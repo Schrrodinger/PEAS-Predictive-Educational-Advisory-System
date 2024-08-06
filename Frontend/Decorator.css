@@ -1,0 +1,281 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+    height: fit-content;
+    overflow: clip;
+}
+
+.MenuBar{
+    position: relative;
+    width:fit-content(100%);
+    height: fit-content(100%);
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    top: 35px;
+}
+.Nav{
+    position: absolute;
+    left: 0;
+}
+.Brand{
+    position: absolute;
+    right: 0;
+    align-self: center;
+    align-items: center;
+    width: max-content;
+    top: -2px;
+}
+.Brand_name{
+    position: relative;
+    right: -10px;
+}
+.Home{
+    position: absolute;
+    left: 0;
+}
+.About{
+    position: absolute;
+    align-self: center;
+}
+.Seperator{
+    position: relative;
+}
+.Slogan{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.Hook{
+    position: relative;
+    width: 100%;
+    transform: translate(0,10px);
+
+}
+.Button{
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+.Start_button{
+    position: relative;
+    text-align: center;
+}
+
+.MainImage{
+    position: relative;
+}
+
+.Container{
+    position: relative;
+    top: 20vh;
+    width: 100%;
+    height: max-content;
+}
+.Age{
+    position: relative;
+    content: "Nhap tuoi cua ban";
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+/*MODIFY THE DISPLAY FOR PHONE*/
+@media screen and (max-width: 850px) {
+    .Home, .About {
+        font-size: 3.1vw; /* Adjust as needed */
+    }
+    .Home,.About{
+        width: max-content;
+    }
+    .Home{
+        left: 10px;
+    }
+    .About{
+        left: 25vw;
+    }
+    .Brand_name{
+        font-size: 3.8vw;
+    }
+    .Seperator{
+        top: 15vw;
+
+    }
+    .Slogan{
+        top: -20px;
+        font-size: 5.5vw;
+    }
+    .Hook{
+        font-size: 4vw;
+        transform: translate(0,-2vw);
+    }
+    .Button{
+        top: 20vw;
+    }
+    .Start_button{
+        width: 40%;
+        height: 12vw;
+    }
+    .MainImage{
+        top: 50vw;
+        width: 100%;
+    }
+}
+
+
+/*MODIFY THE DISPLAY FOR TABLET*/
+@media screen and (min-width: 1000px) and (max-aspect-ratio:4/3) {
+    .Home, .About {
+        font-size: 1.5vh; /* Adjust as needed */
+        transition: none;
+    }
+    .Home, .About {
+        width: max-content;
+    }
+    .Home {
+        left: 3vw;
+    }
+    .About {
+        left: 19vw;
+    }
+    .Brand_name{
+        font-size: 2vh;
+    }
+    .Seperator{
+        top: 6vh;
+    }
+    .Slogan{
+        font-size: 4vh;
+    }
+    .Hook{
+        font-size: 2vh;
+    }
+    .Button{
+        top: 13vh;
+    }
+    .Start_button{
+        width: 21%;
+        height: 5vh;
+        align-self: center;
+    }
+    .MainImage{
+        top: 15vh;
+        width: 70vh;
+        height: auto;
+        justify-content: center;
+        align-self: center;
+        transform: translateX(45px);
+    }
+
+    .MainImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+        transform: translateY(5vh);
+
+    }
+
+}
+
+/*MODIFY THE DISPLAY FOR DESKTOP AND LAPTOP*/
+@media screen and (min-width: 1024px) and (min-aspect-ratio:4/3)  {
+    .Home, .About {
+        font-size: 2.2vh; /* Adjust as needed */
+        transition:none;
+    }
+    .Home , .About{
+        width: max-content;
+    }
+    .Home{
+        left: 3vw;
+    }
+    .About{
+        left: 14vw;
+    }
+    .Brand_name{
+        font-size: 3vh;
+    }
+    .Seperator{
+        top: 10.5vh;
+    }
+    .Slogan{
+        top: 5px;
+        font-size: 52px;
+        text-align: center;
+    }
+    .Hook{
+        font-size: 3.3vh;
+    }
+    .Button{
+        top: 19vh;
+    }
+    .Start_button{
+        width: 13%;
+        height: 8vh;
+        align-self: center;
+        transform: translate(-15px);
+    }
+    .MainImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        transform: translateY(29vh);
+    }
+}
+
+
+@media screen and (min-device-width: 768px) and (max-device-width: 950px) and (max-aspect-ratio: 4/3)  {
+    .Home, .About {
+        font-size: 2vh; /* Adjust as needed */
+        transition:none;
+    }
+    .Home , .About{
+        width: max-content;
+    }
+    .Home{
+        left: 3vw;
+    }
+    .About{
+        left: 20vw;
+    }
+    .Brand_name{
+        font-size: 2.3vh;
+    }
+    .Seperator{
+        top: 8vh;
+    }
+    .Slogan{
+        font-size: 5.5vw;
+        text-align: center;
+        transform: translate(0,1.5vw);
+    }
+    .Hook{
+        font-size: 3.2vw;
+        transform:translate(0,2.8vw);
+    }
+    .Button{
+        top: 20vw;
+    }
+    .Start_button{
+        width: 24%;
+        height: 8vw;
+        align-self: center;
+    }
+
+    .MainImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        transform: translateY(-15vw);
+
+    }
+
+}
+
