@@ -73,19 +73,21 @@ body{
         top: 2vw;
     }
     .Title{
-        margin-top: 200px;
-        margin-left: 50px;
-        text-align: center;
+        margin-top: 18vh;
+        margin-left: 40px;
+        text-align: left;
         color: white; /* Light text color for readability */
         font-family: "Montserrat SemiBold",sans-serif;
+        font-size: 4vh;
     }
     .Sub{
-        margin-left: 50px;
-        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 10px;
+        margin-top: 30px;
         text-align: left;
         color: white;
-        font-family:;
-        font-size: 3vh;
+        font-family:"Montserrat SemiBold",sans-serif;
+        font-size: 2.5vh;
 
     }
     .Input{
@@ -152,19 +154,21 @@ body{
         top: 3vw;
     }
     .Title{
-        margin-top: 200px;
+        margin-top: 20vh ;
         margin-left: 50px;
-        text-align: center;
+        text-align: left;
         color: white; /* Light text color for readability */
         font-family: 'Montserrat SemiBold', sans-serif;
+        font-size: 5vh;
     }
     .Sub{
         margin-left: 50px;
         margin-top: 40px;
+        margin-right: 10px;
         text-align: left;
         color: white;
         font-family:"Montserrat SemiBold",sans-serif;
-        font-size: 3vh;
+        font-size: 2.5vh;
 
     }
     .Input{
@@ -229,12 +233,12 @@ body{
         top: -3vh;
     }
     .Title{
-        margin-top: 130px;
+        margin-top: 20vh;
         margin-left: 50px ;
         text-align: left;
         color: white; /* Light text color for readability */
         font-family: "Montserrat SemiBold",sans-serif;
-        font-size: 7vh;
+        font-size: 6vh;
     }
     .Sub{
         margin-left: 50px;
@@ -303,12 +307,12 @@ body{
         top: 4vw;
     }
     .Title{
-        margin-top: 200px;
+        margin-top: 20vh;
         margin-left: 50px;
         text-align: left;
         color: white; /* Light text color for readability */
-        font-family: 'Montserrat SemiBold",sans-serif;
-        font-size: 8vh;
+        font-family:"Montserrat SemiBold",sans-serif;
+        font-size: 6vh;
     }
     .Sub{
         margin-left: 50px;
