@@ -72,6 +72,30 @@ body{
         height: 43%;
         top: 2vw;
     }
+    .Title{
+        margin-top: 200px;
+        margin-left: 50px;
+        text-align: center;
+        color: white; /* Light text color for readability */
+        font-family: "Montserrat SemiBold",sans-serif;
+    }
+    .Sub{
+        margin-left: 50px;
+        margin-top: 40px;
+        text-align: left;
+        color: white;
+        font-family:;
+        font-size: 3vh;
+
+    }
+    .Input{
+        margin: 20px 0;
+        padding: 10px;
+        background: #333;
+        border: aliceblue;
+        color: white;
+        border-radius: 5px;
+    }
 }
 
 
@@ -127,6 +151,30 @@ body{
         height: 70%;
         top: 3vw;
     }
+    .Title{
+        margin-top: 200px;
+        margin-left: 50px;
+        text-align: center;
+        color: white; /* Light text color for readability */
+        font-family: 'Montserrat SemiBold', sans-serif;
+    }
+    .Sub{
+        margin-left: 50px;
+        margin-top: 40px;
+        text-align: left;
+        color: white;
+        font-family:"Montserrat SemiBold",sans-serif;
+        font-size: 3vh;
+
+    }
+    .Input{
+        margin: 20px 0;
+        padding: 10px;
+        background: #333;
+        border: aliceblue;
+        color: white;
+        border-radius: 5px;
+    }
 
 }
 
@@ -180,6 +228,31 @@ body{
         height: 65%;
         top: -3vh;
     }
+    .Title{
+        margin-top: 130px;
+        margin-left: 50px ;
+        text-align: left;
+        color: white; /* Light text color for readability */
+        font-family: "Montserrat SemiBold",sans-serif;
+        font-size: 7vh;
+    }
+    .Sub{
+        margin-left: 50px;
+        margin-top: 40px;
+        text-align: left;
+        color: white;
+        font-family:"Montserrat SemiBold",sans-serif;
+        font-size: 3vh;
+
+    }
+    .Input{
+        margin: 20px 0;
+        padding: 10px;
+        background: #333;
+        border: aliceblue;
+        color: white;
+        border-radius: 5px;
+    }
 }
 
 /*Small Tablet*/
@@ -228,6 +301,31 @@ body{
         width:100%;
         height: 65%;
         top: 4vw;
+    }
+    .Title{
+        margin-top: 200px;
+        margin-left: 50px;
+        text-align: left;
+        color: white; /* Light text color for readability */
+        font-family: 'Montserrat SemiBold",sans-serif;
+        font-size: 8vh;
+    }
+    .Sub{
+        margin-left: 50px;
+        margin-top: 40px;
+        text-align: left;
+        color: white;
+        font-family:"Montserrat SemiBold",sans-serif;
+        font-size: 2.3vh;
+
+    }
+    .Input{
+        margin: 20px 0;
+        padding: 10px;
+        background: #333;
+        border: aliceblue;
+        color: white;
+        border-radius: 5px;
     }
 
 }
