@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation-float.min.css" crossorigin="anonymous">
 
@@ -15,33 +15,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Major picker</title>
+    <title>Title</title>
 </head>
 <body>
-<div class="LandingPage" id="landing" style="width: 100%;top: 0;left: 0;height: max-content">
-    <!--    MENU BAR-->
-    <div class="MenuBar large-12 medium-12 small-12 columns">
-        <div class="Nav large-4 medium-6 small-6 columns" style="background: lightgreen">
-            <a href="#Trang chu" class="Home large-4 medium-6 small-6 columns" style="text-align: center; color: floralwhite;">Trang chủ</a>
-            <a href="#Ve chung toi" class="About large-5 medium-6 small-6 columns" style=" text-align: center; color: floralwhite;">Về chúng tôi</a>
+<div class="LandingPage" id="landingpage" style="box-sizing: border-box;border: 1px lightcoral solid;position:fixed;width: 100%;height: 100%;top: 0;left: 0;">
+    <div class="MenuBar large-12 medium-12 small-12 columns" style="box-sizing: border-box; position: fixed;top: 3vh;left: 0;height: 3.8vh">
+        <div class="Nav large-4 medium-6 small-6 columns" style="box-sizing: border-box;position: inherit;left:0;">
+            <a href="#Trang chu" class="Home large-4 medium-4  small-5 columns" style="font-kerning:auto;font-style: italic;font-family:Montserrat,sans-serif;color: floralwhite;text-align: center">Trang chủ</a>
+            <a  href="#Ve chung toi" class="About large-6 medium-6 small-7 columns" style="font-kerning:auto;font-style: italic;font-family:Montserrat,sans-serif;color: floralwhite;text-align: left">Về chúng tôi</a>
         </div>
-        <div class="Brand large-6 medium-6 small-6 columns" style="text-align: right">
-            <div class=" Brand_name large-12 medium-12 small-12  columns" style="color: lightgoldenrodyellow; font-weight: lighter">MAJOR PICKER</div>
-        </div>
-    </div>
-    <!-- SEPERATOR LINE    -->
-    <div class="Seperator large-12 medium-12  small-12 columns"><hr style="min-width: 100%"></div>
-
-
-    <div class="Underline" style="width:100%;height: fit-content(100%);position:absolute;top:125px">
-        <div class="large-12 columns medium-12 small-12 columns Slogan" style="font-family:Poppins,sans-serif;color: #F5F5DC;text-decoration: none;align-self: center">Chọn ngành học , chọn tương lai</div>
-        <div class="large-12 columns medium-12 small-12 columns Hook" style="font-family:Poppins,sans-serif;color: #D0B49B;text-decoration: none; text-align: center; align-self: center">Tìm hiểu ngành học phù hợp với bạn</div>
-        <div class="Button large-12 medium-12 small-11 columns">
-            <button class="button Start_button large-6 medium-6 small-6 columns" style=" border-radius: 50px;background:dimgrey; text-align: center;align-self: center;">Bắt đầu ngay</button>
+        <div class="Brand large-8 medium-6 small-5 columns" style="box-sizing: border-box;height: inherit;margin-right: -15px;align-items: center;align-self: center;align-content: center">
+            <span class="Brand_name large-12 medium-12 small-12 columns" style="font-family:Montserrat,sans-serif;color: lightgoldenrodyellow; text-align: right;height: inherit;position: marker;">MAJOR PICKER</span>
         </div>
     </div>
-    <img class="MainImage large-12 medium-12 small-12 cell" src="Image/new.png"></img>
+    <div class="Seperator large-12 medium-12  small-12 columns" style="position: relative;"><hr style="min-width: 100%"></div>
+    <div class="Underline large-12 medium-12 small-12 columns" style="box-sizing: border-box;position: relative;width: inherit;height: inherit">
+        <div class="Slogan large-12 medium-12 small-12 columns" style="font-family:Montserrat,sans-serif;;text-align: center;color:#E7E7C8; font-style: italic">Chọn ngành nghề, chọn tương lai</div>
+        <div class="Hook large-12 medium-12 small-12 columns" style="font-family:Montserrat,sans-serif;;text-align: center;color:#D0B49B;font-style: italic ">Tìm hiểu ngành nghề phù hợp với bạn tại đây</div>
+        <div class="Button large-12 medium-12 small-12 columns" style="text-align: center;display: flex;justify-content: center;position: relative">
+            <button type="button" class="button Start_button" id="startButton" style="background: lightgoldenrodyellow;border-radius: 50px;position:relative;color: black;font-family:Montserrat,sans-serif; font-style: italic; font-kerning: auto">Bắt đầu</button>
+        </div>
+        <div class="LandingImage large-12 small-12 medium-12 columns" style="position:relative;justify-content: center;height: inherit;width: inherit">
+            <img class="Trophy" src="Main/Image/yellow.png" style="vertical-align: center" alt="#">
+        </div>
+    </div>
 </div>
 </body>
 </html>
+
