@@ -1,0 +1,1051 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+    height: 100%;
+}
+.Brand{
+    position: relative;
+}
+.InterestList label{
+    font-kerning: auto;
+    color: lightgrey;
+    display: inline-block;
+    /*font-family:Montserrat,sans-serif;*/
+    font-family: 'Montserrat', san-serif,sans-serif;
+
+}
+.InterestList label .triangle {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: rgba(207, 191, 175, 0.86);
+    font-size: 1.3em;
+    transform: rotate(0deg);
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    margin-top: auto;
+}
+.details{
+    font-kerning: auto;
+    font-family: 'Montserrat', san-serif,sans-serif;
+    font-style: italic;
+    color: dimgrey;
+    display: none;
+}
+.details.visible{
+    display: block;
+}
+.InterestPage::-webkit-scrollbar{
+    display: none;
+}
+.Skillname{
+    color: floralwhite;
+}
+.range-values{
+    color: lightgray;
+    opacity: .7;
+}
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
+    appearance: none;
+    width: 100%; /* Ensure it takes the full width of the container */
+    height: 10px; /* Adjust the thickness of the slider */
+    background: lightyellow; /* Background of the slider track */
+    outline: none; /* Remove outline */
+    border-radius: 5px; /* Round the edges of the slider */
+    opacity: .85;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; /* Thumb (slider handle) width */
+    height: 30px; /* Thumb (slider handle) height */
+    background: lavenderblush; /* Color of the thumb */
+    border-radius: 50%; /* Make the thumb circular */
+    cursor: pointer; /* Change cursor to pointer */
+    opacity: .9;;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Thumb width for Firefox */
+    height: 20px; /* Thumb height for Firefox */
+    background: lightgoldenrodyellow; /* Thumb color */
+    border-radius: 50%; /* Round thumb edges */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px; /* Thumb width for Edge */
+    height: 20px; /* Thumb height for Edge */
+    background: lightgoldenrodyellow; /* Thumb color */
+    border-radius: 50%; /* Round thumb edges */
+    cursor: pointer; /* Change cursor to pointer */
+}
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    appearance: none; /* Removes default dropdown arrow in most browsers */
+    -webkit-appearance: none; /* Removes default dropdown arrow in Webkit browsers */
+    -moz-appearance: none; /* Removes default dropdown arrow in Firefox */
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 30px; /* Extra space for the custom arrow */
+    border: 1px solid #ccc;
+    background-color: white;
+    background-image: none; /* Removes background image (if any) */
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-select::after {
+    content: '▼'; /* Custom arrow symbol */
+    font-size: 12px;
+    color: #555;
+    position: absolute;
+    top: 38%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevents the custom arrow from blocking click events */
+}
+
+.SelfGeneralContainer::-webkit-scrollbar {
+    display: none;
+}
+.SelfGeneralPage::-webkit-scrollbar{
+    display: none;
+}
+.InterestPage::-webkit-scrollbar {
+    display: none;
+}
+.InterestContainer::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/*MODIFY THE DISPLAY FOR SMALL SCREEN PHONE*/
+@media only screen and (max-width: 399px){
+
+    .Home, .About {
+        font-size: xx-small; /* Adjust as needed */
+        transition:none;
+        display: block;
+        padding: 1px;
+    }
+    .Home{
+        transform: translateX(-1vw);
+    }
+    .About{
+        transform: translateX(1.5vw);
+    }
+    .Brand_name{
+        font-size: 4.3vw;
+        font-weight: lighter;
+    }
+    .Seperator{
+        top: 12vw;
+    }
+    .Slogan{
+        position: relative;
+        top: 11.5vw;
+        font-size: 6.5vw;
+    }
+    .Hook{
+        position: relative;
+        top: 13vw;
+        font-size: 3.6vw;
+    }
+    .Button{
+        top: 22vw;
+    }
+    .Start_button{
+        height: 6.5vh;
+        width: 30%;
+        font-size: 3.2vw;
+        font-kerning: auto;
+    }
+    .MainImage{
+        top: 50vw;
+        width: 100%;
+    }
+    .LandingImage{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        top: 13vw;
+    }
+    .Trophy{
+        position: relative;
+        width:85%;
+        height: 60%;
+        top: 2vw;
+    }
+    .Panigation{
+        top: -1vh;
+    }
+    .Previous,.Next{
+        top: -1vw;
+    }
+    .LeftPani,.RightPani{
+        font-size: 7vh;
+    }
+    .Text{
+        top: 1vh;
+    }
+    .Title{
+        font-size: 1.35rem;
+    }
+    .Sub{
+        font-size: 3.1vw;
+    }
+    .InterestPage{
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestContainer{
+        top: 6vh;
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestList{
+        margin-left: -0.2vw;
+    }
+    .Require{
+        font-size: 4.3vw;
+    }
+    .InterestList label{
+        margin-top: 4vw;
+        font-size: 3.5vw;
+    }
+    .Choice input[type=checkbox]{
+        margin-right: 3.5vw;
+        transform: translateY(0.5vw);
+    }
+    .Checkbox{
+        align-self: center;
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+    .InterestList label .triangle{
+        transform: translate(2.5vw,0.5vw);
+        font-size: larger;
+    }
+    .details{
+        padding-left: 9.5vw;
+    }
+    .details.expanded {
+        padding-top: 5px; /* Add padding when expanded */
+        padding-bottom: 8px; /* Add padding when expanded */
+    }
+    .SubmitButton{
+        transform: translateY(1vh);
+    }
+    .Submit{
+        width: 12vh;
+    }
+    .GradingContainer{
+        top: 7.5vh;
+    }
+    .Textbox1{
+        margin-left:  -2vw;
+        transform: translateX(-1.5vh);
+    }
+    .Require1{
+        font-size: medium;
+    }
+    .Rule{
+        padding-left: 2.2vw;
+        font-size: 3vw;
+    }
+    .GradingSlideContainer{
+        top: 2vh;
+        left: 1vw;
+        width: max(103%);
+    }
+    .Skill1,.Skill3{
+        margin-top: 3vh;
+        transform: translateX(-1vh);
+    }
+    .Skill2,.Skill4{
+        margin-top: 4vh;
+        margin-bottom: 1vh;
+        /*transform: translateX(-1vh);*/
+    }
+    .Skill2{
+        transform: translateX(-1vh);
+    }
+    .Skill4{
+        transform: translate(0.18vh, -2.8vh);
+    }
+
+    .Skillname{
+        transform: translateX(-1vw);
+        font-size: 4vw;
+    }
+    .slider-container{
+        margin-top: 2.2vh;
+        transform: translateX(-1vw);
+    }
+    .range-values{
+        margin-top: 0.5vh;
+    }
+    .Slider , .range-values{
+        width: 100%;
+    }
+    input[type="range"] {
+        -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
+        appearance: none;
+        width: 100%; /* Ensure it takes the full width of the container */
+        height: 5px; /* Adjust the thickness of the slider */
+        /*background: lightyellow; !* Background of the slider track *!*/
+        outline: none; /* Remove outline */
+        border-radius: 5px; /* Round the edges of the slider */
+        opacity: .85;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 15px; /* Thumb (slider handle) width */
+        height: 15px; /* Thumb (slider handle) height */
+        border-radius: 50%; /* Make the thumb circular */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 15px; /* Thumb width for Firefox */
+        height: 15px; /* Thumb height for Firefox */
+        border-radius: 50%; /* Round thumb edges */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    input[type="range"]::-ms-thumb {
+        width: 15px; /* Thumb width for Edge */
+        height: 15px; /* Thumb height for Edge */
+        border-radius: 50%; /* Round thumb edges */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+}
+
+
+/*FOR LARGE SCREEN PHONE*/
+@media screen and (min-width: 400px)  and (max-width: 768px) {
+    .Home, .About {
+        font-size: 2.85vw; /* Adjust as needed */
+        width: max-content;
+    }
+    .Home{
+        transform: translateX(-1.5vw);
+    }
+    .About{
+        position: relative;
+        transform: translateX(2vw);
+    }
+    .Brand_name{
+        font-size: 4.3vw;
+        font-weight: lighter;
+    }
+    .Seperator{
+        top: 12vw;
+    }
+    .Slogan{
+        position: relative;
+        top: 11.5vw;
+        font-size: 6.5vw;
+    }
+    .Hook{
+        position: relative;
+        top: 13vw;
+        font-size: 3.6vw;
+    }
+    .Button{
+        top: 22vw;
+    }
+    .Start_button{
+        height: 6.5vh;
+        width: 30%;
+        font-size: 3.2vw;
+        font-kerning: auto;
+    }
+    .MainImage{
+        top: 50vw;
+        width: 100%;
+    }
+    .LandingImage{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        top: 15vw;
+    }
+    .Trophy{
+        position: relative;
+        width:100%;
+        height: 43%;
+        top: 2vw;
+    }
+    .Panigation{
+        top: 2vh;
+    }
+    .Previous,.Next{
+        top: -1vw;
+    }
+    .LeftPani,.RightPani{
+        font-size: 6vh;
+    }
+    .Text{
+        top: 3.8vh;
+    }
+    .Title{
+        font-size: 1.5rem;
+    }
+    .Sub{
+        font-size: 3.1vw;
+    }
+    .InterestPage{
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestContainer{
+        top: 7.8vh;
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestList{
+        margin-left: 0.2vw;
+    }
+    .Require{
+        font-size: 4.3vw;
+    }
+    .InterestList label{
+        margin-top: 4vw;
+        font-size: 3.5vw;
+    }
+    .Choice input[type=checkbox]{
+        margin-right: 3.5vw;
+        transform: translateY(0.5vw);
+    }
+    .Checkbox{
+        align-self: center;
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+    .InterestList label .triangle{
+        transform: translate(2.5vw,0.5vw);
+        font-size: larger;
+    }
+    .details{
+        padding-left: 9.5vw;
+    }
+    .details.expanded {
+        padding-top: 5px; /* Add padding when expanded */
+        padding-bottom: 8px; /* Add padding when expanded */
+    }
+    .SubmitButton{
+        transform: translateY(1vh);
+    }
+    .Submit{
+        width: 12vh;
+    }
+    .GradingContainer{
+        top: 7.5vh;
+    }
+    .Textbox1{
+        margin-left:  -2vw;
+        transform: translateX(-1.5vh);
+
+    }
+    .Require1{
+        font-size: medium;
+    }
+    .Rule{
+        padding-left: 1.8vw;
+        font-size: 3.1vw;
+    }
+    .GradingSlideContainer{
+        top: 2vh;
+        left: -1vw;
+        width: max(100%);
+    }
+    .Skill1,.Skill3{
+        margin-top: 3vh;
+        transform: translateX(-1vh);
+    }
+    .Skill2,.Skill4{
+        margin-top: 3.5vh;
+        transform: translateX(-1vh);
+    }
+    .Skill2{
+        margin-bottom: 0.5vh;
+    }
+    .Skill4{
+        transform: translate(-0.8vh,-2.5vh);
+    }
+
+    .Skillname{
+        transform: translateX(-1vw);
+        font-size: 3.5vw;
+    }
+    .slider-container{
+        margin-top: 2vh;
+        transform: translateX(-1vw);
+    }
+    .range-values{
+        margin-top: 0.5vh;
+    }
+    .Slider , .range-values{
+        width: 100%;
+    }
+    input[type="range"] {
+        -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
+        appearance: none;
+        width: 100%; /* Ensure it takes the full width of the container */
+        height: 6px; /* Adjust the thickness of the slider */
+        outline: none; /* Remove outline */
+        border-radius: 5px; /* Round the edges of the slider */
+        opacity: .85;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 17px; /* Thumb (slider handle) width */
+        height: 17px; /* Thumb (slider handle) height */
+        border-radius: 50%; /* Make the thumb circular */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 17px; /* Thumb width for Firefox */
+        height: 17px; /* Thumb height for Firefox */
+        border-radius: 50%; /* Round thumb edges */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    input[type="range"]::-ms-thumb {
+        width: 17px; /* Thumb width for Edge */
+        height: 17px; /* Thumb height for Edge */
+        border-radius: 50%; /* Round thumb edges */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+}
+
+
+
+
+
+/*MODIFY THE DISPLAY FOR TABLET*/
+@media screen and (min-width: 769px) and (max-width: 1024px) and (max-aspect-ratio:16/9) {
+    .Home, .About {
+        font-size: 2vh; /* Adjust as needed */
+        transition:none;
+        display: block;
+        padding: 4px;
+    }
+
+    .Brand_name{
+        font-size: 3.4vw;
+        font-weight: lighter;
+    }
+    .Seperator{
+        top: 6.5vh;
+    }
+    .Slogan{
+        position: relative;
+        top: 7vh;
+        font-size: 5.4vw;
+
+    }
+    .Hook{
+        position: relative;
+        top: 8.2vh;
+        font-size: 2.7vw ;
+    }
+    .Button{
+        top: 14vh;
+    }
+    .Start_button{
+        height: 7vh;
+        width: 25%;
+        font-size: 3vw;
+        font-kerning: auto;
+    }
+    .LandingImage{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        top: 17vw;
+        height: fit-content;
+    }
+    .Trophy{
+        position: relative;
+        width:95%;
+        height: 80%;
+        top: -3vw;
+    }
+    .Panigation{
+        top: 2vh;
+    }
+    .Previous,.Next{
+        top: -1vw;
+    }
+    .LeftPani,.RightPani{
+        font-size: 7vw;
+    }
+    .Text{
+        top: 4vh;
+    }
+    .Title{
+        font-size: 4.8vw;
+    }
+    .Sub{
+        font-size: 2.6vw;
+    }
+    .InterestPage{
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestContainer{
+        top: 7vh;
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestForm{
+        top: -1vw;
+    }
+    .InterestList{
+        margin-left: 0.2vw;
+        overflow-y: hidden;
+    }
+    .Require{
+        font-size: 3.3vw;
+    }
+    .InterestList label{
+        margin-top: 4vw;
+        font-size: 3vw;
+    }
+
+    .Choice input[type=checkbox]{
+        margin-right: 3.5vw;
+        transform: translateY(0.5vw);
+    }
+    .Checkbox{
+        align-self: center;
+        width: 3.2vw;
+        height: 3.2vw;
+    }
+
+    .InterestList label .triangle{
+        transform: translate(2.5vw,0.5vw);
+        font-size: xx-large;
+    }
+    .details{
+        padding-left: 7vw;
+    }
+    .details.expanded {
+        padding-top: 5px; /* Add padding when expanded */
+        padding-bottom: 10px; /* Add padding when expanded */
+    }
+    .SubmitButton{
+        transform: translateY(0.7vh);
+    }
+    .Submit{
+        width: 14vw;
+        height: 7vw;
+        font-size: 1.5rem;
+    }
+    .GradingContainer{
+        top: 7vh;
+    }
+    .Textbox1{
+        margin-left:  -2vw;
+        transform: translateX(0.5vh);
+
+    }
+    .Require1{
+        font-size: xx-large;
+    }
+    .Rule{
+        padding-left: 2.8vw;
+        font-size: 2.6vw;
+    }
+    .GradingSlideContainer{
+        top: 2vh;
+        left: -1vw;
+        width: max(100%);
+    }
+    .Skill1,.Skill3{
+        margin-top: 3vh;
+        transform: translateX(-0.5vh);
+    }
+    .Skill2,.Skill4{
+        margin-top: 4vh;
+        margin-bottom: 1vh;
+        transform: translateX(-0.5vh);
+    }
+    .Skill2{
+        transform: translateX(-1vh);
+    }
+    .Skill4{
+        transform: translate(-0.3vh , -1.8vh);
+    }
+
+    .Skillname{
+        transform: translateX(-1vw);
+        font-size: 2.72vw;
+    }
+    .range-values span{
+        font-size: xx-large ;
+    }
+    .slider-container{
+        margin-top: 2.5vh;
+        transform: translateX(-1vw);
+    }
+    .range-values{
+        margin-top: 2vh;
+    }
+    .Slider , .range-values{
+        width: 100%;
+    }
+
+    /*    MODIFY THE APPEARANCE OF THE SLIDER*/
+
+
+}
+
+/*MODIFY THE DISPLAY FOR DESKTOP AND LAPTOP*/
+@media screen and (min-width: 1024px) and (min-aspect-ratio:4/3) {
+    .Home, .About {
+        font-size: 2.5vh; /* Adjust as needed */
+        transition:none;
+        width: max-content;
+    }
+    .Home{
+        transform: translateX(-10vw);
+    }
+    .About{
+        transform: translateX(-19vw);
+    }
+    .Brand_name{
+        font-size: 3vh;
+        font-weight: lighter;
+    }
+    .Seperator{
+        top: 6.3vh;
+    }
+    .Underline{
+        top: 5vh;
+    }
+    .Slogan{
+        position: relative;
+        top: 1.7vh;
+        font-size: 6.5vh;
+    }
+    .Hook{
+        position: relative;
+        font-size: 2.4vh;
+        top: 2vh ;
+    }
+    .Button{
+        top: 8vh;
+    }
+    .Start_button{
+        height: 6.5vh;
+        width: 11%;
+        font-size: 1.8vh;
+        font-kerning: auto;
+    }
+    .LandingImage{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        top: 10vh;
+    }
+    .Trophy{
+        position: relative;
+        width:40%;
+        top: -7vh;
+        height: 36vw;
+    }
+    .Panigation{
+        top: 1vh;
+    }
+    .Previous,.Next{
+        top: -1vh;
+    }
+    .LeftPani,.RightPani{
+        font-size: 7vh;
+    }
+    .Text{
+        top: 3.5vh;
+    }
+    .Title{
+        font-size: 3.5vh;
+    }
+    .Sub{
+        font-size: 2vh;
+    }
+    .InterestContainer{
+        top: 5vh;
+    }
+
+    .InterestForm{
+        top: 5vh;
+    }
+    .InterestList{
+        margin-left: -1vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .Require{
+        font-size: 2.4vh;
+    }
+    .InterestList label{
+        margin-top:3vh;
+        padding-bottom: 1vh;
+        /*font-size: 1.33vw;*/
+        font-size: x-large;
+        width: 48%;
+    }
+
+    .Choice input[type=checkbox]{
+        margin-right: 2vw;
+        transform: translateY(0.5vh);
+    }
+
+    .Checkbox{
+        align-self: center;
+        width: 2.6vh;
+        height: 2.6vh;
+    }
+
+    .InterestList label .triangle{
+        transform: translate(2.5vh,0.3vw);
+        font-size: 1.8vw;
+    }
+    .details{
+        font-size: large;
+        padding-left: 6.8vh;
+    }
+    .details.expanded {
+        padding-top: 5px; /* Add padding when expanded */
+        padding-bottom: 10px; /* Add padding when expanded */
+    }
+    .SubmitButton{
+        transform: translateY(0.7vh);
+    }
+    .Submit{
+        width: 10vh;
+        height: 5vh;
+    }
+    .GradingContainer{
+        top: 4vw;
+    }
+    .Textbox1{
+        margin-left:  -2vw;
+    }
+    .Require1{
+        font-size: large;
+    }
+    .Rule{
+        padding-left: 1.2vw;
+    }
+    .GradingSlideContainer{
+        top: 2vh;
+        left: -1vw;
+    }
+    .Skill1,.Skill3{
+        margin-top: 3vh;
+        /*transform: translateX(-1vh);*/
+    }
+    .Skill2,.Skill4{
+        margin-top: 4vh;
+        margin-bottom: 1vh;
+        /*transform: translateX(-1vh);*/
+    }
+    .Skill4{
+        transform: translateY(-2.8vh);
+    }
+    .Skillname{
+        transform: translateX(-1vw);
+        font-size: larger;
+    }
+    .slider-container{
+        margin-top: 2.5vh;
+        transform: translateX(-1vw);
+    }
+    .range-values{
+        margin-top: 1.5vh;
+    }
+    .Slider , .range-values{
+        width: 45%;
+    }
+    input[type="range"] {
+        -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
+        appearance: none;
+        width: 45%; /* Ensure it takes the full width of the container */
+        height: 6px; /* Adjust the thickness of the slider */
+        outline: none; /* Remove outline */
+        border-radius: 5px; /* Round the edges of the slider */
+        opacity: .85;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 17px; /* Thumb (slider handle) width */
+        height: 17px; /* Thumb (slider handle) height */
+        border-radius: 50%; /* Make the thumb circular */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 17px; /* Thumb width for Firefox */
+        height: 17px; /* Thumb height for Firefox */
+        border-radius: 50%; /* Round thumb edges */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    input[type="range"]::-ms-thumb {
+        width: 17px; /* Thumb width for Edge */
+        height: 17px; /* Thumb height for Edge */
+        border-radius: 50%; /* Round thumb edges */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+    .General{
+        transform: translateX(-0.5vw);
+    }
+    .SelfGeneralContainer{
+        top: 9vh;
+    }
+    .custom-select ,.Bar{
+        width: 30%;
+        border-radius: 20px;
+    }
+    .Gender,.Major{
+        margin-top: 6vh;
+    }
+    .Gender{
+        margin-bottom: -1vh;
+    }
+    .AgeBar{
+        text-indent: 15px;
+    }
+
+
+
+
+}
+
+/*Small Tablet*/
+@media screen and (min-device-width: 768px) and (max-device-width: 1000px) and (max-aspect-ratio: 3/2) {
+    .Home, .About {
+        font-size: 1.8vh; /* Adjust as needed */
+        transition:none;
+        display: block;
+        padding: 4px;
+    }
+    .Brand_name{
+        font-size: 3.6vw;
+        font-weight: lighter;
+    }
+    .Seperator{
+        top: 9vw;
+    }
+    .Slogan{
+        position: relative;
+        top: 10vw;
+        font-size: 5.2vw;
+    }
+    .Hook{
+        position: relative;
+        top: 12vw;
+        font-size:x-large;
+    }
+    .Button{
+        top: 14vh;
+    }
+    .Start_button{
+        height: 7vh;
+        width: 24%;
+        font-size: 3vw;
+        font-kerning: auto;
+    }
+    .LandingImage{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        top: 15vw;
+    }
+    .Trophy{
+        position: relative;
+        width:100%;
+        height: 50%;
+        top: -1.5vw;
+    }
+    .Panigation{
+        top: 2vh;
+    }
+    .LeftPani,.RightPani{
+        font-size: 7.5vw;
+    }
+    .Text{
+        top: 6vw;
+    }
+    .Title{
+        font-size: 2.2rem;
+    }
+    .Sub{
+        font-size: 1.3rem;
+    }
+    .InterestPage{
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestContainer{
+        top: 9vh;
+        -webkit-overflow-scrolling: touch;
+    }
+    .InterestForm{
+        top: -1vh;
+    }
+    .Require{
+        font-size: 3.5vw;
+    }
+    .Choice input[type=checkbox]{
+        width: 3vw;
+        height: 3vw;
+        margin-right: 5vw;
+    }
+    .InterestList label .triangle{
+        transform: translate(2.2vw,0.3vw);
+        font-size: xx-large;
+    }
+    .details{
+        margin-left: 2vw;
+    }
+    .details.expanded {
+        padding-top: 15px; /* Add padding when expanded */
+        padding-bottom: 3vw; /* Add padding when expanded */
+    }
+    .SubmitButton{
+        transform: translateY(0.7vh);
+    }
+    .Submit{
+        width: 16vw;
+        height: 5vh;
+        font-size: 1.3rem;
+    }
+    .Require1{
+        font-size: x-large;
+    }
+    .Rule{
+        padding-left: 3.5vw;
+        font-size: 2.5vw;
+    }
+    .Skillname{
+        font-size: 2.59vw;
+    }
+    .range-values{
+        font-size: 2.8vw;
+        margin-top: 1.5vh;
+    }
+    .slider-container{
+        margin-top: 2.5vh;
+        transform: translateX(-1vw);
+    }
+
+}
+
