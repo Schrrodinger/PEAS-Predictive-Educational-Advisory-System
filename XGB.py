@@ -68,21 +68,17 @@ best_xgb_model = grid_search.best_estimator_
 # Make predictions on test set
 y_pred = best_xgb_model.predict(X_test)
 
+import joblib
+joblib.dump(best_xgb_model, 'major_prediction_model.joblib')
+
 # Evaluate the model
 print("Best parameters found: ", grid_search.best_params_)
 print("Accuracy:", accuracy_score(y_test, y_pred))
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred, target_names=le.classes_))
 
 # Print feature importance
 feature_importance = pd.DataFrame({'feature': feature_names, 'importance': best_xgb_model.feature_importances_})
 print("\nFeature Importance:")
 print(feature_importance.sort_values('importance', ascending=False))
 
-# Plot confusion matrix
-plt.figure(figsize=(10, 8))
-sns.heatmap(confusion_matrix(y_test, y_pred), annot=True, fmt='d', cmap='Blues')
-plt.title('Confusion Matrix')
-plt.ylabel('True Label')
-plt.xlabel('Predicted Label')
-plt.show()
+
+
