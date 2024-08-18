@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        form {
+            background: #f4f7f8;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f6f3;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Major Prediction Form</h1>
+    <form id="majorPredictionForm">
+        <label for="Gender">Gender:</label>
+        <select name="Gender" required>
+            <option value="">Select Gender</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+        </select>
+
+        <label for="Departments">Departments:</label>
+        <select name="Departments" required>
+            <option value="">Select Department</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="H">H</option>
+            <option value="V">V</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="Habit">Habit:</label>
+        <select name="Habit" required>
+            <option value="">Select Habit</option>
+            <option value="Nghệ thuật và sáng tạo">Nghệ thuật và sáng tạo</option>
+            <option value="Công nghệ và kỹ thuật số">Công nghệ và kỹ thuật số</option>
+            <option value="Du lịch và khám phá văn hóa">Du lịch và khám phá văn hóa</option>
+            <option value="Hoạt động xã hội và cộng đồng">Hoạt động xã hội và cộng đồng</option>
+            <option value="Khoa học và khám phá">Khoa học và khám phá</option>
+            <option value="Thể thao và hoạt động thể chất">Thể thao và hoạt động thể chất</option>
+            <option value="Nấu ăn và ẩm thực">Nấu ăn và ẩm thực</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="Field of interest">Field of interest:</label>
+        <select name="Field of interest" required>
+            <option value="">Select Field of Interest</option>
+            <option value="Khoa học Tự nhiên">Khoa học Tự nhiên</option>
+            <option value="Công nghệ">Công nghệ</option>
+            <option value="Khoa học Xã hội">Khoa học Xã hội</option>
+            <option value="Nghệ thuật và Thiết kế">Nghệ thuật và Thiết kế</option>
+            <option value="Kinh tế và Kinh doanh">Kinh tế và Kinh doanh</option>
+            <option value="Kỹ thuật">Kỹ thuật</option>
+            <option value="Luật và Chính sách công">Luật và Chính sách công</option>
+            <option value="Du lịch và Dịch vụ">Du lịch và Dịch vụ</option>
+            <option value="Y tế và Sức khỏe">Y tế và Sức khỏe</option>
+            <option value="Giáo dục">Giáo dục</option>
+            <option value="Truyền thông và Media">Truyền thông và Media</option>
+            <option value="Nông nghiệp và Môi trường">Nông nghiệp và Môi trường</option>
+        </select>
+
+        <label for="Computer Skills">Computer Skills:</label>
+        <select name="Computer Skills" required>
+            <option value="">Select Computer Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Language Skills">Language Skills:</label>
+        <select name="Language Skills" required>
+            <option value="">Select Language Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Machine Operation Skills">Machine Operation Skills:</label>
+        <select name="Machine Operation Skills" required>
+            <option value="">Select Machine Operation Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Data Analysis Skills">Data Analysis Skills:</label>
+        <select name="Data Analysis Skills" required>
+            <option value="">Select Data Analysis Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Sales and Marketing Skills">Sales and Marketing Skills:</label>
+        <select name="Sales and Marketing Skills" required>
+            <option value="">Select Sales and Marketing Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Writing Skills">Writing Skills:</label>
+        <select name="Writing Skills" required>
+            <option value="">Select Writing Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Financial Skills">Financial Skills:</label>
+        <select name="Financial Skills" required>
+            <option value="">Select Financial Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Project Management Skills">Project Management Skills:</label>
+        <select name="Project Management Skills" required>
+            <option value="">Select Project Management Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Medical Skills">Medical Skills:</label>
+        <select name="Medical Skills" required>
+            <option value="">Select Medical Skills</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select>
+
+        <label for="Annual Tuition Budget">Annual Tuition Budget:</label>
+        <select name="Annual Tuition Budget" required>
+            <option value="">Select Annual Tuition Budget</option>
+            <option value="Dưới 50.000.000 VND">Dưới 50.000.000 VND</option>
+            <option value="Trên 50.000.000 VND">Trên 50.000.000 VND</option>
+            <option value="Trên 100.000.000 VND">Trên 100.000.000 VND</option>
+        </select>
+
+        <label for="Preferred Location">Preferred Location:</label>
+        <select name="Preferred Location" required>
+            <option value="">Select Preferred Location</option>
+            <option value="Miền Nam">Miền Nam</option>
+            <option value="Miền Bắc">Miền Bắc</option>
+            <option value="Miền Trung">Miền Trung</option>
+        </select>
+
+        <label for="Key Factors for Future Job">Key Factors for Future Job:</label>
+        <select name="Key Factors for Future Job" required>
+            <option value="">Select Key Factors for Future Job</option>
+            <option value="Khả năng học hỏi">Khả năng học hỏi</option>
+            <option value="Cơ hội phát triển">Cơ hội phát triển</option>
+            <option value="Thu nhập cao">Thu nhập cao</option>
+            <option value="Công việc ổn định">Công việc ổn định</option>
+            <option value="Thách thức và kích thích">Thách thức và kích thích</option>
+            <option value="Sáng tạo">Sáng tạo</option>
+            <option value="Linh hoạt về thời gian">Linh hoạt về thời gian</option>
+            <option value="Đóng góp cho xã hội">Đóng góp cho xã hội</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Predict Major</button>
+    </form>
+
+    <div id="result"></div>
+    <script src="{{ url_for('static', filename='check.js') }}"></script>
+    <script>
+        document.getElementById('majorPredictionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+            var jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = 'Predicted Major: ' + data.predicted_major;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = 'An error occurred. Please try again.';
+            });
+        });
+    </script>
+</body>
+</html>

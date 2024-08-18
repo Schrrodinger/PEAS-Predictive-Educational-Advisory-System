@@ -8,6 +8,8 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 from sklearn.model_selection import GridSearchCV
 import seaborn as sns
 import matplotlib.pyplot as plt
+import xgboost as xgb
+print(xgb.__version__)
 
 # Read the data
 data = pd.read_csv('data/Final Major.csv')
@@ -80,5 +82,9 @@ feature_importance = pd.DataFrame({'feature': feature_names, 'importance': best_
 print("\nFeature Importance:")
 print(feature_importance.sort_values('importance', ascending=False))
 
-
-
+# At the end of your XGB.py file
+import joblib
+joblib.dump(best_xgb_model, 'major_prediction_model.joblib')
+import pickle
+with open('major_prediction_model.pkl', 'wb') as f:
+    pickle.dump(best_xgb_model, f)

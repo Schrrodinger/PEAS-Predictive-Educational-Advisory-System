@@ -4,6 +4,9 @@ document.getElementById('majorPredictionForm').addEventListener('submit', functi
     var jsonData = {};
     formData.forEach((value, key) => {jsonData[key] = value});
 
+    // Show loading message
+    document.getElementById('result').innerText = 'Predicting...';
+
     fetch('/predict', {
         method: 'POST',
         headers: {
@@ -13,9 +16,10 @@ document.getElementById('majorPredictionForm').addEventListener('submit', functi
     })
     .then(response => response.json())
     .then(data => {
-        alert('Predicted Major: ' + data.predicted_major);
+        document.getElementById('result').innerText = 'Predicted Major: ' + data.predicted_major;
     })
     .catch((error) => {
         console.error('Error:', error);
+        document.getElementById('result').innerText = 'An error occurred. Please try again.';
     });
 });
