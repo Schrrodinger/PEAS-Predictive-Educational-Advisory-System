@@ -1,0 +1,128 @@
+{
+  "Gender": {
+    "Nữ": 2,
+    "Nam": 1
+  },
+   "Departments": {
+     "A": 1,
+     "B": 2,
+     "C": 3,
+     "D": 4,
+     "H": 5,
+     "V": 6,
+     "Other": 0
+  },
+  "Habit": {
+    "Nghệ thuật và sáng tạo": 1,
+    "Công nghệ và kỹ thuật số": 2,
+    "Du lịch và khám phá văn hóa": 3,
+    "Hoạt động xã hội và cộng đồng": 4,
+    "Khoa học và khám phá": 5,
+    "Thể thao và hoạt động thể chất": 6,
+    "Nấu ăn và ẩm thực": 7,
+    "Other": 8
+  },
+  "Field of interest": {
+    "Khoa học Tự nhiên": 1,
+    "Công nghệ": 2,
+    "Khoa học Xã hội": 3,
+    "Nghệ thuật và Thiết kế": 4,
+    "Kinh tế và Kinh doanh": 5,
+    "Kỹ thuật": 6,
+    "Luật và Chính sách công": 7,
+    "Du lịch và Dịch vụ": 8,
+    "Y tế và Sức khỏe": 9,
+    "Giáo dục": 10,
+    "Truyền thông và Media": 11,
+    "Nông nghiệp và Môi trường": 12
+  },
+  "Computer Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Language Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Machine Operation Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Data Analysis Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Sales and Marketing Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Writing Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Financial Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Project Management Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+   "Medical Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Annual Tuition Budget": {
+    "Dưới 50.000.000 VND": 1,
+    "Trên 50.000.000 VND": 2,
+    "Trên 100.000.000 VND": 3
+  },
+  "Preferred Location": {
+    "Miền Nam": 1,
+    "Miền Bắc": 2,
+    "Miền Trung": 3
+  },
+  "Key Factors for Future Job": {
+    "Khả năng học hỏi": 1,
+    "Cơ hội phát triển": 2,
+    "Thu nhập cao": 3,
+    "Công việc ổn định": 4,
+    "Thách thức và kích thích": 5,
+    "Sáng tạo": 6,
+    "Linh hoạt về thời gian": 7,
+    "Đóng góp cho xã hội": 8,
+    "Other": 9
+  },
+  "Major": {
+    "Ngôn ngữ": 1,
+    "Nghệ thuật": 2,
+    "Mỹ thuật ứng dụng": 3,
+    "Kinh tế học": 4,
+    "Báo chí và thông tin": 5,
+    "Kinh doanh và quản lý": 6,
+    "Pháp luật": 7,
+    "Khoa học tự nhiên": 8,
+    "Kỹ thuật": 9,
+    "Máy tính và công nghệ thông tin": 10,
+    "Kỹ thuật (Technical Engineering)": 11,
+    "Sản xuất và chế biến": 13,
+    "Kiến trúc và xây dựng": 14,
+    "Nông nghiệp, lâm nghiệp và thủy sản": 15,
+    "Thú y": 16,
+    "Sức khỏe": 17,
+    "Du lịch, khách sạn, thể thao và dịch vụ cá nhân": 18,
+    "Dịch vụ vận tải": 19,
+    "Khoa học môi trường": 20,
+    "An ninh và quốc phòng": 21,
+    "Khoa học giáo dục và đào tạo giáo viên": 22
+  }
+}
