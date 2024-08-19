@@ -4,7 +4,7 @@ import pandas as pd
 import json
 import os
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='template')
 model = joblib.load('major_prediction_model.joblib')
 
 with open('data/encoding_schema.json', 'r', encoding='utf-8') as f:
