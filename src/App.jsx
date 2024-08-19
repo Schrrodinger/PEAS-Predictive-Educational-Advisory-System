@@ -33,11 +33,11 @@
 // }
 //
 // export default App
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-// import Page0 from './Frontend/Page0';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Page0 from './Frontend/Page0.jsx';
 import Page1 from './Frontend/Page1.jsx';
-// import Page2 from './Frontend/Page2';
-// import Page3 from './Frontend/Page3';
+import Page2 from './Frontend/Page2.jsx';
+import Page3 from './Frontend/Page3.jsx';
 import Page4 from './Frontend/Page4.jsx';
 import Page5 from './Frontend/Page5.jsx';
 import './Frontend/Decorator.css';
@@ -55,10 +55,10 @@ function App() {
                 {/*    <Link to="/page5">Page5</Link>*/}
                 {/*</nav>*/}
                 <Routes>
-                    {/*<Route path="/" element={<Page0 />} />*/}
+                    <Route path="/" element={<Page0 />} />
                     <Route path="/page1" element={<Page1 />} />
-                    {/*<Route path="/page2" element={<Page2 />} />*/}
-                    {/*<Route path="/page3" element={<Page3 />} />*/}
+                    <Route path="/page2" element={<Page2 />} />
+                    <Route path="/page3" element={<Page3 />} />
                     <Route path="/page4" element={<Page4 />} />
                     <Route path="/page5" element={<Page5 />} />
                 </Routes>

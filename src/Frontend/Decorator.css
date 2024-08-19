@@ -1,8 +1,10 @@
 body{
     margin: 0;
     padding: 0;
-    background: black;
+    background: rgba(12, 12, 16, 0.93);
     height: 100%;
+    font-family: "Poppins", sans-serif;
+    overflow-y: visible;
 }
 .Brand{
     position: relative;
@@ -11,9 +13,13 @@ body{
     font-kerning: auto;
     color: lightgrey;
     display: inline-block;
-    /*font-family:Montserrat,sans-serif;*/
     font-family: 'Montserrat', san-serif,sans-serif;
-
+}
+.InterestList2 label{
+    font-kerning: auto;
+    color: lightgrey;
+    display: inline-block;
+    font-family: 'Montserrat', san-serif,sans-serif;
 }
 .InterestList label .triangle {
     position: relative;
@@ -28,6 +34,21 @@ body{
     align-self: center;
     margin-top: auto;
 }
+
+.InterestList2 label .triangle {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: rgba(207, 191, 175, 0.86);
+    font-size: 1.3em;
+    transform: rotate(0deg);
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    margin-top: auto;
+}
+
 .details{
     font-kerning: auto;
     font-family: 'Montserrat', san-serif,sans-serif;
@@ -41,8 +62,14 @@ body{
 .InterestPage::-webkit-scrollbar{
     display: none;
 }
+.InterestPage2::-webkit-scrollbar{
+    display: none;
+}
 .Skillname{
     color: floralwhite;
+    font-style: italic;
+    font-kerning: auto;
+    font-family: Poppins,sans-serif;
 }
 .range-values{
     color: lightgray;
@@ -88,6 +115,7 @@ input[type="range"]::-ms-thumb {
     position: relative;
 }
 
+
 .custom-select select {
     appearance: none; /* Removes default dropdown arrow in most browsers */
     -webkit-appearance: none; /* Removes default dropdown arrow in Webkit browsers */
@@ -117,13 +145,31 @@ input[type="range"]::-ms-thumb {
 }
 .SelfGeneralPage::-webkit-scrollbar{
     display: none;
+    scrollbar-width: none;
 }
-.InterestPage::-webkit-scrollbar {
+.InterestPage,.InterestPage2{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.RatingPage::-webkit-scrollbar{
     display: none;
 }
-.InterestContainer::-webkit-scrollbar{
-    display: none;
+.RatingPage{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+::placeholder{
+    color: dimgrey;
+    font-family: "Poppins", sans-serif;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 150ms linear; /* Match the delay in setTimeout */
+}
+
+
+
 
 
 
@@ -138,9 +184,11 @@ input[type="range"]::-ms-thumb {
     }
     .Home{
         transform: translateX(-1vw);
+        font-size: 3vw;
     }
     .About{
         transform: translateX(1.5vw);
+        font-size: 3vw;
     }
     .Brand_name{
         font-size: 4.3vw;
@@ -152,7 +200,7 @@ input[type="range"]::-ms-thumb {
     .Slogan{
         position: relative;
         top: 11.5vw;
-        font-size: 6.5vw;
+        font-size: 6vw;
     }
     .Hook{
         position: relative;
@@ -160,7 +208,7 @@ input[type="range"]::-ms-thumb {
         font-size: 3.6vw;
     }
     .Button{
-        top: 22vw;
+        top: 24vw;
     }
     .Start_button{
         height: 6.5vh;
@@ -176,46 +224,66 @@ input[type="range"]::-ms-thumb {
         display: flex;
         justify-content: center;
         align-self: center;
-        top: 13vw;
+        top: 20vw;
     }
     .Trophy{
         position: relative;
-        width:85%;
+        width:90%;
         height: 60%;
         top: 2vw;
     }
     .Panigation{
-        top: -1vh;
+        top: 1.5vh;
     }
     .Previous,.Next{
         top: -1vw;
     }
     .LeftPani,.RightPani{
-        font-size: 7vh;
+        font-size: 7.5vh;
+        font-weight: lighter;
     }
     .Text{
-        top: 1vh;
+        top: 3vh;
+        transform: translateX(3vw);
     }
     .Title{
-        font-size: 1.35rem;
+        font-size: 1.3rem;
     }
     .Sub{
-        font-size: 3.1vw;
+        font-size: 2.82vw;
+    }
+    .InterestForm, .InterestForm2{
+        height: inherit;
     }
     .InterestPage{
         -webkit-overflow-scrolling: touch;
+        min-height: 120vh;
+        overflow-y: auto;
     }
-    .InterestContainer{
-        top: 6vh;
+    .InterestPage2{
         -webkit-overflow-scrolling: touch;
+        height: 180vh;
+        overflow-y: scroll;
     }
-    .InterestList{
+    .InterestContainer ,.InterestContainer2{
+        top: 8vh;
+        -webkit-overflow-scrolling: touch;
+        /*overflow-y: scroll;*/
+        height: 100vh;
+
+    }
+    .InterestList,.InterestList2{
+        height: inherit;
         margin-left: -0.2vw;
     }
     .Require{
         font-size: 4.3vw;
     }
     .InterestList label{
+        margin-top: 4vw;
+        font-size: 3.5vw;
+    }
+    .InterestList2 label{
         margin-top: 4vw;
         font-size: 3.5vw;
     }
@@ -232,6 +300,10 @@ input[type="range"]::-ms-thumb {
         transform: translate(2.5vw,0.5vw);
         font-size: larger;
     }
+    .InterestList2 label .triangle{
+        transform: translate(2.5vw,0.5vw);
+        font-size: larger;
+    }
     .details{
         padding-left: 9.5vw;
     }
@@ -243,20 +315,21 @@ input[type="range"]::-ms-thumb {
         transform: translateY(1vh);
     }
     .Submit{
-        width: 12vh;
+        width: 95%;
     }
     .GradingContainer{
-        top: 7.5vh;
+        top: 6vh;
     }
     .Textbox1{
-        margin-left:  -2vw;
+        top: -2vw;
+        margin-left:  2vw;
         transform: translateX(-1.5vh);
     }
     .Require1{
-        font-size: medium;
+        font-size: 1.7vh;
     }
     .Rule{
-        padding-left: 2.2vw;
+        padding-left: 3vw;
         font-size: 3vw;
     }
     .GradingSlideContainer{
@@ -265,11 +338,11 @@ input[type="range"]::-ms-thumb {
         width: max(103%);
     }
     .Skill1,.Skill3{
-        margin-top: 3vh;
+        margin-top: 4vh;
         transform: translateX(-1vh);
     }
     .Skill2,.Skill4{
-        margin-top: 4vh;
+        margin-top: 5vh;
         margin-bottom: 1vh;
         /*transform: translateX(-1vh);*/
     }
@@ -277,19 +350,19 @@ input[type="range"]::-ms-thumb {
         transform: translateX(-1vh);
     }
     .Skill4{
-        transform: translate(0.18vh, -2.8vh);
+        transform: translate(0.18vh, -.5vh);
     }
-
     .Skillname{
-        transform: translateX(-1vw);
-        font-size: 4vw;
+        transform: translateX(1vw);
+        font-size: smaller;
     }
     .slider-container{
         margin-top: 2.2vh;
-        transform: translateX(-1vw);
+        transform: translateX(1vw);
     }
     .range-values{
-        margin-top: 0.5vh;
+        margin-top: 2.8vh;
+        font-size: smaller;
     }
     .Slider , .range-values{
         width: 100%;
@@ -298,15 +371,15 @@ input[type="range"]::-ms-thumb {
         -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
         appearance: none;
         width: 100%; /* Ensure it takes the full width of the container */
-        height: 5px; /* Adjust the thickness of the slider */
+        height: 4px; /* Adjust the thickness of the slider */
         /*background: lightyellow; !* Background of the slider track *!*/
         outline: none; /* Remove outline */
         border-radius: 5px; /* Round the edges of the slider */
         opacity: .85;
     }
     input[type="range"]::-webkit-slider-thumb {
-        width: 15px; /* Thumb (slider handle) width */
-        height: 15px; /* Thumb (slider handle) height */
+        width: 14px; /* Thumb (slider handle) width */
+        height: 14px; /* Thumb (slider handle) height */
         border-radius: 50%; /* Make the thumb circular */
         cursor: pointer; /* Change cursor to pointer */
     }
@@ -324,28 +397,31 @@ input[type="range"]::-ms-thumb {
         border-radius: 50%; /* Round thumb edges */
         cursor: pointer; /* Change cursor to pointer */
     }
-    .General{
+    .General,.Mark{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer{
-        top: 7vh;
+    .SelfGeneralContainer, .SelfMarkContainer{
+        top: 11vh;
         left: -2vh;
     }
     .custom-select ,.Bar{
-        width: 105%;
+        width: 100%;
         border-radius: 5vh;
         height: max-content;
     }
     .Gender,.Major{
-        margin-top: 6vh;
+        margin-top: 7vh;
     }
     .Gender{
-        margin-bottom: -1vh;
+        margin-bottom: -2vh;
     }
     .Bar{
-        transform: translateX(1vw);
+        transform: translateX(5vw);
     }
     .AgeBar{
+       min-height: 10.5vw;
+    }
+    .AgeBar, .MarkBar{
         font-size: small;
         text-indent: 15px;
     }
@@ -355,10 +431,15 @@ input[type="range"]::-ms-thumb {
         padding: 10px; /* Adjust padding for better fit */
     }
     .custom-select::after{
-        transform: translateY(-1.8vh);
+        transform: translate(5vw,-3vw);
+        overflow-y: scroll;
     }
     .custom-select select{
         padding-left: 7vw;
+        overflow-y: scroll;
+    }
+    .Mark2,.Mark3{
+        margin-top: 5vh;
     }
 
 
@@ -383,26 +464,27 @@ input[type="range"]::-ms-thumb {
         font-weight: lighter;
     }
     .Seperator{
-        top: 12vw;
+        top: 6vw;
     }
     .Slogan{
         position: relative;
-        top: 11.5vw;
-        font-size: 6.5vw;
+        top: 6vw;
+        font-size: 6vw;
     }
     .Hook{
         position: relative;
-        top: 13vw;
-        font-size: 3.6vw;
+        top: 8vw;
+        font-size: 3.5vw;
     }
     .Button{
-        top: 22vw;
+        top: 18vw;
     }
     .Start_button{
         height: 6.5vh;
-        width: 30%;
-        font-size: 3.2vw;
+        width: 35%;
+        font-size: 3.4vw;
         font-kerning: auto;
+        font-family: Poppins,sans-serif;
     }
     .MainImage{
         top: 50vw;
@@ -410,6 +492,7 @@ input[type="range"]::-ms-thumb {
     }
     .LandingImage{
         display: flex;
+        height: inherit;
         justify-content: center;
         align-self: center;
         top: 15vw;
@@ -417,7 +500,7 @@ input[type="range"]::-ms-thumb {
     .Trophy{
         position: relative;
         width:100%;
-        height: 43%;
+        height: 45%;
         top: 2vw;
     }
     .Panigation{
@@ -427,10 +510,12 @@ input[type="range"]::-ms-thumb {
         top: -1vw;
     }
     .LeftPani,.RightPani{
-        font-size: 6vh;
+        font-size: 7vh;
+        font-weight: lighter;
     }
     .Text{
         top: 3.8vh;
+        transform: translateX(2vh);
     }
     .Title{
         font-size: 1.5rem;
@@ -438,20 +523,27 @@ input[type="range"]::-ms-thumb {
     .Sub{
         font-size: 3.1vw;
     }
-    .InterestPage{
+    .InterestPage,.InterestPage2 {
         -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+        height: max(140vh);
     }
-    .InterestContainer{
+    .InterestContainer,.InterestContainer2{
         top: 7.8vh;
-        -webkit-overflow-scrolling: touch;
+        height: 79vh;
+        overflow-y: hidden;
     }
-    .InterestList{
+    .InterestList,.InterestList2{
         margin-left: 0.2vw;
     }
     .Require{
         font-size: 4.3vw;
     }
     .InterestList label{
+        margin-top: 4vw;
+        font-size: 3.5vw;
+    }
+    .InterestList2 label{
         margin-top: 4vw;
         font-size: 3.5vw;
     }
@@ -468,6 +560,10 @@ input[type="range"]::-ms-thumb {
         transform: translate(2.5vw,0.5vw);
         font-size: larger;
     }
+    .InterestList2 label .triangle{
+        transform: translate(2.5vw,0.5vw);
+        font-size: larger;
+    }
     .details{
         padding-left: 9.5vw;
     }
@@ -479,18 +575,18 @@ input[type="range"]::-ms-thumb {
         transform: translateY(1vh);
     }
     .Submit{
-        width: 12vh;
+        width: 98%;
     }
     .GradingContainer{
         top: 7.5vh;
     }
     .Textbox1{
-        margin-left:  -2vw;
+        top: -4vw;
+        margin-left:  4vw;
         transform: translateX(-1.5vh);
-
     }
     .Require1{
-        font-size: medium;
+        font-size: smaller;
     }
     .Rule{
         padding-left: 1.8vw;
@@ -510,22 +606,22 @@ input[type="range"]::-ms-thumb {
         transform: translateX(-1vh);
     }
     .Skill2{
-        margin-bottom: 0.5vh;
+        margin-bottom: .5vh;
     }
     .Skill4{
-        transform: translate(-0.8vh,-2.5vh);
+        transform: translate(-0.8vh,.5vh);
     }
 
     .Skillname{
-        transform: translateX(-1vw);
-        font-size: 3.5vw;
+        transform: translateX(2.2vw);
+        font-size: medium;
     }
     .slider-container{
         margin-top: 2vh;
-        transform: translateX(-1vw);
+        transform: translateX(2vw);
     }
     .range-values{
-        margin-top: 0.5vh;
+        margin-top: 2.5vh;
     }
     .Slider , .range-values{
         width: 100%;
@@ -540,31 +636,31 @@ input[type="range"]::-ms-thumb {
         opacity: .85;
     }
     input[type="range"]::-webkit-slider-thumb {
-        width: 17px; /* Thumb (slider handle) width */
-        height: 17px; /* Thumb (slider handle) height */
+        width: 16px; /* Thumb (slider handle) width */
+        height: 16px; /* Thumb (slider handle) height */
         border-radius: 50%; /* Make the thumb circular */
         cursor: pointer; /* Change cursor to pointer */
     }
 
     input[type="range"]::-moz-range-thumb {
-        width: 17px; /* Thumb width for Firefox */
-        height: 17px; /* Thumb height for Firefox */
+        width: 16px; /* Thumb width for Firefox */
+        height: 16px; /* Thumb height for Firefox */
         border-radius: 50%; /* Round thumb edges */
         cursor: pointer; /* Change cursor to pointer */
     }
 
     input[type="range"]::-ms-thumb {
-        width: 17px; /* Thumb width for Edge */
-        height: 17px; /* Thumb height for Edge */
+        width: 16px; /* Thumb width for Edge */
+        height: 16px; /* Thumb height for Edge */
         border-radius: 50%; /* Round thumb edges */
         cursor: pointer; /* Change cursor to pointer */
     }
     .General{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer{
-        top: 7vh;
-        left: -2vh;
+    .SelfGeneralContainer, .SelfMarkContainer{
+        top: 11vh;
+        left: -.5vh;
     }
     .custom-select ,.Bar{
         width: 90%;
@@ -575,12 +671,15 @@ input[type="range"]::-ms-thumb {
         margin-top: 6vh;
     }
     .Gender{
-        margin-bottom: -2vh;
+        margin-bottom: -1vh;
     }
     .Bar{
-        transform: translateX(1vw);
+        transform: translateX(4.5vw);
     }
     .AgeBar{
+        height: 10vw;
+    }
+    .AgeBar, .MarkBar{
         font-size: small;
         text-indent: 15px;
     }
@@ -595,6 +694,9 @@ input[type="range"]::-ms-thumb {
     .custom-select select{
         padding-left: 6vw;
     }
+    .Mark2,.Mark3{
+        margin-top: 4vh;
+    }
 
 }
 
@@ -605,7 +707,7 @@ input[type="range"]::-ms-thumb {
 /*MODIFY THE DISPLAY FOR TABLET*/
 @media screen and (min-width: 769px) and (max-width: 1024px) and (max-aspect-ratio:16/9) {
     .Home, .About {
-        font-size: 2vh; /* Adjust as needed */
+        font-size: 2.1vh; /* Adjust as needed */
         transition:none;
         display: block;
         padding: 4px;
@@ -616,7 +718,7 @@ input[type="range"]::-ms-thumb {
         font-weight: lighter;
     }
     .Seperator{
-        top: 6.5vh;
+        top: 5vh;
     }
     .Slogan{
         position: relative;
@@ -659,28 +761,35 @@ input[type="range"]::-ms-thumb {
         top: -1vw;
     }
     .LeftPani,.RightPani{
-        font-size: 7vw;
+        font-weight: lighter;
+        font-size: 10vw;
     }
     .Text{
-        top: 4vh;
+        top: 6vh;
+        transform: translateX(5vw);
     }
     .Title{
-        font-size: 4.8vw;
+        font-size: 4.4vw;
     }
     .Sub{
-        font-size: 2.6vw;
+        font-size: 2.55vw;
     }
     .InterestPage{
         -webkit-overflow-scrolling: touch;
+        height: 130vh;
     }
-    .InterestContainer{
-        top: 7vh;
+    .InterestPage2{
+        -webkit-overflow-scrolling: touch;
+        height: 150vh;
+    }
+    .InterestContainer,.InterestContainer2{
+        top: 13vh;
         -webkit-overflow-scrolling: touch;
     }
-    .InterestForm{
+    .InterestForm,.InterestForm2{
         top: -1vw;
     }
-    .InterestList{
+    .InterestList,.InterestList2{
         margin-left: 0.2vw;
         overflow-y: hidden;
     }
@@ -688,6 +797,10 @@ input[type="range"]::-ms-thumb {
         font-size: 3vw;
     }
     .InterestList label{
+        margin-top: 4vw;
+        font-size: 3vw;
+    }
+    .InterestList2 label{
         margin-top: 4vw;
         font-size: 3vw;
     }
@@ -703,6 +816,10 @@ input[type="range"]::-ms-thumb {
     }
 
     .InterestList label .triangle{
+        transform: translate(2.5vw,0.5vw);
+        font-size: xx-large;
+    }
+    .InterestList2 label .triangle{
         transform: translate(2.5vw,0.5vw);
         font-size: xx-large;
     }
@@ -725,20 +842,20 @@ input[type="range"]::-ms-thumb {
         top: 7vh;
     }
     .Textbox1{
+        top: 1vw;
         margin-left:  -2vw;
-        transform: translateX(0.5vh);
-
+        transform: translateX(3.5vh);
     }
     .Require1{
-        font-size: xx-large;
+        font-size: 2.7vw;
     }
     .Rule{
         padding-left: 2.8vw;
         font-size: 2.6vw;
     }
     .GradingSlideContainer{
-        top: 2vh;
-        left: -1vw;
+        top: 5vh;
+        left: 2vw;
         width: max(100%);
     }
     .Skill1,.Skill3{
@@ -759,7 +876,7 @@ input[type="range"]::-ms-thumb {
 
     .Skillname{
         transform: translateX(-1vw);
-        font-size: 2.72vw;
+        font-size: 2.5vw;
     }
     .range-values span{
         font-size: xx-large ;
@@ -774,12 +891,12 @@ input[type="range"]::-ms-thumb {
     .Slider , .range-values{
         width: 100%;
     }
-    .General{
+    .General, .Mark{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer{
-        top: 12vh;
-        left: -2vh;
+    .SelfGeneralContainer , .SelfMarkContainer{
+        top: 15vh;
+        left: 3vw;
     }
     .custom-select ,.Bar{
         width: 80%;
@@ -796,7 +913,7 @@ input[type="range"]::-ms-thumb {
     .Bar{
         transform: translateX(2vw);
     }
-    .AgeBar{
+    .AgeBar , .MarkBar{
         text-indent: 35px;
         font-size: xx-large;
 
@@ -813,11 +930,11 @@ input[type="range"]::-ms-thumb {
         font-size: xx-large;
     }
     .custom-select option{
-        /*width: 30%;*/
         font-size: medium;
     }
-
-
+    .Mark2,.Mark3{
+        margin-top: 6vh;
+    }
 
 
 }
@@ -826,8 +943,8 @@ input[type="range"]::-ms-thumb {
 @media screen and (min-width: 1024px) and (min-aspect-ratio:4/3) {
     .Home, .About {
         font-size: 2.5vh; /* Adjust as needed */
-        transition:none;
         width: max-content;
+        margin-top: 1vw;
     }
     .Home{
         transform: translateX(-10vw);
@@ -838,6 +955,7 @@ input[type="range"]::-ms-thumb {
     .Brand_name{
         font-size: 3vh;
         font-weight: lighter;
+        margin-top: 1vw;
     }
     .Seperator{
         top: 6.3vh;
@@ -860,21 +978,22 @@ input[type="range"]::-ms-thumb {
     }
     .Start_button{
         height: 6.5vh;
-        width: 11%;
+        width: 10%;
         font-size: 1.8vh;
         font-kerning: auto;
+        font-family: Poppins,sans-serif;
     }
     .LandingImage{
         display: flex;
         justify-content: center;
         align-self: center;
-        top: 10vh;
+        top: 11.5vh;
     }
     .Trophy{
         position: relative;
-        width:40%;
+        width:36%;
         top: -7vh;
-        height: 36vw;
+        height: 34vw;
     }
     .Panigation{
         top: 1vh;
@@ -883,10 +1002,12 @@ input[type="range"]::-ms-thumb {
         top: -1vh;
     }
     .LeftPani,.RightPani{
-        font-size: 7vh;
+        font-size: 8.5vh;
+        font-weight: lighter;
     }
     .Text{
         top: 3.5vh;
+        left: 5vh;
     }
     .Title{
         font-size: 3.5vh;
@@ -894,28 +1015,40 @@ input[type="range"]::-ms-thumb {
     .Sub{
         font-size: 2vh;
     }
-    .InterestContainer{
+    .InterestPage,.InterestPage2{
+        min-height: 100vh;
+        max-height: 120vh;
+    }
+    .InterestPage2{
+        height: 83vh;
+    }
+    .InterestContainer,.InterestContainer2{
         top: 5vh;
     }
 
-    .InterestForm{
-        top: 5vh;
+    .InterestForm,.InterestForm2{
+        top: 4vh;
     }
-    .InterestList{
-        margin-left: -1vh;
+    .InterestList,.InterestList2{
+        margin-left: .3vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     .Require{
-        font-size: 2.4vh;
+        font-size: 2.3vh;
     }
     .InterestList label{
         margin-top:3vh;
-        padding-bottom: 1vh;
-        /*font-size: 1.33vw;*/
-        font-size: x-large;
-        width: 48%;
+        padding-bottom: -3vh;
+        font-size: larger;
+        width: 45%;
+    }
+    .InterestList2 label{
+        margin-top:3vh;
+        padding-bottom: -3vh;
+        font-size: larger;
+        width: 45%;
     }
 
     .Choice input[type=checkbox]{
@@ -931,11 +1064,16 @@ input[type="range"]::-ms-thumb {
 
     .InterestList label .triangle{
         transform: translate(2.5vh,0.3vw);
-        font-size: 1.8vw;
+        font-size: 1.5vw;
+    }
+    .InterestList2 label .triangle{
+        transform: translate(2.5vh,0.3vw);
+        font-size: 1.5vw;
     }
     .details{
         font-size: large;
         padding-left: 6.8vh;
+        padding-bottom: -5vw;
     }
     .details.expanded {
         padding-top: 5px; /* Add padding when expanded */
@@ -952,17 +1090,18 @@ input[type="range"]::-ms-thumb {
         top: 4vw;
     }
     .Textbox1{
-        margin-left:  -2vw;
+        top: -1vw;
+        margin-left:  1.5vw;
     }
     .Require1{
-        font-size: large;
+        font-size: medium;
     }
     .Rule{
         padding-left: 1.2vw;
     }
     .GradingSlideContainer{
         top: 2vh;
-        left: -1vw;
+        left: 2vw;
     }
     .Skill1,.Skill3{
         margin-top: 3vh;
@@ -978,14 +1117,15 @@ input[type="range"]::-ms-thumb {
     }
     .Skillname{
         transform: translateX(-1vw);
-        font-size: larger;
+        font-size: large;
     }
     .slider-container{
-        margin-top: 2.5vh;
+        margin-top: 4vh;
         transform: translateX(-1vw);
     }
     .range-values{
         margin-top: 1.5vh;
+        font-size: medium;
     }
     .Slider , .range-values{
         width: 45%;
@@ -1019,11 +1159,12 @@ input[type="range"]::-ms-thumb {
         border-radius: 50%; /* Round thumb edges */
         cursor: pointer; /* Change cursor to pointer */
     }
-    .General{
-        transform: translateX(-0.5vw);
+    .General ,.Mark{
+        transform: translateX(.5vw);
     }
-    .SelfGeneralContainer{
-        top: 9vh;
+    .SelfGeneralContainer , .SelfMarkContainer{
+        top: 13vh;
+        left: 1.5vw;
     }
     .custom-select ,.Bar{
         width: 40%;
@@ -1031,22 +1172,18 @@ input[type="range"]::-ms-thumb {
         height: 5vh;
         font-size: 1.1em;
     }
-    .Gender,.Major{
+    .Gender,.Major,.Mark2 ,.Mark3{
         margin-top: 6vh;
     }
     .Gender{
         margin-bottom: 1vh;
     }
-    .AgeBar{
+    .AgeBar , .MarkBar{
         text-indent: 15px;
     }
     .custom-select::after{
         transform: translateY(-1vh);
     }
-
-
-
-
 
 }
 
@@ -1100,29 +1237,35 @@ input[type="range"]::-ms-thumb {
         top: 2vh;
     }
     .LeftPani,.RightPani{
-        font-size: 7.5vw;
+        font-size: 10.5vw;
+        font-weight: lighter;
     }
     .Text{
         top: 6vw;
+        transform: translateX(4.5vw);
     }
     .Title{
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
     .Sub{
-        font-size: 1.3rem;
+        font-size: 1.15rem;
     }
     .InterestPage{
         -webkit-overflow-scrolling: touch;
+        height: 165vh ;
     }
-    .InterestContainer{
-        top: 9vh;
+    .InterestPage2{
         -webkit-overflow-scrolling: touch;
+        height: 180vh ;
     }
-    .InterestForm{
-        top: -1vh;
+    .InterestContainer,.InterestContainer2{
+        top: 9vh;
+    }
+    .InterestForm,.InterestForm2{
+        top: 1vh;
     }
     .Require{
-        font-size: 3.5vw;
+        font-size: 3.2vw;
     }
     .Choice input[type=checkbox]{
         width: 3vw;
@@ -1131,10 +1274,14 @@ input[type="range"]::-ms-thumb {
     }
     .InterestList label .triangle{
         transform: translate(2.2vw,0.3vw);
-        font-size: xx-large;
+        font-size: x-large;
+    }
+    .InterestList2 label .triangle{
+        transform: translate(2.2vw,0.3vw);
+        font-size: x-large;
     }
     .details{
-        margin-left: 2vw;
+        margin-left: -1vw;
     }
     .details.expanded {
         padding-top: 15px; /* Add padding when expanded */
@@ -1144,51 +1291,55 @@ input[type="range"]::-ms-thumb {
         transform: translateY(0.7vh);
     }
     .Submit{
-        width: 16vw;
-        height: 5vh;
+        width: 98%;
+        /*width: 16vw;*/
+        /*height: 5vh;*/
         font-size: 1.3rem;
     }
+    .Textbox1{
+        top: -1vw;
+    }
     .Require1{
-        font-size: x-large;
+        font-size: larger;
     }
     .Rule{
         padding-left: 3.5vw;
         font-size: 2.5vw;
     }
     .Skillname{
-        font-size: 2.59vw;
+        font-size: larger;
     }
     .range-values{
-        font-size: 2.8vw;
-        margin-top: 1.5vh;
+        font-size: x-large;
+        margin-top: 2vh;
     }
     .slider-container{
         margin-top: 2.5vh;
-        transform: translateX(-1vw);
+        transform: translateX(2vw);
     }
-    .General{
+    .General ,.Mark{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer{
+    .SelfGeneralContainer ,.SelfMarkContainer{
         top: 12vh;
-        left: -2vh;
+        left: .1vh;
     }
     .custom-select ,.Bar{
-        width: 90%;
+        width: 83%;
         border-radius: 5vh;
         height: max-content;
     }
     .Gender,.Major{
-        margin-top: 8vh;
+        margin-top: 6vh;
         font-size: xx-large;
     }
     .Gender{
         margin-bottom: -1vh;
     }
     .Bar{
-        transform: translateX(2vw);
+        transform: translateX(4vw);
     }
-    .AgeBar{
+    .AgeBar, .MarkBar{
         text-indent: 35px;
         font-size: x-large;
 
@@ -1198,7 +1349,8 @@ input[type="range"]::-ms-thumb {
         padding: 10px; /* Adjust padding for better fit */
     }
     .custom-select::after{
-        transform: translate(1vh,-1.5vh);
+        font-size: smaller;
+        transform: translate(1vh,-2vh);
     }
     .custom-select select{
         padding-left: 5vw;
@@ -1206,6 +1358,15 @@ input[type="range"]::-ms-thumb {
     }
     .custom-select option{
         font-size: medium;
+    }
+    .Mark2,.Mark3{
+        margin-top: 8vw;
+    }
+    .InterestList label{
+        font-size: 2.8vw;
+    }
+    .InterestList2 label{
+        font-size: 2.8vw;
     }
 
 }
