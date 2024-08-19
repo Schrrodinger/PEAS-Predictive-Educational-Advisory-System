@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XGB.py" beforeDir="false" afterPath="$PROJECT_DIR$/XGB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templace/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check.js" beforeDir="false" afterPath="$PROJECT_DIR$/check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/encoding_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/encoding_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,17 @@
         <option value="JavaScript File" />
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -153,8 +167,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Flask server.Flask (backend.py)" />
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.check.js" />
+        <item itemvalue="Python.XGB" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +196,7 @@
       <workItem from="1723950330577" duration="7602000" />
       <workItem from="1723998064854" duration="170000" />
       <workItem from="1724027982520" duration="49000" />
-      <workItem from="1724075753631" duration="281000" />
+      <workItem from="1724075753631" duration="5821000" />
     </task>
     <servers />
   </component>
@@ -200,11 +215,12 @@
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$check_2.coverage" NAME="check_2 Coverage Results" MODIFIED="1723471811433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$XGBoost.coverage" NAME="XGBoost Coverage Results" MODIFIED="1723469760953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$RandomForest__1_.coverage" NAME="RandomForest (1) Coverage Results" MODIFIED="1723482900016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/encoding_schema_json$Flask__backend_py_.coverage" NAME="Flask (backend.py) Coverage Results" MODIFIED="1724076018922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/encoding_schema_json$Flask__backend_py_.coverage" NAME="Flask (backend.py) Coverage Results" MODIFIED="1724081745893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$1.coverage" NAME="1 Coverage Results" MODIFIED="1723372898663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$Flask__backend_py_.coverage" NAME="Flask (backend.py) Coverage Results" MODIFIED="1723998130931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$3.coverage" NAME="3 Coverage Results" MODIFIED="1723388921146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$Decision_tree.coverage" NAME="Decision tree Coverage Results" MODIFIED="1723482837148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$XGB__1_.coverage" NAME="XGB (1) Coverage Results" MODIFIED="1723796695246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/encoding_schema_json$XGB.coverage" NAME="XGB Coverage Results" MODIFIED="1724080389230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -3,14 +3,14 @@
     "Nữ": 2,
     "Nam": 1
   },
-   "Departments": {
-     "A": 1,
-     "B": 2,
-     "C": 3,
-     "D": 4,
-     "H": 5,
-     "V": 6,
-     "Other": 0
+  "Departments": {
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4,
+    "H": 5,
+    "V": 6,
+    "Other": 0
   },
   "Habit": {
     "Nghệ thuật và sáng tạo": 1,
@@ -35,6 +35,26 @@
     "Giáo dục": 10,
     "Truyền thông và Media": 11,
     "Nông nghiệp và Môi trường": 12
+  },
+  "Communication Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Teamwork Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Management Skills": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
+  },
+  "Critical Thinking": {
+    "Trung bình": 1,
+    "Khá": 2,
+    "Tốt": 3
   },
   "Computer Skills": {
     "Trung bình": 1,
@@ -76,7 +96,7 @@
     "Khá": 2,
     "Tốt": 3
   },
-   "Medical Skills": {
+  "Medical Skills": {
     "Trung bình": 1,
     "Khá": 2,
     "Tốt": 3
