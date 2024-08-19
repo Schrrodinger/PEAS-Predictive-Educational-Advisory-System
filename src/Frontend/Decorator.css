@@ -147,6 +147,10 @@ input[type="range"]::-ms-thumb {
     display: none;
     scrollbar-width: none;
 }
+.LastPage::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: none;
+}
 .InterestPage,.InterestPage2{
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -337,20 +341,20 @@ input[type="range"]::-ms-thumb {
         left: 1vw;
         width: max(103%);
     }
-    .Skill1,.Skill3{
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11{
         margin-top: 4vh;
         transform: translateX(-1vh);
     }
-    .Skill2,.Skill4{
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
         margin-top: 5vh;
         margin-bottom: 1vh;
         /*transform: translateX(-1vh);*/
     }
-    .Skill2{
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
         transform: translateX(-1vh);
     }
-    .Skill4{
-        transform: translate(0.18vh, -.5vh);
+    .Skill11{
+        transform: translateX(.5vh);
     }
     .Skillname{
         transform: translateX(1vw);
@@ -400,7 +404,7 @@ input[type="range"]::-ms-thumb {
     .General,.Mark{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer, .SelfMarkContainer{
+    .SelfGeneralContainer, .SelfMarkContainer,.LastContainer{
         top: 11vh;
         left: -2vh;
     }
@@ -409,8 +413,8 @@ input[type="range"]::-ms-thumb {
         border-radius: 5vh;
         height: max-content;
     }
-    .Gender,.Major{
-        margin-top: 7vh;
+    .Gender,.Major,.Location,.KeyFactor{
+        margin-top: 5vh;
     }
     .Gender{
         margin-bottom: -2vh;
@@ -597,11 +601,11 @@ input[type="range"]::-ms-thumb {
         left: -1vw;
         width: max(100%);
     }
-    .Skill1,.Skill3{
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11{
         margin-top: 3vh;
         transform: translateX(-1vh);
     }
-    .Skill2,.Skill4{
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
         margin-top: 3.5vh;
         transform: translateX(-1vh);
     }
@@ -658,7 +662,7 @@ input[type="range"]::-ms-thumb {
     .General{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer, .SelfMarkContainer{
+    .SelfGeneralContainer, .SelfMarkContainer,.LastContainer{
         top: 11vh;
         left: -.5vh;
     }
@@ -669,6 +673,9 @@ input[type="range"]::-ms-thumb {
     }
     .Gender,.Major{
         margin-top: 6vh;
+    }
+    .KeyFactor,.Location{
+        margin-top: 4vh;
     }
     .Gender{
         margin-bottom: -1vh;
@@ -689,7 +696,7 @@ input[type="range"]::-ms-thumb {
         padding: 10px; /* Adjust padding for better fit */
     }
     .custom-select::after{
-        transform: translate(1vh,-1.5vh);
+        transform: translate(2vh,-1.3vh);
     }
     .custom-select select{
         padding-left: 6vw;
@@ -858,20 +865,20 @@ input[type="range"]::-ms-thumb {
         left: 2vw;
         width: max(100%);
     }
-    .Skill1,.Skill3{
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill1{
         margin-top: 3vh;
         transform: translateX(-0.5vh);
     }
-    .Skill2,.Skill4{
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
         margin-top: 4vh;
         margin-bottom: 1vh;
         transform: translateX(-0.5vh);
     }
-    .Skill2{
-        transform: translateX(-1vh);
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
+        transform: translateX(-0.5vh);
     }
-    .Skill4{
-        transform: translate(-0.3vh , -1.8vh);
+    .Skill5,.Skill7,.Skill9,.Skill11{
+        transform: translateX(-0.5vh);
     }
 
     .Skillname{
@@ -891,10 +898,10 @@ input[type="range"]::-ms-thumb {
     .Slider , .range-values{
         width: 100%;
     }
-    .General, .Mark{
+    .General, .Mark ,.General1{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer , .SelfMarkContainer{
+    .SelfGeneralContainer , .SelfMarkContainer,.LastContainer{
         top: 15vh;
         left: 3vw;
     }
@@ -903,8 +910,8 @@ input[type="range"]::-ms-thumb {
         border-radius: 5vh;
         height: max-content;
     }
-    .Gender,.Major{
-        margin-top: 8vh;
+    .Gender,.Major,.KeyFactor,.Location{
+        margin-top: 7vh;
         font-size: xx-large;
     }
     .Gender{
@@ -916,14 +923,13 @@ input[type="range"]::-ms-thumb {
     .AgeBar , .MarkBar{
         text-indent: 35px;
         font-size: xx-large;
-
     }
      select.Bar {
-        /*max-width: 100%; !* Ensures it doesn't exceed the container width *!*/
         padding: 10px; /* Adjust padding for better fit */
     }
     .custom-select::after{
         transform: translate(1vh,-1.5vh);
+        font-size: 2.8vw;
     }
     .custom-select select{
         padding-left: 5vw;
@@ -1103,18 +1109,18 @@ input[type="range"]::-ms-thumb {
         top: 2vh;
         left: 2vw;
     }
-    .Skill1,.Skill3{
-        margin-top: 3vh;
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11{
+        margin-top: 5vh;
         /*transform: translateX(-1vh);*/
     }
-    .Skill2,.Skill4{
-        margin-top: 4vh;
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
+        margin-top: 6vh;
         margin-bottom: 1vh;
         /*transform: translateX(-1vh);*/
     }
-    .Skill4{
-        transform: translateY(-2.8vh);
-    }
+    /*.Skill4{*/
+    /*    transform: translateY(-2.8vh);*/
+    /*}*/
     .Skillname{
         transform: translateX(-1vw);
         font-size: large;
@@ -1128,12 +1134,12 @@ input[type="range"]::-ms-thumb {
         font-size: medium;
     }
     .Slider , .range-values{
-        width: 45%;
+        width: 40%;
     }
     input[type="range"] {
         -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
         appearance: none;
-        width: 45%; /* Ensure it takes the full width of the container */
+        width: 40%; /* Ensure it takes the full width of the container */
         height: 6px; /* Adjust the thickness of the slider */
         outline: none; /* Remove outline */
         border-radius: 5px; /* Round the edges of the slider */
@@ -1317,10 +1323,10 @@ input[type="range"]::-ms-thumb {
         margin-top: 2.5vh;
         transform: translateX(2vw);
     }
-    .General ,.Mark{
+    .General ,.Mark,.General1{
         transform: translateX(-0.5vw);
     }
-    .SelfGeneralContainer ,.SelfMarkContainer{
+    .SelfGeneralContainer ,.SelfMarkContainer,.LastContainer{
         top: 12vh;
         left: .1vh;
     }
@@ -1345,12 +1351,11 @@ input[type="range"]::-ms-thumb {
 
     }
     select.Bar {
-        /*max-width: 100%; !* Ensures it doesn't exceed the container width *!*/
         padding: 10px; /* Adjust padding for better fit */
     }
     .custom-select::after{
-        font-size: smaller;
-        transform: translate(1vh,-2vh);
+        font-size: large;
+        transform: translate(1.5vh,-1.5vh);
     }
     .custom-select select{
         padding-left: 5vw;

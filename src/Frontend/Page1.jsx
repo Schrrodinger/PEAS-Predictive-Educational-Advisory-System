@@ -23,6 +23,11 @@ const Page1 = () =>{
         }, 150);
     };
 
+    // HANDLE CHANGING VALUE
+    const  handleChange = (e) =>{
+        updateFormData({...formData, [e.target.name]: e.target.value});
+    };
+
     // HANDLE BLOCK CHOOSING
     const [selectedBlock, setSelectedBlock] = useState('');
 

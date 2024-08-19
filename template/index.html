@@ -60,6 +60,7 @@
 </head>
 <body>
     <h1>Major Prediction Form</h1>
+    <script src="{{ url_for('static', filename='check.js') }}"></script>
     <form id="majorPredictionForm">
         <label for="Gender">Gender:</label>
         <select name="Gender" required>
@@ -78,7 +79,7 @@
             <option value="H">H</option>
             <option value="V">V</option>
             <option value="Other">Other</option>
-        </select>
+        </select><br><br>
 
         <label for="Habit">Habit:</label>
         <select name="Habit" required>
@@ -116,7 +117,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Language Skills">Language Skills:</label>
         <select name="Language Skills" required>
@@ -124,7 +125,21 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
+
+        <label for="Communication Skills">Communication Skills:</label>
+        <select name="Communication Skills" required>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select><br><br>
+
+        <label for="Teamwork Skills">Teamwork Skills:</label>
+        <select name="Teamwork Skills" required>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Khá">Khá</option>
+            <option value="Tốt">Tốt</option>
+        </select><br><br>
 
         <label for="Machine Operation Skills">Machine Operation Skills:</label>
         <select name="Machine Operation Skills" required>
@@ -132,7 +147,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Data Analysis Skills">Data Analysis Skills:</label>
         <select name="Data Analysis Skills" required>
@@ -140,7 +155,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Sales and Marketing Skills">Sales and Marketing Skills:</label>
         <select name="Sales and Marketing Skills" required>
@@ -148,7 +163,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Writing Skills">Writing Skills:</label>
         <select name="Writing Skills" required>
@@ -156,7 +171,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Financial Skills">Financial Skills:</label>
         <select name="Financial Skills" required>
@@ -164,7 +179,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Project Management Skills">Project Management Skills:</label>
         <select name="Project Management Skills" required>
@@ -172,7 +187,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Medical Skills">Medical Skills:</label>
         <select name="Medical Skills" required>
@@ -180,7 +195,7 @@
             <option value="Trung bình">Trung bình</option>
             <option value="Khá">Khá</option>
             <option value="Tốt">Tốt</option>
-        </select>
+        </select><br><br>
 
         <label for="Annual Tuition Budget">Annual Tuition Budget:</label>
         <select name="Annual Tuition Budget" required>
@@ -216,33 +231,34 @@
     </form>
 
     <div id="result"></div>
-    <script src="{{ url_for('static', filename='check.js') }}"></script>
+
     <script>
-        document.getElementById('majorPredictionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+    document.getElementById('majorPredictionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-            var formData = new FormData(this);
-            var jsonData = {};
-            formData.forEach((value, key) => {
-                jsonData[key] = value;
-            });
+        var formData = new FormData(this);
+        var jsonData = {};
+        formData.forEach((value, key) => {jsonData[key] = value});
 
-            fetch('/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(jsonData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('result').innerText = 'Predicted Major: ' + data.predicted_major;
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                document.getElementById('result').innerText = 'An error occurred. Please try again.';
-            });
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            document.getElementById('result').innerText = 'Predicted Major: ' + data.predicted_major;
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            document.getElementById('result').innerText = 'An error occurred: ' + error.message;
         });
+    });
     </script>
 </body>
 </html>

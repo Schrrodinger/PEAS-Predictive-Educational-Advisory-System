@@ -38,21 +38,36 @@ function Page5() {
                 <div className="Sub large-12 medium-12- small-12 columns" style={{ position: 'relative', fontKerning: 'auto', fontFamily: 'Montserrat, sans-serif', color: 'floralwhite', fontStyle: 'italic' }}>Nhập thông tin của bạn dưới đây để tiến hành phân tích</div>
             </div>
 
-            <div className="GradingContainer large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height: '100%' }}>
-                <div className="Textbox1 large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', width: 'max(107%)', height: 'fit-content', position: 'relative' }}>
+            <div className="GradingContainer large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height: '120%' }}>
+                <div className="Textbox1 large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', width: 'max(100%)', height: 'fit-content', position: 'relative' }}>
                     <div className="Require1 large-12 medium-12 small-12 columns" style={{ position: 'relative', fontKerning: 'auto', fontFamily: 'Montserrat, sans-serif', color: '#E7E7C8', fontStyle: 'italic' }}>* Tự đánh giá kĩ năng mềm của bạn theo các mục dưới đây</div>
                     <div className="Rule large-12 medium-12 small-12 columns" style={{ position: 'relative', fontKerning: 'auto', fontFamily: 'Montserrat, sans-serif', color: '#E7E7C8', fontStyle: 'italic' }}>( 1-2: Kĩ năng cần cải thiện ; 3: Kĩ năng trung bình ; 4-5: Tự tin )</div>
                 </div>
 
-                <form className="GradingSlideContainer large-12 medium-12 small-12 columns" style={{ position: 'relative', height: 'max-content', boxSizing: 'border-box' }}>
+                <form className="GradingSlideContainer large-12 medium-12 small-12 columns "
+                      style={{position: 'relative', height: 'max-content', boxSizing: 'border-box'}}>
                     {/* Skill 1 */}
-                    <div className="Skill1 large-12 medium-12 small-12 columns" id="Skill_1" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box', width: 'inherit', height: 'max-content' }}>
-                        <div className="Skillname large-12 medium-12 small-12 columns" style={{ textAlign: 'left', width: 'inherit' }}>
-                            Kĩ năng giao tiếp ( Giao tiếp bằng lời, hành động, lắng nghe tích cực)
+                    <div className="Skill1 large-12 medium-12 small-12 columns" id="Skill_1" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng tin học
                         </div>
-                        <div className="slider-container large-12 medium-12 small-12 columns" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', width: 'inherit' }}>
-                            <input className="Slider" type="range" min="1" max="5" defaultValue="1" />
-                            <div className="range-values" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
                                 <span>3</span>
@@ -63,13 +78,27 @@ function Page5() {
                     </div>
 
                     {/* Skill 2 */}
-                    <div className="Skill2 large-12 medium-12 small-12 columns" id="Skill_2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box', width: 'inherit', height: 'max-content' }}>
-                        <div className="Skillname large-12 medium-12 small-12 columns" style={{ textAlign: 'left', width: 'inherit' }}>
-                            Kĩ năng quản lí ( Quản lí thời gian, lập kế hoạch, tổ chức công việc )
+                    <div className="Skill2 large-12 medium-12 small-12 columns" id="Skill_2" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng ngôn ngữ
                         </div>
-                        <div className="slider-container large-12 medium-12 small-12 columns" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', width: 'inherit' }}>
-                            <input className="Slider" type="range" min="1" max="5" defaultValue="1" />
-                            <div className="range-values" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
                                 <span>3</span>
@@ -80,13 +109,27 @@ function Page5() {
                     </div>
 
                     {/* Skill 3 */}
-                    <div className="Skill3 large-12 medium-12 small-12 columns" id="Skill_3" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box', width: 'inherit', height: 'max-content' }}>
-                        <div className="Skillname large-12 medium-12 small-12 columns" style={{ textAlign: 'left', width: 'inherit' }}>
-                            Kĩ năng quản lí ( Quản lí thời gian, lập kế hoạch, tổ chức công việc )
+                    <div className="Skill3 large-12 medium-12 small-12 columns" id="Skill_3" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng giao tiếp
                         </div>
-                        <div className="slider-container large-12 medium-12 small-12 columns" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', width: 'inherit' }}>
-                            <input className="Slider" type="range" min="1" max="5" defaultValue="1" />
-                            <div className="range-values" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
                                 <span>3</span>
@@ -97,13 +140,27 @@ function Page5() {
                     </div>
 
                     {/* Skill 4 */}
-                    <div className="Skill4 large-12 medium-12 small-12 columns" id="Skill_4" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box', width: 'inherit', height: 'max-content' }}>
-                        <div className="Skillname large-12 medium-12 small-12 columns" style={{ textAlign: 'left', width: 'inherit' }}>
-                            Kĩ năng tư duy ( Tư duy phản biện, sáng tạo , giải quyết vấn đề )
+                    <div className="Skill4 large-12 medium-12 small-12 columns" id="Skill_4" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng làm việc nhóm
                         </div>
-                        <div className="slider-container large-12 medium-12 small-12 columns" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', width: 'inherit' }}>
-                            <input className="Slider" type="range" min="1" max="5" defaultValue="1" />
-                            <div className="range-values" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
                                 <span>3</span>
@@ -112,11 +169,230 @@ function Page5() {
                             </div>
                         </div>
                     </div>
+
+                    {/*    Skill 5*/}
+                    <div className="Skill5 large-12 medium-12 small-12 columns" id="Skill_5" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng vận hành máy móc
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 6*/}
+                    <div className="Skill6 large-12 medium-12 small-12 columns" id="Skill_6" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng phân tích dữ liệu
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 7*/}
+                    <div className="Skill7 large-12 medium-12 small-12 columns" id="Skill_7" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng bán hàng và tiếp thị
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 8*/}
+                    <div className="Skill8 large-12 medium-12 small-12 columns" id="Skill_8" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng viết lách
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 9*/}
+                    <div className="Skill9 large-12 medium-12 small-12 columns" id="Skill_9" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng quản lí tài chính
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 10*/}
+                    <div className="Skill10 large-12 medium-12 small-12 columns" id="Skill_10" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng quản lí dự án
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 11*/}
+                    <div className="Skill11 large-12 medium-12 small-12 columns" id="Skill_11" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng y tế
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
     );
 }
+
 export default Page5;
 
 
