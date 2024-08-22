@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Decorator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Decorator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page1.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page5.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +197,15 @@
       <workItem from="1724075753631" duration="281000" />
       <workItem from="1724246126453" duration="5625000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6">
+      <option name="closed" value="true" />
+      <created>1724327626667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724327626667</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +213,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Merge remote-tracking branch 'ReactFrontEnd/main' into BE" />
+    <MESSAGE value="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

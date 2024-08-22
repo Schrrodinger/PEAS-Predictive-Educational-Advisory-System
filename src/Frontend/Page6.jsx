@@ -122,10 +122,10 @@ const Page6 = () =>{
                     <label className="Budget" style={{position: 'relative'}}>
                         <div className="custom-select">
                             <select className="Bar" id="budget" required>
-                                <option value="" disabled selected>Chọn nơi bạn muốn học</option>
-                                <option>Khu vực miền Bắc</option>
-                                <option>Khu vực miền Trung</option>
-                                <option>Khu vực miền Nam</option>
+                                <option value="" disabled selected>Chọn mức học phí phù hợp với bạn</option>
+                                <option>Dưới 50.000.000 VND/năm</option>
+                                <option>Trên 50.000.000 VND/năm </option>
+                                <option>Trên 100.000.000 VND/năm </option>
                             </select>
                         </div>
                     </label>

@@ -1165,10 +1165,10 @@ input[type="range"]::-ms-thumb {
         border-radius: 50%; /* Round thumb edges */
         cursor: pointer; /* Change cursor to pointer */
     }
-    .General ,.Mark{
+    .General ,.Mark,.Location,.KeyFactor,.Budget{
         transform: translateX(.5vw);
     }
-    .SelfGeneralContainer , .SelfMarkContainer{
+    .SelfGeneralContainer , .SelfMarkContainer,.LastContainer{
         top: 13vh;
         left: 1.5vw;
     }
@@ -1178,7 +1178,7 @@ input[type="range"]::-ms-thumb {
         height: 5vh;
         font-size: 1.1em;
     }
-    .Gender,.Major,.Mark2 ,.Mark3{
+    .Gender,.Major,.Mark2 ,.Mark3,.KeyFactor,.Location{
         margin-top: 6vh;
     }
     .Gender{
