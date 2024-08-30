@@ -13,7 +13,7 @@ function App() {
     const [formData, setFormData] = useState({
         Age:'',
         Gender:'',
-        Blocks:'',
+        Block:'',
         Mark1:'',
         Mark2:'',
         Mark3:'',

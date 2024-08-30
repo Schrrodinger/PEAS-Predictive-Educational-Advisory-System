@@ -91,12 +91,12 @@ const Page1 = ({formData,updateFormData}) =>{
                         </div>
                     </label>
                 </form>
-                {/*<div className="formDataDisplay">*/}
-                {/*    <h3>Stored Data:</h3>*/}
-                {/*    <p>Skill3: {formData.Age}</p>*/}
-                {/*    <p>Skill3: {formData.Gender}</p>*/}
-                {/*    <p>Skill3: {formData.Blocks}</p>*/}
-                {/*</div>*/}
+                <div className="formDataDisplay">
+                    <h3>Stored Data:</h3>
+                    <p>Skill3: {formData.Age}</p>
+                    <p>Skill3: {formData.Gender}</p>
+                    <p>Skill3: {formData.Block}</p>
+                </div>
             </div>
         </div>
     );

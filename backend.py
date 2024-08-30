@@ -8,7 +8,7 @@ import numpy as np
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__)
 
 # Load model and encoders
 model = joblib.load('major_prediction_model.joblib')
