@@ -13,16 +13,10 @@ function App() {
     const [formData, setFormData] = useState({
         Age:'',
         Gender:'',
-        Block:'',
+        Blocks:'',
         Mark1:'',
         Mark2:'',
         Mark3:'',
-        Interest1:'',
-        Interest2:'',
-        Interest3:'',
-        InterestField1:'',
-        InterestField2:'',
-        InterestField3:'',
         Skill1:'',
         Skill2:'',
         Skill3:'',
@@ -47,12 +41,12 @@ function App() {
             <div className="navigation">
                 <Routes>
                     <Route path="/" element={<Page0 />} />
-                    <Route path="/page1" element={<Page1 />} />
-                    <Route path="/page2" element={<Page2 />} />
-                    <Route path="/page3" element={<Page3 />} />
-                    <Route path="/page4" element={<Page4 />} />
-                    <Route path="/page5" element={<Page5 />} />
-                    <Route path="/page6" element={<Page6 />} />
+                    <Route path="/page1" element={<Page1 formData={formData} updateFormData={updateFormData} />} />
+                    <Route path="/page2" element={<Page2 formData={formData} updateFormData={updateFormData} />} />
+                    <Route path="/page3" element={<Page3 formData={formData} updateFormData={updateFormData} />} />
+                    <Route path="/page4" element={<Page4 formData={formData} updateFormData={updateFormData} />} />
+                    <Route path="/page5" element={<Page5 formData={formData} updateFormData={updateFormData} />} />
+                    <Route path="/page6" element={<Page6 formData={formData} updateFormData={updateFormData} />} />
                 </Routes>
             </div>
         </Router>

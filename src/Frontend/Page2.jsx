@@ -4,7 +4,7 @@ import Subject from "./Subject.js";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-const Page2 = () =>{
+const Page2 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
     // HANDLE FORWARD PAGE TRANSITON
@@ -33,6 +33,12 @@ const Page2 = () =>{
             document.getElementById('s3').placeholder = `Nhập điểm môn ${subjects[2]}`;
         }
     }, []); // Empty dependency array means this runs once on mount
+
+
+    //  HANDLE STORE DATA
+    const handleDataChange = (e) =>{
+        updateFormData({...formData, [e.target.name]: e.target.value});
+    };
     return (
         <div className="SelfGeneralPage large-12 small-12 medium-12 columns" style={{ boxSizing: 'border-box', marginLeft: 0, marginTop: 0, width: '100%', height: '80vh', position: 'relative', overflowY: 'scroll' }}>
             <div className="Panigation large-12 medium-12 small-12 columns" style={{  boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content', display: 'inline-block', margin: 'auto' }}>
@@ -51,21 +57,29 @@ const Page2 = () =>{
                     Nhập thông tin của bạn dưới đây để tiến hành phân tích
                 </div>
             </div>
-            <div className="SelfMarkContainer large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content' }}>
-                <form className="Mark large-12 medium-12 small-12 columns" style={{height: "fit-content"}}>
+            <div className="SelfMarkContainer large-12 medium-12 small-12 columns"
+                 style={{boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content'}}>
+                <form className="Mark large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
+                      onChange={handleDataChange}>
                     <div className="Mark1" style={{position: 'relative', width: "inherit"}}>
-                        <input className="Bar MarkBar" type="text" id="s1" name="age" autoFocus={true}
+                        <input className="Bar MarkBar" type="text" id="s1" name="Mark1" autoFocus={true}
                                placeholder="Nhập điểm môn 1" required style={{boxSizing: "border-box"}}/>
                     </div>
                     <div className="Mark2" style={{position: 'relative', width: "inherit"}}>
-                        <input className="Bar MarkBar" type="text" id="s2" name="age" autoFocus={true}
+                        <input className="Bar MarkBar" type="text" id="s2" name="Mark2" autoFocus={true}
                                placeholder="Nhập điểm môn 2" required style={{boxSizing: "border-box"}}/>
                     </div>
                     <div className="Mark3" style={{position: 'relative', width: "inherit"}}>
-                        <input className="Bar MarkBar" type="text" id="s3" name="age" autoFocus={true}
+                        <input className="Bar MarkBar" type="text" id="s3" name="Mark3" autoFocus={true}
                                placeholder="Nhập điểm môn 3" required style={{boxSizing: "border-box"}}/>
                     </div>
                 </form>
+                <div className="formDataDisplay">
+                    <h3>Stored Data:</h3>
+                    <p>Skill3: {formData.Mark1}</p>
+                    <p>Skill3: {formData.Mark2}</p>
+                    <p>Skill3: {formData.Mark3}</p>
+                </div>
             </div>
         </div>
     );

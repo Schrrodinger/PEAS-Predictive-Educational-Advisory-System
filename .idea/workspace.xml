@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Decorator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Decorator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page1.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page2.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page5.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
     </list>
@@ -26,20 +29,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "PhungNghiaMa"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PhungNghiaMa&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Schrrodinger/PEAS-Predictive-Educational-Advisory-System.git",
-    "accountId": "e9536dbb-6c20-420c-8dd1-b0dbb7e8aa86"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Schrrodinger/PEAS-Predictive-Educational-Advisory-System.git&quot;,
+    &quot;accountId&quot;: &quot;e9536dbb-6c20-420c-8dd1-b0dbb7e8aa86&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -196,6 +204,8 @@
       <workItem from="1724027982520" duration="49000" />
       <workItem from="1724075753631" duration="281000" />
       <workItem from="1724246126453" duration="5625000" />
+      <workItem from="1725030018744" duration="1998000" />
+      <workItem from="1725032072614" duration="2071000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6">
       <option name="closed" value="true" />
@@ -210,6 +220,29 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="ReactFrontEnd" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

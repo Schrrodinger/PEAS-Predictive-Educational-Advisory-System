@@ -3,7 +3,7 @@ import './Decorator.css';
 // import Subject from "./Subject.js";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-const Page1 = () =>{
+const Page1 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
     // HANDLE FORWARD PAGE TRANSITON
@@ -24,7 +24,7 @@ const Page1 = () =>{
     };
 
     // HANDLE CHANGING VALUE
-    const  handleChange = (e) =>{
+    const handleDataChange = (e) =>{
         updateFormData({...formData, [e.target.name]: e.target.value});
     };
 
@@ -38,14 +38,6 @@ const Page1 = () =>{
         console.log(value);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if (selectedBlock) {
-            history.push('/page2'); // Navigate to Page2 after selection
-        } else {
-            alert('Please select a block');
-        }
-    };
 
     return (
         <div className="SelfGeneralPage large-12 small-12 medium-12 columns ${fade ? 'fade-out' : ''}" style={{ boxSizing: 'border-box', marginLeft: 0, marginTop: 0, width: '100%', height: '80vh', position: 'relative', overflowY: 'scroll' }}>
@@ -65,14 +57,17 @@ const Page1 = () =>{
                     Nhập thông tin của bạn dưới đây để tiến hành phân tích
                 </div>
             </div>
-            <div className="SelfGeneralContainer large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content' }}>
-                <form className="General large-12 medium-12 small-12 columns" style={{height:"fit-content"}}>
-                    <div className="Age" style={{ position: 'relative',width:"inherit" }}>
-                        <input className="Bar AgeBar" type="text" id="age" name="age" autoFocus={true} placeholder="Nhập tuổi của bạn tại đây" required style={{boxSizing:"border-box"}} />
+            <div className="SelfGeneralContainer large-12 medium-12 small-12 columns"
+                 style={{boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content'}}>
+                <form className="General large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
+                      onChange={handleDataChange}>
+                    <div className="Age" style={{position: 'relative', width: "inherit"}}>
+                        <input className="Bar AgeBar" type="text" id="age" name="Age" autoFocus={true}
+                               placeholder="Nhập tuổi của bạn tại đây" required style={{boxSizing: "border-box"}}/>
                     </div>
-                    <label className="Gender" style={{ position: 'relative' }}>
+                    <label className="Gender" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="gender" name="gender" required>
+                            <select className="Bar" id="gender" name="Gender" required>
                                 <option value="" disabled selected>Chọn giới tính</option>
                                 <option value="male">Nam</option>
                                 <option value="female">Nữ</option>
@@ -80,9 +75,10 @@ const Page1 = () =>{
                             </select>
                         </div>
                     </label>
-                    <label className="Major" style={{ position: 'relative' }}>
+                    <label className="Major" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="division" name="division" required onChange={handleSelectChange}>
+                            <select className="Bar" id="block" name="Block" required
+                                    onChange={handleSelectChange}>
                                 <option value="" disabled selected>Khối bạn muốn thi</option>
                                 <option value="a00">A00</option>
                                 <option value="a01">A01</option>
@@ -95,6 +91,12 @@ const Page1 = () =>{
                         </div>
                     </label>
                 </form>
+                {/*<div className="formDataDisplay">*/}
+                {/*    <h3>Stored Data:</h3>*/}
+                {/*    <p>Skill3: {formData.Age}</p>*/}
+                {/*    <p>Skill3: {formData.Gender}</p>*/}
+                {/*    <p>Skill3: {formData.Blocks}</p>*/}
+                {/*</div>*/}
             </div>
         </div>
     );

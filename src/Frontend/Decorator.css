@@ -316,10 +316,11 @@ input[type="range"]::-ms-thumb {
         padding-bottom: 8px; /* Add padding when expanded */
     }
     .SubmitButton{
-        transform: translateY(1vh);
+        transform: translateY(3vh);
     }
     .Submit{
-        width: 95%;
+        width: 100%;
+        font-size: .75em;
     }
     .GradingContainer{
         top: 6vh;
@@ -357,12 +358,12 @@ input[type="range"]::-ms-thumb {
         transform: translateX(.5vh);
     }
     .Skillname{
-        transform: translateX(1vw);
+        transform: translateX(-.5vw);
         font-size: smaller;
     }
     .slider-container{
         margin-top: 2.2vh;
-        transform: translateX(1vw);
+        transform: translateX(-1vw);
     }
     .range-values{
         margin-top: 2.8vh;
@@ -576,10 +577,11 @@ input[type="range"]::-ms-thumb {
         padding-bottom: 8px; /* Add padding when expanded */
     }
     .SubmitButton{
-        transform: translateY(1vh);
+        transform: translateY(3vh);
     }
     .Submit{
-        width: 98%;
+        width: 100%;
+        font-size: smaller;
     }
     .GradingContainer{
         top: 7.5vh;
@@ -838,7 +840,7 @@ input[type="range"]::-ms-thumb {
         padding-bottom: 10px; /* Add padding when expanded */
     }
     .SubmitButton{
-        transform: translateY(0.7vh);
+        transform: translateY(3vh);
     }
     .Submit{
         width: 14vw;
@@ -1086,7 +1088,7 @@ input[type="range"]::-ms-thumb {
         padding-bottom: 10px; /* Add padding when expanded */
     }
     .SubmitButton{
-        transform: translateY(0.7vh);
+        transform: translateY(3vh);
     }
     .Submit{
         width: 10vh;
@@ -1294,13 +1296,13 @@ input[type="range"]::-ms-thumb {
         padding-bottom: 3vw; /* Add padding when expanded */
     }
     .SubmitButton{
-        transform: translateY(0.7vh);
+        transform: translateY(3vh);
     }
     .Submit{
         width: 98%;
         /*width: 16vw;*/
         /*height: 5vh;*/
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .Textbox1{
         top: -1vw;
