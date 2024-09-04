@@ -6,6 +6,7 @@ import Page3 from './Frontend/Page3.jsx';
 import Page4 from './Frontend/Page4.jsx';
 import Page5 from './Frontend/Page5.jsx';
 import Page6 from './Frontend/Page6.jsx';
+import ResultPage from "./Frontend/ResultPage.jsx";
 import './Frontend/Decorator.css';
 import {useState} from "react";
 
@@ -47,6 +48,7 @@ function App() {
                     <Route path="/page4" element={<Page4 formData={formData} updateFormData={updateFormData} />} />
                     <Route path="/page5" element={<Page5 formData={formData} updateFormData={updateFormData} />} />
                     <Route path="/page6" element={<Page6 formData={formData} updateFormData={updateFormData} />} />
+                    <Route path="/result" element={<ResultPage />} />
                 </Routes>
             </div>
         </Router>

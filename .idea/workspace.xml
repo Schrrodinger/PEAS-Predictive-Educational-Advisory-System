@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Create function to store the user input data for all pages">
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="print out the json file of user input in the console">
+      <change afterPath="$PROJECT_DIR$/src/Frontend/ResultPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/encoding_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/encoding_schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page1.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +204,8 @@
       <workItem from="1724075753631" duration="281000" />
       <workItem from="1724246126453" duration="5625000" />
       <workItem from="1725030018744" duration="1998000" />
-      <workItem from="1725032072614" duration="2749000" />
+      <workItem from="1725032072614" duration="8262000" />
+      <workItem from="1725333654218" duration="4163000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6">
       <option name="closed" value="true" />
@@ -221,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725034310719</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="print out the json file of user input in the console">
+      <option name="closed" value="true" />
+      <created>1725034908942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725034908942</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,14 +265,15 @@
     <MESSAGE value="Merge remote-tracking branch 'ReactFrontEnd/main' into BE" />
     <MESSAGE value="Merge remote-tracking branch 'ReactFrontEnd/main' into BE and add page6" />
     <MESSAGE value="Create function to store the user input data for all pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create function to store the user input data for all pages" />
+    <MESSAGE value="print out the json file of user input in the console" />
+    <option name="LAST_COMMIT_MESSAGE" value="print out the json file of user input in the console" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.jsx</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

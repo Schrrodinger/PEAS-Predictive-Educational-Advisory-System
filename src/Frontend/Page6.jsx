@@ -47,27 +47,29 @@ const Page6 = ({formData,updateFormData}) =>{
         // You can save this JSON to localStorage or send it to the server as per your requirement
         localStorage.setItem('formData', formDataJson);
 
-        // try {
-        //     // Send form data to Flask backend
-        //     const response = await fetch('http://localhost:5000/predict', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(formData)
-        //     });
-        //
-        //     const result = await response.json();
-        //     if (response.ok) {
-        //         console.log('Prediction result:', result);
-        //         // Navigate to a new page or display the result as needed
-        //     } else {
-        //         console.error('Error:', result.error);
-        //     }
-        // } catch (error) {
-        //     console.error('Error during submission:', error);
-        // }
+        try {
+            // Send form data to Flask backend
+            const response = await fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const resultData = await response.json();
+            if (response.ok) {
+                console.log('Prediction result:', resultData);
+                navigate('/result', { state: { result: resultData.predicted_major } }); // Navigate to the result page
+            } else {
+                console.error('Error:', resultData.error);
+            }
+        } catch (error) {
+            console.error('Error during submission:', error);
+        }
     };
+
+    const [result, setResult] = useState(null);
 
 
     return (
@@ -184,6 +186,13 @@ const Page6 = ({formData,updateFormData}) =>{
                     <p>Skill3: {formData.Location}</p>
                     <p>Skill3: {formData.KeyFactor}</p>
                 </div>
+                {/*/!* Display the result *!/*/}
+                {/*{result && (*/}
+                {/*    <div>*/}
+                {/*        <h3>Prediction Result:</h3>*/}
+                {/*        <p>{result}</p>*/}
+                {/*    </div>*/}
+                {/*)}*/}
             </div>
         </div>
     );
