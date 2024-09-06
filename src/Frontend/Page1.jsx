@@ -69,34 +69,33 @@ const Page1 = ({formData,updateFormData}) =>{
                         <div className="custom-select">
                             <select className="Bar" id="gender" name="Gender" required>
                                 <option value="" disabled selected>Chọn giới tính</option>
-                                <option value="male">Nam</option>
-                                <option value="female">Nữ</option>
-                                <option value="other">Khác</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
                             </select>
                         </div>
                     </label>
                     <label className="Major" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="block" name="Block" required
+                            <select className="Bar" id="block" name="Departments" required
                                     onChange={handleSelectChange}>
                                 <option value="" disabled selected>Khối bạn muốn thi</option>
-                                <option value="a00">A00</option>
-                                <option value="a01">A01</option>
-                                <option value="b00">B00</option>
-                                <option value="c00">C00</option>
-                                <option value="d01">D01</option>
-                                <option value="h01">H01</option>
-                                <option value="k">Khác</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="H">H</option>
+                                <option value="V">V</option>
+                                <option value="Other">Khác</option>
                             </select>
                         </div>
                     </label>
                 </form>
-                <div className="formDataDisplay">
-                    <h3>Stored Data:</h3>
-                    <p>Skill3: {formData.Age}</p>
-                    <p>Skill3: {formData.Gender}</p>
-                    <p>Skill3: {formData.Block}</p>
-                </div>
+                {/*<div className="formDataDisplay">*/}
+                {/*    <h3>Stored Data:</h3>*/}
+                {/*    <p>Skill3: {formData.Age}</p>*/}
+                {/*    <p>Skill3: {formData.Gender}</p>*/}
+                {/*    <p>Skill3: {formData.Block}</p>*/}
+                {/*</div>*/}
             </div>
         </div>
     );

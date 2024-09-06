@@ -98,20 +98,20 @@ loaded_model = joblib.load('major_prediction_model.joblib')
 
 # Create a sample input
 sample_input = pd.DataFrame({
-    'Departments': [0],  # Assuming 0 corresponds to a specific department in your encoding
-    'Communication Skills': [2],
-    'Teamwork Skills': [1],
-    'Management Skills': [2],
-    'Critical Thinking': [2],
-    'Computer Skills': [2],
-    'Language Skills': [1],
-    'Machine Operation Skills': [1],
-    'Data Analysis Skills': [2],
-    'Sales and Marketing Skills': [1],
-    'Writing Skills': [2],
-    'Financial Skills': [1],
-    'Project Management Skills': [2],
-    'Medical Skills': [1]
+       'Departments': [0],  # Assuming 0 corresponds to a specific department in your encoding
+       'Communication Skills': [2],
+       'Teamwork Skills': [1],
+       'Management Skills': [2],
+       'Critical Thinking': [2],
+       'Computer Skills': [2],
+       'Language Skills': [1],
+       'Machine Operation Skills': [1],
+       'Data Analysis Skills': [2],
+       'Sales and Marketing Skills': [1],
+       'Writing Skills': [2],
+       'Financial Skills': [1],
+       'Project Management Skills': [2],
+       'Medical Skills': [1]
 })
 
 # Ensure the order of columns matches the order used during training

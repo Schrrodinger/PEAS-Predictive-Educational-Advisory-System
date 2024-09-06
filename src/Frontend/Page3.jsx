@@ -34,38 +34,43 @@ const Page3 = () => {
         }));
     };
 
+    //  HANDLE SAVE DATA
+    const handleDataChange = (e) =>{
+        updateFormData({...formData, [e.target.name]: e.target.value});
+    };
+
     const getChoiceLabel = (choice) => {
         const labels = {
-            'A': 'Khoa học tự nhiên',
-            'B': 'Khoa học xã hội',
-            'C': 'Công nghệ',
-            'D': 'Kỹ thuật',
-            'E': 'Y tế',
-            'F': 'Kinh tế',
-            'I': 'Luật ',
-            'H': 'Giáo dục',
-            'G': 'Nghệ thuật',
-            'J': 'Truyền thông và báo chí',
-            'K': 'Nông nghiệp và môi trường',
-            'L': 'Du lịch và dịch vụ'
+            'Khoa học tự nhiên': 'Khoa học tự nhiên',
+            'Khoa học xã hội': 'Khoa học xã hội',
+            'Công nghệ': 'Công nghệ',
+            'Kỹ thuật': 'Kỹ thuật',
+            'Y tế': 'Y tế',
+            'Kinh tế': 'Kinh tế',
+            'Luật': 'Luật ',
+            'Giáo dục': 'Giáo dục',
+            'Nghệ thuật': 'Nghệ thuật',
+            'Truyền thông và báo chí': 'Truyền thông và báo chí',
+            'Nông nghiệp và môi trường': 'Nông nghiệp và môi trường',
+            'Du lịch và dịch vụ': 'Du lịch và dịch vụ'
         };
         return labels[choice];
     };
 
     const getChoiceDetails = (choice) => {
         const details = {
-            'A': 'Vật lí, Hóa học, Địa chất học,...',
-            'B': 'Tâm lý học, Chính trị học,Nhân học,...',
-            'C': 'Công nghệ thông tin, Công nghệ sinh học, Robotics,...',
-            'D': 'Cơ khí, Điện-điện tử, Xây dựng,...',
-            'E': 'Y học, Dược học, Điều dưỡng...',
-            'F': 'Tài chính-ngân hàng, Kế toán, Kiểm toán...',
-            'I': 'Luật, Hành chính công, Quan hệ quốc tế...',
-            'H': 'Sư phạm, Quản lí giáo dục,...',
-            'G': 'Âm nhạc, Thiết kế đồ họa, Thiết kế thời trang, Kiến trúc...',
-            'J': 'Báo chí, Quan hệ công chúng, Quảng cáo...',
-            'K': 'Nông nghiệp, Lâm nghiệp, Thủy hải sản,...',
-            'L': 'Quản trị khách sạn, Du lịch...'
+            'Khoa học tự nhiên': 'Vật lí, Hóa học, Địa chất học,...',
+            'Khoa học xã hội': 'Tâm lý học, Chính trị học,Nhân học,...',
+            'Công nghệ': 'Công nghệ thông tin, Công nghệ sinh học, Robotics,...',
+            'Kỹ thuật': 'Cơ khí, Điện-điện tử, Xây dựng,...',
+            'Y tế': 'Y học, Dược học, Điều dưỡng...',
+            'Kinh tế': 'Tài chính-ngân hàng, Kế toán, Kiểm toán...',
+            'Luật': 'Luật, Hành chính công, Quan hệ quốc tế...',
+            'Giáo dục': 'Sư phạm, Quản lí giáo dục,...',
+            'Nghệ thuật': 'Âm nhạc, Thiết kế đồ họa, Thiết kế thời trang, Kiến trúc...',
+            'Truyền thông và báo chí': 'Báo chí, Quan hệ công chúng, Quảng cáo...',
+            'Nông nghiệp và môi trường': 'Nông nghiệp, Lâm nghiệp, Thủy hải sản,...',
+            'Du lịch và dịch vụ': 'Quản trị khách sạn, Du lịch...'
         };
         return details[choice];
     };
@@ -88,9 +93,9 @@ const Page3 = () => {
                 <form className="InterestForm2 large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
                     <fieldset className="InterestList2 large-12 medium-12 small-12 columns" style={{ border: '2px solid lightgoldenrodyellow', position: 'relative', height: "fit-content", width: '100%' }}>
                         <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 3 lĩnh vực bạn quan tâm</legend>
-                        {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K','L'].map(choice => (
+                        {['Khoa học tự nhiên', 'Khoa học xã hội', 'Công nghệ', 'Kỹ thuật', 'Y tế', 'Kinh tế', 'Luật', 'Giáo dục', 'Nghệ thuật', 'Truyền thông và báo chí','Nông nghiệp và môi trường','Du lịch và dịch vụ'].map(choice => (
                             <label key={choice} className={`Choice ${choice} large-12 medium-12 small-12 columns`} style={{ alignContent: 'center', alignSelf: 'center' }}>
-                                <input className="Checkbox" type="checkbox" />
+                                <input name={'Field_Of_Interest'} className="Checkbox" type="checkbox" />
                                 {getChoiceLabel(choice)}
                                 <button type="button" className="triangle" onClick={() => toggleDropdown(choice)}>▼</button>
                                 <div className={`details ${openDropdowns[choice] ? 'visible' : ''}`}>

@@ -27,17 +27,19 @@ function Page5({formData,updateFormData}) {
     // HANDLE SAVE DATA
     useEffect(() => {
         updateFormData({
-            Skill1: 'Bad',
-            Skill2: 'Bad',
-            Skill3: 'Bad',
-            Skill4: 'Bad',
-            Skill5: 'Bad',
-            Skill6: 'Bad',
-            Skill7: 'Bad',
-            Skill8: 'Bad',
-            Skill9: 'Bad',
-            Skill10: 'Bad',
-            Skill11: 'Bad'
+            "Communication Skills": 'Trung bình',
+            "Teamwork Skills": 'Trung bình',
+            "Management Skills": 'Trung bình',
+            "Critical Thinking": 'Trung bình',
+            "Computer Skills": 'Trung bình',
+            "Language Skills": 'Trung bình',
+            "Machine Operation Skills": 'Trung bình',
+            "Data Analysis Skills": 'Trung bình',
+            "Sales and Marketing Skills": 'Trung bình',
+            "Writing Skills": 'Trung bình',
+            "Financial Skills": 'Trung bình',
+            "Project Management Skills":'Trung bình',
+            "Medical Skills":'Trung bình'
         });
     }, []);
     const handleDataChange = (e) => {
@@ -45,13 +47,15 @@ function Page5({formData,updateFormData}) {
         const selection = parseInt(value);
         let skillDescription = '';
         if (selection === 1 || selection === 2) {
-            skillDescription = 'Bad';
+            skillDescription = 'Trung bình';
         } else if (selection === 3) {
-            skillDescription = 'Moderate';
+            skillDescription = 'Khá';
         } else if(selection === 4 || selection === 5) {
-            skillDescription = 'Good';
+            skillDescription = 'Tốt';
         }
         updateFormData({[name]:skillDescription});
+        console.log(e.target.name);
+        console.log(skillDescription);
     };
 
 
@@ -133,7 +137,8 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng tin học
+                            Kĩ năng giao tiếp
+
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -142,7 +147,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill1"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Communication Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -164,7 +169,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng ngôn ngữ
+                            Kĩ năng làm việc nhóm
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -173,7 +178,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill2"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
+                            <input name={"Teamwork Skills"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -195,7 +200,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng giao tiếp
+                            Kĩ năng quản lí
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -204,7 +209,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill3"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Management Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -226,7 +231,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng làm việc nhóm
+                            Kĩ năng tư duy phản biện
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -235,7 +240,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill4"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Critical Thinking"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -257,7 +262,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng vận hành máy móc
+                            Kĩ năng tin học
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -266,7 +271,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill5"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Computer Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -288,7 +293,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng phân tích dữ liệu
+                            Kĩ năng ngôn ngữ ( Giao tiếp tốt, thành thạo nhiều ngôn ngữ,...)
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -297,7 +302,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill6"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Language Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -319,7 +324,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng bán hàng và tiếp thị
+                            Kĩ năng vận hành máy móc
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -328,7 +333,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill7"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Machine Operation Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -350,7 +355,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng viết lách
+                            Kĩ năng phân tích dữ liệu
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -359,7 +364,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill8"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Data Analysis Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -381,7 +386,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng quản lí tài chính
+                            Kĩ năng bán hàng và tiếp thị
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -390,7 +395,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill9"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Sales and Marketing Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -412,7 +417,7 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
-                            Kĩ năng quản lí dự án
+                            Kĩ năng viết lách
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
                             display: 'flex',
@@ -421,7 +426,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill10"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Writing Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -443,6 +448,68 @@ function Page5({formData,updateFormData}) {
                     }}>
                         <div className="Skillname large-12 medium-12 small-12 columns"
                              style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng tài chính
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input name={"Financial Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 12*/}
+                    <div className="Skill2 large-12 medium-12 small-12 columns" id="Skill_2" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
+                            Kĩ năng quản lí dự án
+                        </div>
+                        <div className="slider-container large-12 medium-12 small-12 columns" style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'flex-start',
+                            flexDirection: 'column',
+                            width: 'inherit'
+                        }}>
+                            <input name={"Project Management Skills"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
+                            <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*    Skill 13*/}
+                    <div className="Skill2 large-12 medium-12 small-12 columns" id="Skill_13" style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxSizing: 'border-box',
+                        width: 'inherit',
+                        height: 'max-content'
+                    }}>
+                        <div className="Skillname large-12 medium-12 small-12 columns"
+                             style={{textAlign: 'left', width: 'inherit'}}>
                             Kĩ năng y tế
                         </div>
                         <div className="slider-container large-12 medium-12 small-12 columns" style={{
@@ -452,7 +519,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Skill11"} className="Slider" type="range" min="1" max="5" defaultValue="1" />
+                            <input name={"Medical Skills"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -463,20 +530,6 @@ function Page5({formData,updateFormData}) {
                         </div>
                     </div>
                 </form>
-                <div className="formDataDisplay">
-                    <h3>Stored Data:</h3>
-                    <p>Skill1: {formData.Skill1}</p>
-                    <p>Skill2: {formData.Skill2}</p>
-                    <p>Skill3: {formData.Skill3}</p>
-                    <p>Skill4: {formData.Skill4}</p>
-                    <p>Skill5: {formData.Skill5}</p>
-                    <p>Skill6: {formData.Skill6}</p>
-                    <p>Skill7: {formData.Skill7}</p>
-                    <p>Skill8: {formData.Skill8}</p>
-                    <p>Skill9: {formData.Skill9}</p>
-                    <p>Skill10: {formData.Skill10}</p>
-                    <p>Skill11: {formData.Skill11}</p>
-                </div>
             </div>
         </div>
     );

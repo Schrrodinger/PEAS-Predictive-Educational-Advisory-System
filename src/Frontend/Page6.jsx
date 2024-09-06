@@ -32,7 +32,7 @@ const Page6 = ({formData,updateFormData}) =>{
     // HANDLE FORM SUBMISSION
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const requiredFields = ['Age','Gender','Block','Mark1','Mark2','Mark3','Skill1','Skill2','Skill3','Skill4','Skill5','Skill6','Skill7','Skill8','Skill9','Skill10','Skill11','Budget', 'Location', 'KeyFactor']; // Add all required fields from Page1 to Page6
+        const requiredFields = ['Age','Gender','Departments','Mark1','Mark2','Mark3','Communication Skills','Teamwork Skills','Management Skills','Critical Thinking','Computer Skills','Language Skills','Machine Operation Skills','Data Analysis Skills','Sales and Marketing Skills','Writing Skills','Financial Skills','Project Management Skills','Medical Skills','Annual Tuition Budget', 'Preferred Location', 'Key Factors for Future Job']; // Add all required fields from Page1 to Page6
         const missingFields = requiredFields.filter(field => !formData[field]);
 
         if (missingFields.length > 0) {
@@ -144,38 +144,38 @@ const Page6 = ({formData,updateFormData}) =>{
                       onChange={handleDataChange}>
                     <label className="Budget" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="budget" name="Budget" required>
+                            <select className="Bar" id="budget" name="Annual Tuition Budget" required>
                                 <option value="" disabled selected>Chọn mức học phí phù hợp với bạn</option>
-                                <option>Dưới 50.000.000 VND/năm</option>
-                                <option>Trên 50.000.000 VND/năm</option>
-                                <option>Trên 100.000.000 VND/năm</option>
+                                <option value={"Dưới 50.000.000 VND"}>Dưới 50.000.000 VND/năm</option>
+                                <option value={"Trên 50.000.000 VND"}>Trên 50.000.000 VND/năm</option>
+                                <option value={"Trên 100.000.000 VND"}>Trên 100.000.000 VND/m/năm</option>
                             </select>
                         </div>
                     </label>
                     <label className="Location" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="location" name="Location" required style={{overflowY:"scroll"}} >
+                            <select className="Bar" id="location" name="Preferred Location" required style={{overflowY:"scroll"}} >
                             <option value="" disabled selected>Chọn nơi bạn muốn học</option>
-                                <option>Khu vực miền Bắc</option>
-                                <option>Khu vực miền Trung</option>
-                                <option>Khu vực miền Nam</option>
+                                <option value={"Miền Bắc"}>Khu vực miền Bắc</option>
+                                <option value={"Miền Trung"}>Khu vực miền Trung</option>
+                                <option value={"Miền Nam"}>Khu vực miền Nam</option>
                             </select>
                         </div>
                     </label>
                     <label className="KeyFactor" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="keyfactor" name="KeyFactor" required
+                            <select className="Bar" id="keyfactor" name="Key Factors for Future Job" required
                                     onChange={handleSelectChange}>
                                 <option value="" disabled selected>Chọn yếu tố ưu tiên khi chọn ngành</option>
-                                <option>Khả năng học hỏi</option>
-                                <option>Cơ hội phát triển</option>
-                                <option>Thu nhập cao</option>
-                                <option>Công việc ổn định</option>
-                                <option>Thách thức và kích thích</option>
-                                <option>Sáng tạo</option>
-                                <option>Linh hoạt thời gian</option>
-                                <option>Có thể đóng góp cho xã hội</option>
-                                <option>Khác</option>
+                                <option value={"Khả năng học hỏi"}>Khả năng học hỏi</option>
+                                <option value={"Cơ hội phát triển"}>Cơ hội phát triển</option>
+                                <option value={"Thu nhập cao"}>Thu nhập cao</option>
+                                <option value={"Công việc ổn định"}>Công việc ổn định</option>
+                                <option value={"Thách thức và kích thích"}>Thách thức và kích thích</option>
+                                <option value={"Sáng tạo"}>Sáng tạo</option>
+                                <option value={"Linh hoạt về thời gian"}>Linh hoạt thời gian</option>
+                                <option value={"Đóng góp cho xã hội"}>Có thể đóng góp cho xã hội</option>
+                                <option value={"Other"}>Khác</option>
                             </select>
                         </div>
                     </label>

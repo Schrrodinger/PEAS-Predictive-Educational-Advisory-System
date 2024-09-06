@@ -38,6 +38,8 @@ const Page2 = ({formData,updateFormData}) =>{
     //  HANDLE STORE DATA
     const handleDataChange = (e) =>{
         updateFormData({...formData, [e.target.name]: e.target.value});
+        console.log(e.target.name);
+        console.log(e.target.value);
     };
     return (
         <div className="SelfGeneralPage large-12 small-12 medium-12 columns" style={{ boxSizing: 'border-box', marginLeft: 0, marginTop: 0, width: '100%', height: '80vh', position: 'relative', overflowY: 'scroll' }}>
