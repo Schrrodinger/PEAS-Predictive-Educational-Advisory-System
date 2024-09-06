@@ -26,7 +26,7 @@ def encode_input(data):
             'Financial Skills', 'Project Management Skills', 'Medical Skills'
     ]
     for feature in features:
-        if feature == 'Block':
+        if feature == 'Departments':
             encoded_data[feature] = label_encoders[feature].get(data.get(feature, 'Other'), 0)
         else:
             encoded_data[feature] = label_encoders[feature].get(data.get(feature, 'Trung bình'), 1)
@@ -34,6 +34,30 @@ def encode_input(data):
     logger.debug(f"Encoded data: {encoded_data}")
     return encoded_data
 
+# Mapping of encoded values to major names
+major_mapping = {
+    1: "Ngôn ngữ",
+    2: "Nghệ thuật",
+    3: "Nghệ thuật ứng dụng",
+    4: "Kinh tế học",
+    5: "Báo chí và Thông tin",
+    6: "Kinh doanh và Quản lý",
+    7: "Luật",
+    8: "Khoa học tự nhiên",
+    9: "Toán học và Thống kê",
+    10: "Máy tính và Công nghệ thông tin",
+    11: "Kỹ thuật",
+    12: "Sản xuất và Chế biến",
+    13: "Kiến trúc và Xây dựng",
+    14: "Nông, Lâm nghiệp và Thủy sản",
+    15: "Thú y",
+    16: "Sức khỏe",
+    17: "Du lịch, Khách sạn, Thể thao và Dịch vụ cá nhân",
+    18: "Dịch vụ vận tải",
+    19: "Khoa học môi trường",
+    20: "An ninh - Quốc phòng",
+    21: "Khoa học giáo dục và đào tạo giáo viên"
+}
 
 # @app.route('/')
 # def index():
@@ -62,11 +86,16 @@ def predict():
         predicted_major = major_encoder.inverse_transform([prediction])[0]
         logger.info(f"Decoded prediction: {predicted_major}")
 
+        #Decode the prediction to get the major name
+        predicted_major_name = major_mapping.get(prediction,"Unknown Major")
+        logger.info(f"Decoded prediction: {predicted_major_name}")
+
+
         # Convert numpy.int64 to Python int
         if isinstance(predicted_major, np.integer):
             predicted_major = int(predicted_major)
 
-        return jsonify({'predicted_major': predicted_major})
+        return jsonify({'predicted_major': predicted_major,'predicted_major_name': predicted_major_name})
     except Exception as e:
         logger.error(f"Error in predict: {str(e)}", exc_info=True)
         return jsonify({'error': str(e)}), 400

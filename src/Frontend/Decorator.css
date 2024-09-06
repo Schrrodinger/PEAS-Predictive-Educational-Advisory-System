@@ -339,23 +339,26 @@ input[type="range"]::-ms-thumb {
     }
     .GradingSlideContainer{
         top: 2vh;
-        left: 1vw;
+        left: 2.5vw;
         width: max(103%);
     }
-    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11{
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11,.Skill13{
         margin-top: 4vh;
         transform: translateX(-1vh);
     }
-    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12{
         margin-top: 5vh;
         margin-bottom: 1vh;
         /*transform: translateX(-1vh);*/
     }
-    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12{
         transform: translateX(-1vh);
     }
     .Skill11{
-        transform: translateX(.5vh);
+        transform: translateX(-1vh);
+    }
+    .Skill13{
+        transform: translateX(1vh);
     }
     .Skillname{
         transform: translateX(-.5vw);
@@ -603,12 +606,12 @@ input[type="range"]::-ms-thumb {
         left: -1vw;
         width: max(100%);
     }
-    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11{
-        margin-top: 3vh;
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11,.Skill13{
+        margin-top: 4vh;
         transform: translateX(-1vh);
     }
-    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
-        margin-top: 3.5vh;
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12{
+        margin-top: 4vh;
         transform: translateX(-1vh);
     }
     .Skill2{
@@ -617,6 +620,9 @@ input[type="range"]::-ms-thumb {
     .Skill4{
         transform: translate(-0.8vh,.5vh);
     }
+    /*.Skill13{*/
+    /*    transform: translate(-1vh,.5vh);*/
+    /*}*/
 
     .Skillname{
         transform: translateX(2.2vw);
@@ -867,12 +873,12 @@ input[type="range"]::-ms-thumb {
         left: 2vw;
         width: max(100%);
     }
-    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill1{
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11,.Skill13{
         margin-top: 3vh;
         transform: translateX(-0.5vh);
     }
-    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
-        margin-top: 4vh;
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12{
+        margin-top: 4.5vh;
         margin-bottom: 1vh;
         transform: translateX(-0.5vh);
     }
@@ -1111,12 +1117,12 @@ input[type="range"]::-ms-thumb {
         top: 2vh;
         left: 2vw;
     }
-    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11{
-        margin-top: 5vh;
+    .Skill1,.Skill3,.Skill5,.Skill7,.Skill9,.Skill11,.Skill13{
+        margin-top: 4.5vh;
         /*transform: translateX(-1vh);*/
     }
-    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10{
-        margin-top: 6vh;
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12{
+        margin-top: 5.8vh;
         margin-bottom: 1vh;
         /*transform: translateX(-1vh);*/
     }
@@ -1375,6 +1381,13 @@ input[type="range"]::-ms-thumb {
     .InterestList2 label{
         font-size: 2.8vw;
     }
+    .Skill1,.Skill3,.Skill4,.Skill7,.Skill9,.Skill11,.Skill13{
+        margin-top: 3vh;
+    }
+    .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12 {
+        margin-top: 4vh;
+    }
+
 
 }
 

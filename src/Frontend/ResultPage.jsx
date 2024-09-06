@@ -7,8 +7,8 @@ const ResultPage = () => {
 
     return (
         <div>
-            <h3>Prediction Result:</h3>
-            <p>{result}</p>
+            <h3 style={{color:"white"}}>Prediction Result:</h3>
+            <p style={{color:"white"}}>{result}</p>
         </div>
     );
 };

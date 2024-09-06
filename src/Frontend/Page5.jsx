@@ -469,7 +469,7 @@ function Page5({formData,updateFormData}) {
                     </div>
 
                     {/*    Skill 12*/}
-                    <div className="Skill2 large-12 medium-12 small-12 columns" id="Skill_2" style={{
+                    <div className="Skill12 large-12 medium-12 small-12 columns" id="Skill_2" style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -500,7 +500,7 @@ function Page5({formData,updateFormData}) {
                     </div>
 
                     {/*    Skill 13*/}
-                    <div className="Skill2 large-12 medium-12 small-12 columns" id="Skill_13" style={{
+                    <div className="Skill13 large-12 medium-12 small-12 columns" id="Skill_13" style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
