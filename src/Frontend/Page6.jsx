@@ -60,7 +60,7 @@ const Page6 = ({formData,updateFormData}) =>{
             const resultData = await response.json();
             if (response.ok) {
                 console.log('Prediction result:', resultData);
-                navigate('/result', { state: { result: resultData.predicted_major } }); // Navigate to the result page
+                navigate('/result', { state: { result: resultData.predicted_major_name } }); // Navigate to the result page
             } else {
                 console.error('Error:', resultData.error);
             }
