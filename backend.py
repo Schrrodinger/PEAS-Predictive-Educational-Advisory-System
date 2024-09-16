@@ -23,7 +23,7 @@ def encode_input(data):
             'Departments', 'Communication Skills', 'Teamwork Skills', 'Management Skills',
             'Critical Thinking', 'Computer Skills', 'Language Skills', 'Machine Operation Skills',
             'Data Analysis Skills', 'Sales and Marketing Skills', 'Writing Skills',
-            'Financial Skills', 'Project Management Skills', 'Medical Skills'
+            'Financial Skills', 'Project Management Skills', 'Medical Skills','Habit','Field of Interest'
     ]
     for feature in features:
         if feature == 'Departments':
@@ -44,9 +44,9 @@ major_mapping = {
     6: "Kinh doanh và Quản lý",
     7: "Luật",
     8: "Khoa học tự nhiên",
-    9: "Toán học và Thống kê",
+    9: "Kỹ thuật",
     10: "Máy tính và Công nghệ thông tin",
-    11: "Kỹ thuật",
+    11: "Kỹ thuật (Technical Engineering)",
     12: "Sản xuất và Chế biến",
     13: "Kiến trúc và Xây dựng",
     14: "Nông, Lâm nghiệp và Thủy sản",
@@ -90,12 +90,11 @@ def predict():
         predicted_major_name = major_mapping.get(prediction,"Unknown Major")
         logger.info(f"Decoded prediction: {predicted_major_name}")
 
-
         # Convert numpy.int64 to Python int
         if isinstance(predicted_major, np.integer):
             predicted_major = int(predicted_major)
 
-        return jsonify({'predicted_major': predicted_major,'predicted_major_name': predicted_major_name})
+        return jsonify({'predicted_major': predicted_major, 'predicted_major_name':predicted_major_name})
     except Exception as e:
         logger.error(f"Error in predict: {str(e)}", exc_info=True)
         return jsonify({'error': str(e)}), 400
