@@ -1,3 +1,5 @@
+import json
+
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
@@ -12,14 +14,14 @@ import xgboost as xgb
 print(xgb.__version__)
 
 # Read the data
-data = pd.read_csv('data/Final Major.csv')
+data = pd.read_csv('data/Balance Predict Major Decoded.csv')
 
 # Define necessary columns
 departments = ['Departments']
 soft_skills = ['Communication Skills', 'Teamwork Skills', 'Management Skills', 'Critical Thinking']
 hard_skills = ['Computer Skills', 'Language Skills', 'Machine Operation Skills', 'Data Analysis Skills',
                'Sales and Marketing Skills', 'Writing Skills', 'Financial Skills', 'Project Management Skills',
-               'Medical Skills']
+               'Medical Skills','Habit','Field of Interest']
 
 # Combine all feature columns
 features = departments + soft_skills + hard_skills
@@ -96,33 +98,56 @@ with open('major_prediction_model.pkl', 'wb') as f:
 # Load the trained model
 loaded_model = joblib.load('major_prediction_model.joblib')
 
+# Load the encoding schema
+with open('data/encoding_schema.json', 'r', encoding='utf-8') as f:
+    encoding_schema = json.load(f)
+
+# Create a reverse mapping for majors
+major_mapping = {v: k for k, v in encoding_schema['Major'].items()}
+
 # Create a sample input
 sample_input = pd.DataFrame({
-       'Departments': [0],  # Assuming 0 corresponds to a specific department in your encoding
-       'Communication Skills': [2],
-       'Teamwork Skills': [1],
-       'Management Skills': [2],
-       'Critical Thinking': [2],
-       'Computer Skills': [2],
-       'Language Skills': [1],
-       'Machine Operation Skills': [1],
-       'Data Analysis Skills': [2],
-       'Sales and Marketing Skills': [1],
-       'Writing Skills': [2],
-       'Financial Skills': [1],
-       'Project Management Skills': [2],
-       'Medical Skills': [1]
+    'Departments': [1],
+    'Communication Skills': [2],
+    'Teamwork Skills': [3],
+    'Management Skills': [2],
+    'Critical Thinking': [3],
+    'Computer Skills': [2],
+    'Language Skills': [5],
+    'Machine Operation Skills': [4],
+    'Data Analysis Skills': [2],
+    'Sales and Marketing Skills': [1],
+    'Writing Skills': [2],
+    'Financial Skills': [3],
+    'Project Management Skills': [2],
+    'Medical Skills': [5],
+    'Habit': [4],
+    'Field of Interest': [9]
 })
 
 # Ensure the order of columns matches the order used during training
+feature_names = ['Departments', 'Communication Skills', 'Teamwork Skills', 'Management Skills', 'Critical Thinking',
+                 'Computer Skills', 'Language Skills', 'Machine Operation Skills', 'Data Analysis Skills',
+                 'Sales and Marketing Skills', 'Writing Skills', 'Financial Skills', 'Project Management Skills',
+                 'Medical Skills', 'Habit', 'Field of Interest']
 sample_input = sample_input[feature_names]
 
 # Make a prediction
 prediction = loaded_model.predict(sample_input)
 
-# Decode the prediction
-decoded_prediction = le.inverse_transform(prediction)[0]
+# Decode the prediction using the mapping
+try:
+    decoded_prediction = major_mapping[prediction[0]]
+except KeyError:
+    print(f"Error: Prediction {prediction[0]} not found in mapping.")
+    decoded_prediction = "Unknown"
 
 print("\nSample Input:")
 print(sample_input)
-print("\nPredicted Major:", decoded_prediction)
+print("\nPredicted Major (numeric):", prediction[0])
+print("Predicted Major (text):", decoded_prediction)
+
+# Print additional debugging information
+print("\nModel classes:", loaded_model.classes_)
+print("Number of classes in model:", len(loaded_model.classes_))
+print("Number of unique majors in data:", len(encoding_schema['Major']))
