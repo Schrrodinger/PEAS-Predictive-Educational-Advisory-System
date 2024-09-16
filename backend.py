@@ -23,7 +23,7 @@ def encode_input(data):
             'Departments', 'Communication Skills', 'Teamwork Skills', 'Management Skills',
             'Critical Thinking', 'Computer Skills', 'Language Skills', 'Machine Operation Skills',
             'Data Analysis Skills', 'Sales and Marketing Skills', 'Writing Skills',
-            'Financial Skills', 'Project Management Skills', 'Medical Skills'
+            'Financial Skills', 'Project Management Skills', 'Medical Skills','Habit','Field of Interest'
     ]
     for feature in features:
         if feature == 'Departments':
