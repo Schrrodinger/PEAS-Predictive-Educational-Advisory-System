@@ -32,7 +32,7 @@ const Page6 = ({formData,updateFormData}) =>{
     // HANDLE FORM SUBMISSION
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const requiredFields = ['Age','Gender','Departments','Mark1','Mark2','Mark3','Communication Skills','Teamwork Skills','Management Skills','Critical Thinking','Computer Skills','Language Skills','Machine Operation Skills','Data Analysis Skills','Sales and Marketing Skills','Writing Skills','Financial Skills','Project Management Skills','Medical Skills','Annual Tuition Budget', 'Preferred Location', 'Key Factors for Future Job']; // Add all required fields from Page1 to Page6
+        const requiredFields = ['Age','Gender','Departments','Mark1','Mark2','Mark3','Communication Skills','Teamwork Skills','Management Skills','Critical Thinking','Computer Skills','Language Skills','Machine Operation Skills','Data Analysis Skills','Sales and Marketing Skills','Writing Skills','Financial Skills','Project Management Skills','Medical Skills','Annual Tuition Budget', 'Preferred Location', 'Key Factors for Future Job', 'Field of Interest','Habit']; // Add all required fields from Page1 to Page6
         const missingFields = requiredFields.filter(field => !formData[field]);
 
         if (missingFields.length > 0) {

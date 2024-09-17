@@ -4,13 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Fix error link FE vs BE">
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-CANBAPAS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-CANBAPAS.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-M7F2YF5A.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-M7F2YF5A.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Decorator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Decorator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page5.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page3.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page3.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page4.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page4.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/ResultPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/ResultPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Test_BE_server" />
+        <entry key="$PROJECT_DIR$" value="BE_nga_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -219,6 +238,7 @@
       <workItem from="1725523005834" duration="18694000" />
       <workItem from="1725603125287" duration="3665000" />
       <workItem from="1725629528632" duration="2166000" />
+      <workItem from="1726505125942" duration="2230000" />
     </task>
     <task id="LOCAL-00001" summary="Fix error link FE vs BE">
       <option name="closed" value="true" />
@@ -234,8 +254,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="RELOAD_CONTEXT" value="false" />
     <MESSAGE value="Fix error link FE vs BE" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix error link FE vs BE" />
   </component>
