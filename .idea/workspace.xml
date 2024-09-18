@@ -4,29 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="">
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Merge with the updated model and modify FE and handle getting and saving more data for the model.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-CANBAPAS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-CANBAPAS.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-M7F2YF5A.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-M7F2YF5A.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Decorator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Decorator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page1.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page2.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page3.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page3.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page4.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page4.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
@@ -238,7 +219,9 @@
       <workItem from="1725523005834" duration="18694000" />
       <workItem from="1725603125287" duration="3665000" />
       <workItem from="1725629528632" duration="2166000" />
-      <workItem from="1726505125942" duration="2230000" />
+      <workItem from="1726505125942" duration="4732000" />
+      <workItem from="1726575392996" duration="1738000" />
+      <workItem from="1726678938206" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="Fix error link FE vs BE">
       <option name="closed" value="true" />
@@ -248,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725599270862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge with the updated model and modify FE and handle getting and saving more data for the model.">
+      <option name="closed" value="true" />
+      <created>1726539965362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726539965362</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +260,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="RELOAD_CONTEXT" value="false" />
     <MESSAGE value="Fix error link FE vs BE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix error link FE vs BE" />
+    <MESSAGE value="Merge remote-tracking branch 'ReactFrontEnd/BE' into BE" />
+    <MESSAGE value="Link with the updated model and modify FE and handle getting and saving more data for the model." />
+    <MESSAGE value="Merge with the updated model and modify FE and handle getting and saving more data for the model." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge with the updated model and modify FE and handle getting and saving more data for the model." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$backend.coverage" NAME="backend Coverage Results" MODIFIED="1723988320097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

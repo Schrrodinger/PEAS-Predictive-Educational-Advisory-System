@@ -6,13 +6,21 @@ import {useNavigate} from "react-router-dom";
 const Page4 = ({formData,updateFormData}) => {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill] = useState(false);
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
-        setTimeout(() => {
-            setFade(true);
-            navigate('/page5');
-        }, 150);
+        if(filled === true){
+            setTimeout(() => {
+                setFade(true);
+                navigate('/page5');
+            }, 150);
+        }
+        else{
+            alert('Vui lòng chọn 1 trong những lựa chọn bên dưới !');
+            navigate('/page4');
+        }
+
     };
 
     // HANDLE BACKWARD PAGE TRANSITON
@@ -68,22 +76,28 @@ const Page4 = ({formData,updateFormData}) => {
         const {name,value} = e.target;
         const selection = value;
         let realValue = null;
-        if (selection === 'Nghệ thuật và sáng tạo') {
-            realValue = 'Nghệ thuật và sáng tạo';
-        } else if (selection === 'Công nghệ và kĩ thuật') {
-            realValue = 'Công nghệ và kỹ thuật số';
-        } else if(selection === 'Hoạt đông xã hội và cộng đồng') {
-            realValue = 'Hoạt đông xã hội và cộng đồng';
-        }else if(selection === 'Du lịch và khám phá văn hóa') {
-            realValue = 'Du lịch và khám phá văn hóa';
-        }else if(selection === 'Thể thao và hoạt động thể chất') {
-            realValue = 'Thể thao và hoạt động thể chất';
-        }else if(selection === 'Khoa học và nghiên cứu') {
-            realValue = 'Khoa học và khám phá ';
-        }else if(selection === 'Nấu ăn và ẩm thực') {
-            realValue = 'Nấu ăn và ẩm thực';
-        }else if(selection === 'Khác') {
-            realValue = 'Khác';
+        if(selection === ''){
+            setFill(false);
+        }
+        else {
+            if (selection === 'Nghệ thuật và sáng tạo') {
+                realValue = 'Nghệ thuật và sáng tạo';
+            } else if (selection === 'Công nghệ và kĩ thuật') {
+                realValue = 'Công nghệ và kỹ thuật số';
+            } else if (selection === 'Hoạt đông xã hội và cộng đồng') {
+                realValue = 'Hoạt đông xã hội và cộng đồng';
+            } else if (selection === 'Du lịch và khám phá văn hóa') {
+                realValue = 'Du lịch và khám phá văn hóa';
+            } else if (selection === 'Thể thao và hoạt động thể chất') {
+                realValue = 'Thể thao và hoạt động thể chất';
+            } else if (selection === 'Khoa học và nghiên cứu') {
+                realValue = 'Khoa học và khám phá ';
+            } else if (selection === 'Nấu ăn và ẩm thực') {
+                realValue = 'Nấu ăn và ẩm thực';
+            } else if (selection === 'Khác') {
+                realValue = 'Khác';
+            }
+            setFill(true);
         }
         updateFormData({[name]:realValue});
         console.log(name);

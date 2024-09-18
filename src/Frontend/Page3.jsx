@@ -7,13 +7,20 @@ import {useNavigate} from "react-router-dom";
 const Page3 = ({formData,updateFormData}) => {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill]= useState(false);
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
-        setTimeout(() => {
-            setFade(true);
-            navigate('/page4');
-        }, 150);
+        if(filled === true){
+            setTimeout(() => {
+                setFade(true);
+                navigate('/page4');
+            }, 150);
+        }
+        else{
+            alert('Vui lòng chọn 1 trong những lựa chọn bên dưới !')
+            navigate('/page3');
+        }
     };
 
     // HANDLE BACKWARD PAGE TRANSITON
@@ -41,32 +48,36 @@ const Page3 = ({formData,updateFormData}) => {
         const {name,value} = e.target;
         const selection = value;
         let realValue = null;
-        if (selection === 'Khoa học tự nhiên') {
-            realValue = 'Khoa học Tự nhiên';
-        } else if (selection === 'Khoa học xã hội') {
-            realValue = 'Khoa học Xã hội';
-        } else if(selection === 'Công nghệ') {
-            realValue = 'Công nghệ';
-        }else if(selection === 'Kỹ thuật') {
-            realValue = 'Kỹ thuật';
-        }else if(selection === 'Kinh tế') {
-            realValue = 'Kinh tế và Kinh doanh';
-        }else if(selection === 'Y tế') {
-            realValue = 'Y tế và Sức khỏe ';
-        }else if(selection === 'Giáo dục') {
-            realValue = 'Giáo dục';
-        }else if(selection === 'Nghệ thuật') {
-            realValue = 'Nghệ thuật và Thiết kế';
-        }else if(selection === 'Nông nghiệp và môi trường') {
-            realValue = 'Nông nghiệp và Môi trường';
-        }else if(selection === 'Truyền thông và báo chí') {
-            realValue = 'Truyền thông và Media';
+        if(selection === ''){
+            setFill(false);
         }
-        else if(selection === 'Luật') {
-            realValue = 'Luật và Chính sách công';
-        }
-        else if(selection === 'Du lịch và dịch vụ') {
-            realValue = 'Du lịch và Dịch vụ';
+        else{
+            if(selection === 'Khoa học tự nhiên') {
+                realValue = 'Khoa học Tự nhiên';
+            } else if (selection === 'Khoa học xã hội') {
+                realValue = 'Khoa học Xã hội';
+            } else if (selection === 'Công nghệ') {
+                realValue = 'Công nghệ';
+            } else if (selection === 'Kỹ thuật') {
+                realValue = 'Kỹ thuật';
+            } else if (selection === 'Kinh tế') {
+                realValue = 'Kinh tế và Kinh doanh';
+            } else if (selection === 'Y tế') {
+                realValue = 'Y tế và Sức khỏe ';
+            } else if (selection === 'Giáo dục') {
+                realValue = 'Giáo dục';
+            } else if (selection === 'Nghệ thuật') {
+                realValue = 'Nghệ thuật và Thiết kế';
+            } else if (selection === 'Nông nghiệp và môi trường') {
+                realValue = 'Nông nghiệp và Môi trường';
+            } else if (selection === 'Truyền thông và báo chí') {
+                realValue = 'Truyền thông và Media';
+            } else if (selection === 'Luật') {
+                realValue = 'Luật và Chính sách công';
+            } else if (selection === 'Du lịch và dịch vụ') {
+                realValue = 'Du lịch và Dịch vụ';
+            }
+            setFill(true);
         }
         updateFormData({[name]:realValue});
         console.log(name);

@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom";
 const Page6 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill] = useState(false);
     // HANDLE BACKWARD PAGE TRANSITON
     const handleBackButtonClick = () => {
         setFade(true);
@@ -17,8 +18,30 @@ const Page6 = ({formData,updateFormData}) =>{
 
     // HANDLE CHANGING VALUE
     const handleDataChange = (e) =>{
+        const{budget ,location,keyfactor} = formData;
+        if (budget !== '' && location !== '' && keyfactor !== '') {
+            setFill(true);  // All fields are filled
+        } else {
+            setFill(false);  // One or more fields are empty
+        }
+        console.log(filled);
         updateFormData({...formData, [e.target.name]: e.target.value});
+        console.log(filled);
     };
+
+    //  HANDLE NOT CHOOSING
+    // const handleNotChoosing =(e) =>{
+    //     const budget = document.getElementById('budget').value;
+    //     const location = document.getElementById('location').value;
+    //     const keyfactor = document.getElementById('keyfactor').value;
+    //     if(budget==='' || location==='' || keyfactor===''){
+    //         setFill(false);
+    //     }
+    //     else{
+    //         setFill(false);
+    //     }
+    //     console.log(filled)
+    // }
 
     // HANDLE BLOCK CHOOSING
     const [selectedBlock, setSelectedBlock] = useState('');
@@ -32,11 +55,8 @@ const Page6 = ({formData,updateFormData}) =>{
     // HANDLE FORM SUBMISSION
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const requiredFields = ['Age','Gender','Departments','Mark1','Mark2','Mark3','Communication Skills','Teamwork Skills','Management Skills','Critical Thinking','Computer Skills','Language Skills','Machine Operation Skills','Data Analysis Skills','Sales and Marketing Skills','Writing Skills','Financial Skills','Project Management Skills','Medical Skills','Annual Tuition Budget', 'Preferred Location', 'Key Factors for Future Job', 'Field of Interest','Habit']; // Add all required fields from Page1 to Page6
-        const missingFields = requiredFields.filter(field => !formData[field]);
-
-        if (missingFields.length > 0) {
-            alert(`Please fill in the following fields: ${missingFields.join(', ')}`);
+        if(filled === false){
+            alert('Vui lòng điền đầy đủ các mục bên dưới !');
             return;
         }
 
@@ -60,7 +80,7 @@ const Page6 = ({formData,updateFormData}) =>{
             const resultData = await response.json();
             if (response.ok) {
                 console.log('Prediction result:', resultData);
-                navigate('/result', { state: { result: resultData.predicted_major_name } }); // Navigate to the result page
+                navigate('/result', {state: {result: resultData.predicted_major_name}}); // Navigate to the result page
             } else {
                 console.error('Error:', resultData.error);
             }
@@ -141,7 +161,7 @@ const Page6 = ({formData,updateFormData}) =>{
             <div className="LastContainer large-12 medium-12 small-12 columns"
                  style={{boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content'}}>
                 <form className="General1 large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
-                      onChange={handleDataChange}>
+                      onChange={handleDataChange} >
                     <label className="Budget" style={{position: 'relative'}}>
                         <div className="custom-select">
                             <select className="Bar" id="budget" name="Annual Tuition Budget" required>
@@ -155,7 +175,7 @@ const Page6 = ({formData,updateFormData}) =>{
                     <label className="Location" style={{position: 'relative'}}>
                         <div className="custom-select">
                             <select className="Bar" id="location" name="Preferred Location" required style={{overflowY:"scroll"}} >
-                            <option value="" disabled selected>Chọn nơi bạn muốn học</option>
+                                <option value="" disabled selected>Chọn nơi bạn muốn học</option>
                                 <option value={"Miền Bắc"}>Khu vực miền Bắc</option>
                                 <option value={"Miền Trung"}>Khu vực miền Trung</option>
                                 <option value={"Miền Nam"}>Khu vực miền Nam</option>
@@ -180,12 +200,6 @@ const Page6 = ({formData,updateFormData}) =>{
                         </div>
                     </label>
                 </form>
-                <div className="formDataDisplay">
-                    <h3>Stored Data:</h3>
-                    <p>Skill3: {formData.Budget}</p>
-                    <p>Skill3: {formData.Location}</p>
-                    <p>Skill3: {formData.KeyFactor}</p>
-                </div>
                 {/*/!* Display the result *!/*/}
                 {/*{result && (*/}
                 {/*    <div>*/}
