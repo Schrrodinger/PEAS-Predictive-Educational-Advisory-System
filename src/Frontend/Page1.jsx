@@ -3,16 +3,30 @@ import './Decorator.css';
 // import Subject from "./Subject.js";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {objectValues} from "react-foundation/lib/utils.js";
 const Page1 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill] = useState(false);
+    const [valid, setValid] = useState(true);
     // HANDLE FORWARD PAGE TRANSITON
     const handleButtonClick = () => {
         setFade(true);
-        setTimeout(() => {
-            setFade(true);
-            navigate('/page2');
-        }, 150);
+        if(filled === true){
+            setTimeout(() => {
+                setFade(true);
+                navigate('/page2');
+            }, 150);
+        }
+        else{
+            if(valid === false){
+                alert('Vui lòng nhập tuổi hợp lệ ! ');
+            }
+            else if(filled === false){
+                alert('Vui lòng điền vào tất cả thông tin bên dưới');
+            }
+            navigate('/page1');
+        }
     };
     // HANDLE BACKWARD PAGE TRANSITON
     const handleBackButtonClick = () => {
@@ -25,6 +39,15 @@ const Page1 = ({formData,updateFormData}) =>{
 
     // HANDLE CHANGING VALUE
     const handleDataChange = (e) =>{
+        const ageValue = parseInt(e.target.value);  // Parse the input value as an integer
+        const gender = document.getElementById('gender').value ;
+        const block = document.getElementById('block').value;
+        if(ageValue === '' || gender === '' || block === ''){
+            setFill(false)
+        }
+        else{
+            setFill(true);
+        }
         updateFormData({...formData, [e.target.name]: e.target.value});
     };
 
@@ -36,6 +59,19 @@ const Page1 = ({formData,updateFormData}) =>{
         setSelectedBlock(value);
         localStorage.setItem('selectedBlock', value); // Store the selected block in localStorage
         console.log(value);
+    };
+
+    //  HANDLE INVALID AGE
+    const handleAgeValidation = (e) => {
+        const ageValue = parseInt(e.target.value);  // Parse the input value as an integer
+        const gender = document.getElementById('gender').value ;
+        const block = document.getElementById('block').value;
+        if ( ageValue < 18 || ageValue > 40) {
+            setValid(false);
+            alert('Tuổi hợp lệ : 18 - 40 !');
+        } else {
+            setValid(true);  // Valid age, reset the valid state
+        }
     };
 
 
@@ -60,7 +96,7 @@ const Page1 = ({formData,updateFormData}) =>{
             <div className="SelfGeneralContainer large-12 medium-12 small-12 columns"
                  style={{boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content'}}>
                 <form className="General large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
-                      onChange={handleDataChange}>
+                      onChange={handleDataChange} onBlur={handleAgeValidation}>
                     <div className="Age" style={{position: 'relative', width: "inherit"}}>
                         <input className="Bar AgeBar" type="text" id="age" name="Age" autoFocus={true}
                                placeholder="Nhập tuổi của bạn tại đây" required style={{boxSizing: "border-box"}}/>

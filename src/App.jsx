@@ -9,6 +9,8 @@ import Page6 from './Frontend/Page6.jsx';
 import ResultPage from "./Frontend/ResultPage.jsx";
 import './Frontend/Decorator.css';
 import {useState} from "react";
+import 'react-notifications/lib/notifications.css';
+
 
 function App() {
     const [formData, setFormData] = useState({

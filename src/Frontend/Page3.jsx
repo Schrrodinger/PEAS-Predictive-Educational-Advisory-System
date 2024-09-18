@@ -3,16 +3,24 @@ import './Decorator.css'; // Import your custom CSS file
 import 'foundation-sites/dist/css/foundation.min.css';
 import {useNavigate} from "react-router-dom";
 
-const Page3 = () => {
+// eslint-disable-next-line react/prop-types
+const Page3 = ({formData,updateFormData}) => {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill]= useState(false);
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
-        setTimeout(() => {
-            setFade(true);
-            navigate('/page4');
-        }, 150);
+        if(filled === true){
+            setTimeout(() => {
+                setFade(true);
+                navigate('/page4');
+            }, 150);
+        }
+        else{
+            alert('Vui lòng chọn 1 trong những lựa chọn bên dưới !')
+            navigate('/page3');
+        }
     };
 
     // HANDLE BACKWARD PAGE TRANSITON
@@ -36,8 +44,46 @@ const Page3 = () => {
 
     //  HANDLE SAVE DATA
     const handleDataChange = (e) =>{
-        updateFormData({...formData, [e.target.name]: e.target.value});
+        // updateFormData({...formData, [e.target.name]: e.target.value});
+        const {name,value} = e.target;
+        const selection = value;
+        let realValue = null;
+        if(selection === ''){
+            setFill(false);
+        }
+        else{
+            if(selection === 'Khoa học tự nhiên') {
+            realValue = 'Khoa học Tự nhiên';
+        } else if (selection === 'Khoa học xã hội') {
+            realValue = 'Khoa học Xã hội';
+        } else if (selection === 'Công nghệ') {
+            realValue = 'Công nghệ';
+        } else if (selection === 'Kỹ thuật') {
+            realValue = 'Kỹ thuật';
+        } else if (selection === 'Kinh tế') {
+            realValue = 'Kinh tế và Kinh doanh';
+        } else if (selection === 'Y tế') {
+            realValue = 'Y tế và Sức khỏe ';
+        } else if (selection === 'Giáo dục') {
+            realValue = 'Giáo dục';
+        } else if (selection === 'Nghệ thuật') {
+            realValue = 'Nghệ thuật và Thiết kế';
+        } else if (selection === 'Nông nghiệp và môi trường') {
+            realValue = 'Nông nghiệp và Môi trường';
+        } else if (selection === 'Truyền thông và báo chí') {
+            realValue = 'Truyền thông và Media';
+        } else if (selection === 'Luật') {
+            realValue = 'Luật và Chính sách công';
+        } else if (selection === 'Du lịch và dịch vụ') {
+            realValue = 'Du lịch và Dịch vụ';
+        }
+            setFill(true);
+    }
+        updateFormData({[name]:realValue});
+        console.log(name);
+        console.log(realValue);
     };
+
 
     const getChoiceLabel = (choice) => {
         const labels = {
@@ -90,12 +136,12 @@ const Page3 = () => {
                 <div className="Sub large-12 medium-12 small-12 columns" style={{ position: 'relative', fontKerning: 'auto', fontFamily: 'Montserrat, sans-serif', color: 'floralwhite', fontStyle: 'italic' }}>Nhập thông tin của bạn dưới đây để tiến hành phân tích</div>
             </div>
             <div className="InterestContainer2 large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height:'inherit' }}>
-                <form className="InterestForm2 large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
+                <form onChange={handleDataChange} className="InterestForm2 large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
                     <fieldset className="InterestList2 large-12 medium-12 small-12 columns" style={{ border: '2px solid lightgoldenrodyellow', position: 'relative', height: "fit-content", width: '100%' }}>
-                        <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 3 lĩnh vực bạn quan tâm</legend>
+                        <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 1 lĩnh vực bạn quan tâm</legend>
                         {['Khoa học tự nhiên', 'Khoa học xã hội', 'Công nghệ', 'Kỹ thuật', 'Y tế', 'Kinh tế', 'Luật', 'Giáo dục', 'Nghệ thuật', 'Truyền thông và báo chí','Nông nghiệp và môi trường','Du lịch và dịch vụ'].map(choice => (
                             <label key={choice} className={`Choice ${choice} large-12 medium-12 small-12 columns`} style={{ alignContent: 'center', alignSelf: 'center' }}>
-                                <input name={'Field_Of_Interest'} className="Checkbox" type="checkbox" />
+                                <input name={'Field of Interest'} className="Checkbox" type="radio" value={choice} />
                                 {getChoiceLabel(choice)}
                                 <button type="button" className="triangle" onClick={() => toggleDropdown(choice)}>▼</button>
                                 <div className={`details ${openDropdowns[choice] ? 'visible' : ''}`}>

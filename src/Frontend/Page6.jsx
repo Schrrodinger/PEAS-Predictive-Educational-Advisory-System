@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom";
 const Page6 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill] = useState(false);
     // HANDLE BACKWARD PAGE TRANSITON
     const handleBackButtonClick = () => {
         setFade(true);
@@ -17,8 +18,30 @@ const Page6 = ({formData,updateFormData}) =>{
 
     // HANDLE CHANGING VALUE
     const handleDataChange = (e) =>{
+           const{budget ,location,keyfactor} = formData;
+        if (budget !== '' && location !== '' && keyfactor !== '') {
+            setFill(true);  // All fields are filled
+        } else {
+            setFill(false);  // One or more fields are empty
+        }
+        console.log(filled);
         updateFormData({...formData, [e.target.name]: e.target.value});
+        console.log(filled);
     };
+
+    //  HANDLE NOT CHOOSING
+    // const handleNotChoosing =(e) =>{
+    //     const budget = document.getElementById('budget').value;
+    //     const location = document.getElementById('location').value;
+    //     const keyfactor = document.getElementById('keyfactor').value;
+    //     if(budget==='' || location==='' || keyfactor===''){
+    //         setFill(false);
+    //     }
+    //     else{
+    //         setFill(false);
+    //     }
+    //     console.log(filled)
+    // }
 
     // HANDLE BLOCK CHOOSING
     const [selectedBlock, setSelectedBlock] = useState('');
@@ -32,41 +55,38 @@ const Page6 = ({formData,updateFormData}) =>{
     // HANDLE FORM SUBMISSION
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const requiredFields = ['Age','Gender','Departments','Mark1','Mark2','Mark3','Communication Skills','Teamwork Skills','Management Skills','Critical Thinking','Computer Skills','Language Skills','Machine Operation Skills','Data Analysis Skills','Sales and Marketing Skills','Writing Skills','Financial Skills','Project Management Skills','Medical Skills','Annual Tuition Budget', 'Preferred Location', 'Key Factors for Future Job']; // Add all required fields from Page1 to Page6
-        const missingFields = requiredFields.filter(field => !formData[field]);
-
-        if (missingFields.length > 0) {
-            alert(`Please fill in the following fields: ${missingFields.join(', ')}`);
+        if(filled === false){
+            alert('Vui lòng điền đầy đủ thông tin vào form bên dưới !');
             return;
         }
 
-        // Convert formData to JSON and store it (this can be sent to a server or downloaded as a file)
-        const formDataJson = JSON.stringify(formData, null, 2);
-        console.log("Form Data JSON:", formDataJson);
+            // Convert formData to JSON and store it (this can be sent to a server or downloaded as a file)
+            const formDataJson = JSON.stringify(formData, null, 2);
+            console.log("Form Data JSON:", formDataJson);
 
-        // You can save this JSON to localStorage or send it to the server as per your requirement
-        localStorage.setItem('formData', formDataJson);
+            // You can save this JSON to localStorage or send it to the server as per your requirement
+            localStorage.setItem('formData', formDataJson);
 
-        try {
-            // Send form data to Flask backend
-            const response = await fetch('http://127.0.0.1:5000/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
+            try {
+                // Send form data to Flask backend
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
 
-            const resultData = await response.json();
-            if (response.ok) {
-                console.log('Prediction result:', resultData);
-                navigate('/result', { state: { result: resultData.predicted_major_name } }); // Navigate to the result page
-            } else {
-                console.error('Error:', resultData.error);
+                const resultData = await response.json();
+                if (response.ok) {
+                    console.log('Prediction result:', resultData);
+                    navigate('/result', {state: {result: resultData.predicted_major_name}}); // Navigate to the result page
+                } else {
+                    console.error('Error:', resultData.error);
+                }
+            } catch (error) {
+                console.error('Error during submission:', error);
             }
-        } catch (error) {
-            console.error('Error during submission:', error);
-        }
     };
 
     const [result, setResult] = useState(null);
@@ -141,7 +161,7 @@ const Page6 = ({formData,updateFormData}) =>{
             <div className="LastContainer large-12 medium-12 small-12 columns"
                  style={{boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content'}}>
                 <form className="General1 large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
-                      onChange={handleDataChange}>
+                      onChange={handleDataChange} >
                     <label className="Budget" style={{position: 'relative'}}>
                         <div className="custom-select">
                             <select className="Bar" id="budget" name="Annual Tuition Budget" required>
@@ -180,12 +200,6 @@ const Page6 = ({formData,updateFormData}) =>{
                         </div>
                     </label>
                 </form>
-                <div className="formDataDisplay">
-                    <h3>Stored Data:</h3>
-                    <p>Skill3: {formData.Budget}</p>
-                    <p>Skill3: {formData.Location}</p>
-                    <p>Skill3: {formData.KeyFactor}</p>
-                </div>
                 {/*/!* Display the result *!/*/}
                 {/*{result && (*/}
                 {/*    <div>*/}

@@ -449,6 +449,12 @@ input[type="range"]::-ms-thumb {
     .Mark2,.Mark3{
         margin-top: 5vh;
     }
+    .Choice input[type=radio]{
+        width: calc(1.8vh);
+        height: calc(1.8vh);
+        margin-right: calc(2.7vh);
+        transform: translateY(calc(.6vw));
+    }
 
 
 }
@@ -713,6 +719,13 @@ input[type="range"]::-ms-thumb {
         margin-top: 4vh;
     }
 
+    .Choice input[type=radio]{
+        width: calc(1.9vh);
+        height: calc(1.9vh);
+        margin-right: calc(3.8vh);
+        transform: translateY(calc(1vw));
+    }
+
 }
 
 
@@ -948,6 +961,12 @@ input[type="range"]::-ms-thumb {
     }
     .Mark2,.Mark3{
         margin-top: 6vh;
+    }
+    .Choice input[type=radio]{
+        width: calc(2vh);
+        height: calc(2vh);
+        margin-right: calc(4vh);
+        transform: translateY(calc(.5vw));
     }
 
 
@@ -1198,6 +1217,12 @@ input[type="range"]::-ms-thumb {
     .custom-select::after{
         transform: translateY(-1vh);
     }
+    .Choice input[type=radio]{
+        width: calc(1.1vw);
+        height: calc(1.1vw);
+        margin-right: calc(2.5vw);
+        transform: translateY(calc(.2vw));
+    }
 
 }
 
@@ -1386,6 +1411,12 @@ input[type="range"]::-ms-thumb {
     }
     .Skill2,.Skill4,.Skill6,.Skill8,.Skill10,.Skill12 {
         margin-top: 4vh;
+    }
+    .Choice input[type=radio]{
+        width: calc(2vh);
+        height: calc(2vh);
+        margin-right: calc(3.8vh);
+        transform: translateY(calc(.6vw));
     }
 
 

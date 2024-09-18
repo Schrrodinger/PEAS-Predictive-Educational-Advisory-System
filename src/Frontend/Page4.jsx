@@ -3,16 +3,24 @@ import './Decorator.css'; // Import your custom CSS file
 import 'foundation-sites/dist/css/foundation.min.css';
 import {useNavigate} from "react-router-dom";
 
-const Page4 = () => {
+const Page4 = ({formData,updateFormData}) => {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled,setFill] = useState(false);
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
-        setTimeout(() => {
-            setFade(true);
-            navigate('/page5');
-        }, 150);
+        if(filled === true){
+            setTimeout(() => {
+                setFade(true);
+                navigate('/page5');
+            }, 150);
+        }
+        else{
+            alert('Vui lòng chọn 1 trong những lựa chọn bên dưới !');
+            navigate('/page4');
+        }
+
     };
 
     // HANDLE BACKWARD PAGE TRANSITON
@@ -38,14 +46,12 @@ const Page4 = () => {
         const labels = {
             'A': 'Nghệ thuật và sáng tạo',
             'B': 'Thể thao và hoạt động thể chất',
-            'C': 'Công nghệ và Kỹ thuật',
-            'D': 'Khoa học và Nghiên cứu',
-            'E': 'Đọc sách và Học tập',
-            'F': 'Hoạt đông xã hội và cộng đồng',
-            'I': 'Nấu ăn và Ẩm thực',
-            'H': 'Du lịch và Khám phá văn hóa',
-            'G': 'Làm thủ công và DIY',
-            'J': 'Chăm sóc động vật'
+            'C': 'Công nghệ và kĩ thuật',
+            'D': 'Khoa học và nghiên cứu',
+            'E': 'Hoạt đông xã hội và cộng đồng',
+            'F': 'Nấu ăn và ẩm thực',
+            'G': 'Du lịch và khám phá văn hóa',
+            'H': 'Khác'
         };
         return labels[choice];
     };
@@ -56,14 +62,46 @@ const Page4 = () => {
             'B': 'Tham gia các cuộc thi thể thao.',
             'C': 'Lập trình; Chơi game; Thiết kế đồ họa; Robotics.',
             'D': 'Thí nghiệm khoa học, thiên văn học...',
-            'E': 'Đọc sách; Học ngoại ngữ; Giải đố.',
-            'F': 'Tham gia câu lạc bộ và các hoạt động tình nguyện',
-            'I': 'Nấu ăn; Khám phá ẩm thực.',
-            'H': 'Du lịch và tìm hiểu văn hóa, lịch sử của các khu vực khác nhau.',
-            'G': 'Làm đồ thủ công; Chế tạo đồ dùng; Thiết kế thời trang.',
-            'J': 'Nuôi thú cưng; Bảo tồn động vật hoang dã.'
+            'E': 'Tham gia câu lạc bộ và các hoạt động tình nguyện',
+            'F': 'Nấu ăn; Khám phá ẩm thực.',
+            'G': 'Du lịch và tìm hiểu văn hóa, lịch sử của các khu vực khác nhau.',
+            'H': 'Khác.'
         };
         return details[choice];
+    };
+
+    //  HANDLE SAVE DATA
+    const handleDataChange = (e) =>{
+        // updateFormData({...formData, [e.target.name]: e.target.value});
+        const {name,value} = e.target;
+        const selection = value;
+        let realValue = null;
+        if(selection === ''){
+            setFill(false);
+        }
+        else {
+            if (selection === 'Nghệ thuật và sáng tạo') {
+                realValue = 'Nghệ thuật và sáng tạo';
+            } else if (selection === 'Công nghệ và kĩ thuật') {
+                realValue = 'Công nghệ và kỹ thuật số';
+            } else if (selection === 'Hoạt đông xã hội và cộng đồng') {
+                realValue = 'Hoạt đông xã hội và cộng đồng';
+            } else if (selection === 'Du lịch và khám phá văn hóa') {
+                realValue = 'Du lịch và khám phá văn hóa';
+            } else if (selection === 'Thể thao và hoạt động thể chất') {
+                realValue = 'Thể thao và hoạt động thể chất';
+            } else if (selection === 'Khoa học và nghiên cứu') {
+                realValue = 'Khoa học và khám phá ';
+            } else if (selection === 'Nấu ăn và ẩm thực') {
+                realValue = 'Nấu ăn và ẩm thực';
+            } else if (selection === 'Khác') {
+                realValue = 'Khác';
+            }
+            setFill(true);
+        }
+        updateFormData({[name]:realValue});
+        console.log(name);
+        console.log(realValue);
     };
 
     return (
@@ -81,12 +119,12 @@ const Page4 = () => {
                 <div className="Sub large-12 medium-12 small-12 columns" style={{ position: 'relative', fontKerning: 'auto', fontFamily: 'Montserrat, sans-serif', color: 'floralwhite', fontStyle: 'italic' }}>Nhập thông tin của bạn dưới đây để tiến hành phân tích</div>
             </div>
             <div className="InterestContainer large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height:'inherit' }}>
-                <form className="InterestForm large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
+                <form onChange={handleDataChange} className="InterestForm large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
                     <fieldset className="InterestList large-12 medium-12 small-12 columns" style={{ border: '2px solid lightgoldenrodyellow', position: 'relative', height: "fit-content", width: '100%' }}>
-                        <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 3 sở thích phù hợp với bạn</legend>
-                        {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'].map(choice => (
+                        <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 1 sở thích phù hợp với bạn</legend>
+                        {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].map(choice => (
                             <label key={choice} className={`Choice ${choice} large-12 medium-12 small-12 columns`} style={{ alignContent: 'center', alignSelf: 'center' }}>
-                                <input className="Checkbox" type="checkbox" />
+                                <input name={"Habit"} className="Checkbox" type="radio" value={getChoiceLabel(choice)}/>
                                 {getChoiceLabel(choice)}
                                 <button type="button" className="triangle" onClick={() => toggleDropdown(choice)}>▼</button>
                                 <div className={`details ${openDropdowns[choice] ? 'visible' : ''}`}>

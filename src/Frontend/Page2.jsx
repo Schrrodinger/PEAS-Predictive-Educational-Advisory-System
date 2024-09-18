@@ -3,17 +3,39 @@ import './Decorator.css';
 import Subject from "./Subject.js";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {objectValues} from "react-foundation/lib/utils.js";
+// import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 
 const Page2 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    const [filled , setFill] = useState(false);
+    const [valid, setValid] = useState(true);
     // HANDLE FORWARD PAGE TRANSITON
     const handleButtonClick = () => {
         setFade(true);
-        setTimeout(() => {
-            setFade(true);
-            navigate('/page3');
-        }, 150);
+        if(filled && valid === true){
+            setTimeout(() => {
+                setFade(true);
+                navigate('/page3');
+            }, 150);
+        }
+        // setTimeout(() => {
+        //     setFade(true);
+        //     navigate('/page3');
+        //     }, 150);
+
+        else{
+            if(filled === false){
+                alert('Vui lòng nhập đầy đủ các mục bên dưới !');
+            }
+            else if(valid === false){
+                alert('Vui lòng nhập điểm hợp lệ !');
+            }
+            navigate('/page2');
+        }
+
     };
     // HANDLE BACKWARD PAGE TRANSITON
     const handleBackButtonClick = () => {
@@ -37,9 +59,26 @@ const Page2 = ({formData,updateFormData}) =>{
 
     //  HANDLE STORE DATA
     const handleDataChange = (e) =>{
+        if(e.target.value === ''){
+            setFill(false);
+        }
+        else{
+            setFill(true);
+        }
         updateFormData({...formData, [e.target.name]: e.target.value});
         console.log(e.target.name);
         console.log(e.target.value);
+    };
+
+    // HANDLE INVALID MARK
+    const handleInvalidMark = (e) =>{
+        if(parseInt(e.target.value) < 0 || parseInt(e.target.value )>10 || isNaN(e.target.value)){
+            setValid(false);
+            alert('Vui lòng nhập điểm hợp lệ !')
+        }
+        else{
+            setValid(true);
+        }
     };
     return (
         <div className="SelfGeneralPage large-12 small-12 medium-12 columns" style={{ boxSizing: 'border-box', marginLeft: 0, marginTop: 0, width: '100%', height: '80vh', position: 'relative', overflowY: 'scroll' }}>
@@ -62,7 +101,7 @@ const Page2 = ({formData,updateFormData}) =>{
             <div className="SelfMarkContainer large-12 medium-12 small-12 columns"
                  style={{boxSizing: 'border-box', position: 'relative', width: '100%', height: 'fit-content'}}>
                 <form className="Mark large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
-                      onChange={handleDataChange}>
+                      onChange={handleDataChange} onBlur={handleInvalidMark}>
                     <div className="Mark1" style={{position: 'relative', width: "inherit"}}>
                         <input className="Bar MarkBar" type="text" id="s1" name="Mark1" autoFocus={true}
                                placeholder="Nhập điểm môn 1" required style={{boxSizing: "border-box"}}/>
@@ -76,12 +115,6 @@ const Page2 = ({formData,updateFormData}) =>{
                                placeholder="Nhập điểm môn 3" required style={{boxSizing: "border-box"}}/>
                     </div>
                 </form>
-                <div className="formDataDisplay">
-                    <h3>Stored Data:</h3>
-                    <p>Skill3: {formData.Mark1}</p>
-                    <p>Skill3: {formData.Mark2}</p>
-                    <p>Skill3: {formData.Mark3}</p>
-                </div>
             </div>
         </div>
     );
