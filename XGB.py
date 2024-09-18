@@ -88,6 +88,7 @@ print(feature_importance.sort_values('importance', ascending=False))
 import joblib
 #joblib.dump(best_xgb_model, 'major_prediction_model.joblib')
 joblib.dump(le, 'major_label_encoder.pkl')
+
 import pickle
 with open('major_prediction_model.pkl', 'wb') as f:
     pickle.dump(best_xgb_model, f)
@@ -107,22 +108,22 @@ major_mapping = {v: k for k, v in encoding_schema['Major'].items()}
 
 # Create a sample input
 sample_input = pd.DataFrame({
-    'Departments': [1],
+    'Departments': [5],
     'Communication Skills': [2],
     'Teamwork Skills': [3],
     'Management Skills': [2],
     'Critical Thinking': [3],
-    'Computer Skills': [2],
+    'Computer Skills': [1],
     'Language Skills': [5],
-    'Machine Operation Skills': [4],
-    'Data Analysis Skills': [2],
+    'Machine Operation Skills': [1],
+    'Data Analysis Skills': [1],
     'Sales and Marketing Skills': [1],
     'Writing Skills': [2],
-    'Financial Skills': [3],
-    'Project Management Skills': [2],
-    'Medical Skills': [5],
-    'Habit': [4],
-    'Field of Interest': [9]
+    'Financial Skills': [1],
+    'Project Management Skills': [1],
+    'Medical Skills': [1],
+    'Habit': [1],
+    'Field of Interest': [4]
 })
 
 # Ensure the order of columns matches the order used during training
