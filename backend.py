@@ -21,27 +21,27 @@ with open('data/encoding_schema.json', 'r', encoding='utf-8') as f:
 
 # Mapping of encoded values to major names
 major_mapping = {
-    1: "Ngôn ngữ",
-    2: "Nghệ thuật",
-    3: "Nghệ thuật ứng dụng",
-    4: "Kinh tế học",
-    5: "Báo chí và Thông tin",
-    6: "Kinh doanh và Quản lý",
-    7: "Luật",
-    8: "Khoa học tự nhiên",
-    9: "Toán và thống kê",
-    10: "Máy tính và Công nghệ thông tin",
-    11: "Kỹ thuật",
-    12: "Sản xuất và Chế biến",
-    13: "Kiến trúc và Xây dựng",
-    14: "Nông, Lâm nghiệp và Thủy sản",
-    15: "Thú y",
-    16: "Sức khỏe",
-    17: "Du lịch, Khách sạn, Thể thao và Dịch vụ cá nhân",
-    18: "Dịch vụ vận tải",
-    19: "Khoa học môi trường",
-    20: "An ninh - Quốc phòng",
-    21: "Khoa học giáo dục và đào tạo giáo viên"
+    0: "Ngôn ngữ",
+    1: "Nghệ thuật",
+    2: "Nghệ thuật ứng dụng",
+    3: "Kinh tế học",
+    4: "Báo chí và Thông tin",
+    5: "Kinh doanh và Quản lý",
+    6: "Luật",
+    7: "Khoa học tự nhiên",
+    8: "Toán và thống kê",
+    9: "Máy tính và Công nghệ thông tin",
+    10: "Kỹ thuật",
+    11: "Sản xuất và Chế biến",
+    12: "Kiến trúc và Xây dựng",
+    13: "Nông, Lâm nghiệp và Thủy sản",
+    14: "Thú y",
+    15: "Sức khỏe",
+    16: "Du lịch, Khách sạn, Thể thao và Dịch vụ cá nhân",
+    17: "Dịch vụ vận tải",
+    18: "Khoa học môi trường",
+    19: "An ninh - Quốc phòng",
+    20: "Khoa học giáo dục và đào tạo giáo viên"
 }
 
 def encode_input(data):

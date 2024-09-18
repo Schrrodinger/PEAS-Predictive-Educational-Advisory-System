@@ -22,7 +22,7 @@
     "Nấu ăn và ẩm thực": 7,
     "Other": 8
   },
-  "Field of interest": {
+  "Field of Interest": {
     "Khoa học Tự nhiên": 1,
     "Công nghệ": 2,
     "Khoa học Xã hội": 3,
@@ -123,26 +123,26 @@
     "Other": 9
   },
   "Major": {
-    "Ngôn ngữ": 1,
-    "Nghệ thuật": 2,
-    "Mỹ thuật ứng dụng": 3,
-    "Kinh tế học": 4,
-    "Báo chí và thông tin": 5,
-    "Kinh doanh và quản lý": 6,
-    "Pháp luật": 7,
-    "Khoa học tự nhiên": 8,
-    "Kỹ thuật": 9,
-    "Máy tính và công nghệ thông tin": 10,
-    "Kỹ thuật (Technical Engineering)": 11,
-    "Sản xuất và chế biến": 12,
-    "Kiến trúc và xây dựng": 13,
-    "Nông nghiệp, lâm nghiệp và thủy sản": 14,
-    "Thú y": 15,
-    "Sức khỏe": 16,
-    "Du lịch, khách sạn, thể thao và dịch vụ cá nhân": 17,
-    "Dịch vụ vận tải": 18,
-    "Khoa học môi trường": 19,
-    "An ninh và quốc phòng": 22,
-    "Khoa học giáo dục và đào tạo giáo viên": 21
+    "Ngôn ngữ": 0,
+    "Nghệ thuật": 1,
+    "Mỹ thuật ứng dụng": 2,
+    "Kinh tế học": 3,
+    "Báo chí và thông tin": 4,
+    "Kinh doanh và quản lý": 5,
+    "Pháp luật": 6,
+    "Khoa học tự nhiên": 7,
+    "Kỹ thuật": 8,
+    "Máy tính và công nghệ thông tin": 9,
+    "Kỹ thuật (Technical Engineering)": 10,
+    "Sản xuất và chế biến": 11,
+    "Kiến trúc và xây dựng": 12,
+    "Nông nghiệp, lâm nghiệp và thủy sản": 13,
+    "Thú y": 14,
+    "Sức khỏe": 15,
+    "Du lịch, khách sạn, thể thao và dịch vụ cá nhân": 16,
+    "Dịch vụ vận tải": 17,
+    "Khoa học môi trường": 18,
+    "An ninh và quốc phòng": 19,
+    "Khoa học giáo dục và đào tạo giáo viên": 20
   }
 }
