@@ -18,7 +18,7 @@ const Page6 = ({formData,updateFormData}) =>{
 
     // HANDLE CHANGING VALUE
     const handleDataChange = (e) =>{
-           const{budget ,location,keyfactor} = formData;
+        const{budget ,location,keyfactor} = formData;
         if (budget !== '' && location !== '' && keyfactor !== '') {
             setFill(true);  // All fields are filled
         } else {
@@ -56,37 +56,37 @@ const Page6 = ({formData,updateFormData}) =>{
     const handleSubmit = async (e) => {
         e.preventDefault();
         if(filled === false){
-            alert('Vui lòng điền đầy đủ thông tin vào form bên dưới !');
+            alert('Vui lòng điền đầy đủ các mục bên dưới !');
             return;
         }
 
-            // Convert formData to JSON and store it (this can be sent to a server or downloaded as a file)
-            const formDataJson = JSON.stringify(formData, null, 2);
-            console.log("Form Data JSON:", formDataJson);
+        // Convert formData to JSON and store it (this can be sent to a server or downloaded as a file)
+        const formDataJson = JSON.stringify(formData, null, 2);
+        console.log("Form Data JSON:", formDataJson);
 
-            // You can save this JSON to localStorage or send it to the server as per your requirement
-            localStorage.setItem('formData', formDataJson);
+        // You can save this JSON to localStorage or send it to the server as per your requirement
+        localStorage.setItem('formData', formDataJson);
 
-            try {
-                // Send form data to Flask backend
-                const response = await fetch('http://127.0.0.1:5000/predict', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
+        try {
+            // Send form data to Flask backend
+            const response = await fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
 
-                const resultData = await response.json();
-                if (response.ok) {
-                    console.log('Prediction result:', resultData);
-                    navigate('/result', {state: {result: resultData.predicted_major_name}}); // Navigate to the result page
-                } else {
-                    console.error('Error:', resultData.error);
-                }
-            } catch (error) {
-                console.error('Error during submission:', error);
+            const resultData = await response.json();
+            if (response.ok) {
+                console.log('Prediction result:', resultData);
+                navigate('/result', {state: {result: resultData.predicted_major_name}}); // Navigate to the result page
+            } else {
+                console.error('Error:', resultData.error);
             }
+        } catch (error) {
+            console.error('Error during submission:', error);
+        }
     };
 
     const [result, setResult] = useState(null);
@@ -175,7 +175,7 @@ const Page6 = ({formData,updateFormData}) =>{
                     <label className="Location" style={{position: 'relative'}}>
                         <div className="custom-select">
                             <select className="Bar" id="location" name="Preferred Location" required style={{overflowY:"scroll"}} >
-                            <option value="" disabled selected>Chọn nơi bạn muốn học</option>
+                                <option value="" disabled selected>Chọn nơi bạn muốn học</option>
                                 <option value={"Miền Bắc"}>Khu vực miền Bắc</option>
                                 <option value={"Miền Trung"}>Khu vực miền Trung</option>
                                 <option value={"Miền Nam"}>Khu vực miền Nam</option>

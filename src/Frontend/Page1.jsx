@@ -23,7 +23,7 @@ const Page1 = ({formData,updateFormData}) =>{
                 alert('Vui lòng nhập tuổi hợp lệ ! ');
             }
             else if(filled === false){
-                alert('Vui lòng điền vào tất cả thông tin bên dưới');
+                alert('Vui lòng điền dầy đủ vào các mục bên dưới');
             }
             navigate('/page1');
         }

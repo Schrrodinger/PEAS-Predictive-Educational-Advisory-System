@@ -53,32 +53,32 @@ const Page3 = ({formData,updateFormData}) => {
         }
         else{
             if(selection === 'Khoa học tự nhiên') {
-            realValue = 'Khoa học Tự nhiên';
-        } else if (selection === 'Khoa học xã hội') {
-            realValue = 'Khoa học Xã hội';
-        } else if (selection === 'Công nghệ') {
-            realValue = 'Công nghệ';
-        } else if (selection === 'Kỹ thuật') {
-            realValue = 'Kỹ thuật';
-        } else if (selection === 'Kinh tế') {
-            realValue = 'Kinh tế và Kinh doanh';
-        } else if (selection === 'Y tế') {
-            realValue = 'Y tế và Sức khỏe ';
-        } else if (selection === 'Giáo dục') {
-            realValue = 'Giáo dục';
-        } else if (selection === 'Nghệ thuật') {
-            realValue = 'Nghệ thuật và Thiết kế';
-        } else if (selection === 'Nông nghiệp và môi trường') {
-            realValue = 'Nông nghiệp và Môi trường';
-        } else if (selection === 'Truyền thông và báo chí') {
-            realValue = 'Truyền thông và Media';
-        } else if (selection === 'Luật') {
-            realValue = 'Luật và Chính sách công';
-        } else if (selection === 'Du lịch và dịch vụ') {
-            realValue = 'Du lịch và Dịch vụ';
-        }
+                realValue = 'Khoa học Tự nhiên';
+            } else if (selection === 'Khoa học xã hội') {
+                realValue = 'Khoa học Xã hội';
+            } else if (selection === 'Công nghệ') {
+                realValue = 'Công nghệ';
+            } else if (selection === 'Kỹ thuật') {
+                realValue = 'Kỹ thuật';
+            } else if (selection === 'Kinh tế') {
+                realValue = 'Kinh tế và Kinh doanh';
+            } else if (selection === 'Y tế') {
+                realValue = 'Y tế và Sức khỏe ';
+            } else if (selection === 'Giáo dục') {
+                realValue = 'Giáo dục';
+            } else if (selection === 'Nghệ thuật') {
+                realValue = 'Nghệ thuật và Thiết kế';
+            } else if (selection === 'Nông nghiệp và môi trường') {
+                realValue = 'Nông nghiệp và Môi trường';
+            } else if (selection === 'Truyền thông và báo chí') {
+                realValue = 'Truyền thông và Media';
+            } else if (selection === 'Luật') {
+                realValue = 'Luật và Chính sách công';
+            } else if (selection === 'Du lịch và dịch vụ') {
+                realValue = 'Du lịch và Dịch vụ';
+            }
             setFill(true);
-    }
+        }
         updateFormData({[name]:realValue});
         console.log(name);
         console.log(realValue);

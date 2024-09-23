@@ -21,14 +21,14 @@ const Page2 = ({formData,updateFormData}) =>{
                 navigate('/page3');
             }, 150);
         }
-        // setTimeout(() => {
-        //     setFade(true);
-        //     navigate('/page3');
+            // setTimeout(() => {
+            //     setFade(true);
+            //     navigate('/page3');
         //     }, 150);
 
         else{
             if(filled === false){
-                alert('Vui lòng nhập đầy đủ các mục bên dưới !');
+                alert('Vui lòng điền đầy đủ vào các mục bên dưới !');
             }
             else if(valid === false){
                 alert('Vui lòng nhập điểm hợp lệ !');
