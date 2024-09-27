@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="show school name with full result">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page1.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page2.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page3.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page3.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page4.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page4.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page5.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Fix store user input history and give the final data" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,7 +232,7 @@
       <workItem from="1727365010965" duration="1069000" />
       <workItem from="1727385301289" duration="3209000" />
       <workItem from="1727411691523" duration="10613000" />
-      <workItem from="1727443855494" duration="5423000" />
+      <workItem from="1727443855494" duration="6286000" />
     </task>
     <task id="LOCAL-00001" summary="Fix error link FE vs BE">
       <option name="closed" value="true" />
@@ -269,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727421823655</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix store user input history and give the final data">
+      <option name="closed" value="true" />
+      <created>1727449868182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727449868182</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +291,8 @@
     <MESSAGE value="Link with the updated model and modify FE and handle getting and saving more data for the model." />
     <MESSAGE value="Merge with the updated model and modify FE and handle getting and saving more data for the model." />
     <MESSAGE value="show school name with full result" />
-    <option name="LAST_COMMIT_MESSAGE" value="show school name with full result" />
+    <MESSAGE value="Fix store user input history and give the final data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix store user input history and give the final data" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PEAS_Predictive_Educational_Advisory_System$backend.coverage" NAME="backend Coverage Results" MODIFIED="1723988320097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
