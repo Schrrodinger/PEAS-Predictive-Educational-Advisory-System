@@ -24,9 +24,12 @@ const Page6 = ({formData,updateFormData}) =>{
         } else {
             setFill(false);  // One or more fields are empty
         }
+        let storeName = e.target.name;
+        localStorage.setItem(storeName , e.target.value);
         console.log(filled);
         updateFormData({...formData, [e.target.name]: e.target.value});
         console.log(filled);
+
     };
 
     //  HANDLE NOT CHOOSING
@@ -80,7 +83,7 @@ const Page6 = ({formData,updateFormData}) =>{
             const resultData = await response.json();
             if (response.ok) {
                 console.log('Prediction result:', resultData);
-                navigate('/result', {state: {result: resultData.predicted_major_name}}); // Navigate to the result page
+                navigate('/result', { state: { formData: formData, result: resultData.predicted_major_name,school:resultData.matching_schools } }); // Navigate to the result page
             } else {
                 console.error('Error:', resultData.error);
             }
@@ -174,7 +177,7 @@ const Page6 = ({formData,updateFormData}) =>{
                     </label>
                     <label className="Location" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="location" name="Preferred Location" required style={{overflowY:"scroll"}} >
+                            <select className="Bar" id="location" name="Preferred_Location" required style={{overflowY:"scroll"}} >
                                 <option value="" disabled selected>Chọn nơi bạn muốn học</option>
                                 <option value={"Miền Bắc"}>Khu vực miền Bắc</option>
                                 <option value={"Miền Trung"}>Khu vực miền Trung</option>

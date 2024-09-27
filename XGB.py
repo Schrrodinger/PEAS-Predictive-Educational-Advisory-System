@@ -1,5 +1,4 @@
 import json
-
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
@@ -14,14 +13,14 @@ import xgboost as xgb
 print(xgb.__version__)
 
 # Read the data
-data = pd.read_csv('data/Balance Predict Major Decoded.csv')
+data = pd.read_csv('data/Final Major.csv')
 
 # Define necessary columns
 departments = ['Departments']
 soft_skills = ['Communication Skills', 'Teamwork Skills', 'Management Skills', 'Critical Thinking']
 hard_skills = ['Computer Skills', 'Language Skills', 'Machine Operation Skills', 'Data Analysis Skills',
                'Sales and Marketing Skills', 'Writing Skills', 'Financial Skills', 'Project Management Skills',
-               'Medical Skills','Habit','Field of Interest']
+               'Medical Skills']
 
 # Combine all feature columns
 features = departments + soft_skills + hard_skills
@@ -86,7 +85,6 @@ print(feature_importance.sort_values('importance', ascending=False))
 
 # At the end of your XGB.py file
 import joblib
-#joblib.dump(best_xgb_model, 'major_prediction_model.joblib')
 joblib.dump(le, 'major_label_encoder.pkl')
 
 import pickle
@@ -113,24 +111,22 @@ sample_input = pd.DataFrame({
     'Teamwork Skills': [3],
     'Management Skills': [2],
     'Critical Thinking': [3],
-    'Computer Skills': [1],
-    'Language Skills': [5],
-    'Machine Operation Skills': [1],
-    'Data Analysis Skills': [1],
+    'Computer Skills': [3],
+    'Language Skills': [4],
+    'Machine Operation Skills': [2],
+    'Data Analysis Skills': [3],
     'Sales and Marketing Skills': [1],
-    'Writing Skills': [2],
+    'Writing Skills': [5],
     'Financial Skills': [1],
     'Project Management Skills': [1],
-    'Medical Skills': [1],
-    'Habit': [1],
-    'Field of Interest': [4]
+    'Medical Skills': [3],
 })
 
 # Ensure the order of columns matches the order used during training
 feature_names = ['Departments', 'Communication Skills', 'Teamwork Skills', 'Management Skills', 'Critical Thinking',
                  'Computer Skills', 'Language Skills', 'Machine Operation Skills', 'Data Analysis Skills',
                  'Sales and Marketing Skills', 'Writing Skills', 'Financial Skills', 'Project Management Skills',
-                 'Medical Skills', 'Habit', 'Field of Interest']
+                 'Medical Skills']
 sample_input = sample_input[feature_names]
 
 # Make a prediction

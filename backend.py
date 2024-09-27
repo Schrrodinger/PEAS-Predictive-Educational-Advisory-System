@@ -19,6 +19,9 @@ model = joblib.load('major_prediction_model.joblib')
 with open('data/encoding_schema.json', 'r', encoding='utf-8') as f:
     label_encoders = json.load(f)
 
+#Load school data
+school_data=pd.read_csv('data/Score.csv')
+
 # Mapping of encoded values to major names
 major_mapping = {
     0: "Ngôn ngữ",
@@ -44,24 +47,44 @@ major_mapping = {
     20: "Khoa học giáo dục và đào tạo giáo viên"
 }
 
+
 def encode_input(data):
     encoded_data = {}
     features = [
         'Departments', 'Communication Skills', 'Teamwork Skills', 'Management Skills',
         'Critical Thinking', 'Computer Skills', 'Language Skills', 'Machine Operation Skills',
         'Data Analysis Skills', 'Sales and Marketing Skills', 'Writing Skills',
-        'Financial Skills', 'Project Management Skills', 'Medical Skills', 'Habit', 'Field of Interest'
+        'Financial Skills', 'Project Management Skills', 'Medical Skills'
     ]
     for feature in features:
-        if feature in ['Departments', 'Field of Interest', 'Habit']:
-            # Handle categorical features
-            encoded_data[feature] = label_encoders[feature].get(data.get(feature, 'Other'), 0)
+        if feature in data:
+            if feature == 'Departments':
+                encoded_data[feature] = label_encoders[feature].get(data[feature], 0)
+            else:
+                encoded_data[feature] = label_encoders[feature].get(data[feature], 1)
         else:
-            # Handle ordinal features
-            encoded_data[feature] = label_encoders[feature].get(data.get(feature, 'Trung bình'), 1)
+            logger.warning(f"Missing feature: {feature}")
     logger.debug(f"Encoded data: {encoded_data}")
     return encoded_data
 
+
+def find_matching_schools(major_code, region):
+    region_map = {"Miền Bắc": "3", "Miền Trung": "2", "Miền Nam": "1"}
+    region_code = region_map.get(region)
+
+    logger.info(f"Searching for schools with major_code: {major_code} in region: {region}")
+
+    if region_code is None:
+        logger.warning(f"Unrecognized region: {region}. Showing schools from all regions.")
+        matching_schools = school_data[school_data['Major'] == major_code]
+    else:
+        matching_schools = school_data[(school_data['Region'] == int(region_code)) &
+                                       (school_data['Major'] == major_code)]
+
+    schools_list = matching_schools['University'].unique().tolist()
+    logger.info(f"Found {len(schools_list)} matching schools")
+
+    return schools_list
 @app.route('/<path:path>')
 def static_proxy(path):
     return send_from_directory(app.static_folder, path)
@@ -88,13 +111,23 @@ def predict():
         logger.info(f"Decoded prediction index: {predicted_major_index}")
         logger.info(f"Decoded prediction name: {predicted_major_name}")
 
+        #find maching school
+        # matching_schools=find_matching_schools(predicted_major_index,data.get('Preferred Locations'))
+        # logger.info(f"Matching schools: {matching_schools}")
+
+        # Find matching schools
+        preferred_region = data.get('Preferred_Location')
+        matching_schools = find_matching_schools(predicted_major_index, preferred_region)
+
         return jsonify({
             'predicted_major': predicted_major_index,
-            'predicted_major_name': predicted_major_name
+            'predicted_major_name': predicted_major_name,
+            'matching_schools': matching_schools,
+            'preferred_region': preferred_region
         })
     except Exception as e:
         logger.error(f"Error in predict: {str(e)}", exc_info=True)
         return jsonify({'error': str(e)}), 400
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
