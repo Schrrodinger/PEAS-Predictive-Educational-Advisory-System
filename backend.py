@@ -116,7 +116,7 @@ def predict():
         # logger.info(f"Matching schools: {matching_schools}")
 
         # Find matching schools
-        preferred_region = data.get('Preferred_Location')
+        preferred_region = data.get('Preferred Location')
         matching_schools = find_matching_schools(predicted_major_index, preferred_region)
 
         return jsonify({

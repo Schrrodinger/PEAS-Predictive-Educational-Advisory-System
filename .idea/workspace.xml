@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="show school name with full result" />
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="show school name with full result">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page1.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page3.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page3.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page4.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page4.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page5.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Page6.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Page6.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,12 +57,12 @@
     &quot;assignee&quot;: &quot;PhungNghiaMa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Schrrodinger/PEAS-Predictive-Educational-Advisory-System.git&quot;,
-    &quot;accountId&quot;: &quot;29889b8d-c1cd-47de-bf13-3aa9debf1153&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Schrrodinger/PEAS-Predictive-Educational-Advisory-System.git",
+    "accountId": "e9536dbb-6c20-420c-8dd1-b0dbb7e8aa86"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -100,7 +111,7 @@
       <recent name="F:\Onedrive\Documents\GitHub\PEAS-Predictive-Educational-Advisory-System\templace" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.XGB">
+  <component name="RunManager" selected="Node.js.check.js">
     <configuration name="check.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/check.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -188,10 +199,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.XGB" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="Python.backend" />
         <item itemvalue="Node.js.check.js" />
       </list>
     </recent_temporary>
@@ -199,7 +208,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
       </set>
     </attachedChunks>
   </component>
@@ -234,6 +243,7 @@
       <workItem from="1727365010965" duration="1069000" />
       <workItem from="1727385301289" duration="3209000" />
       <workItem from="1727411691523" duration="10613000" />
+      <workItem from="1727443855494" duration="5423000" />
     </task>
     <task id="LOCAL-00001" summary="Fix error link FE vs BE">
       <option name="closed" value="true" />

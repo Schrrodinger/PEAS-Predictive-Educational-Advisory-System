@@ -12,6 +12,11 @@ const Page2 = ({formData,updateFormData}) =>{
     const [fade,setFade] = useState(true);
     const [filled , setFill] = useState(false);
     const [valid, setValid] = useState(true);
+    useEffect(() =>{
+        if (formData.Mark1 && formData.Mark2 && formData.Mark3) {
+            setFill(true);
+        }
+    },[formData]);
     // HANDLE FORWARD PAGE TRANSITON
     const handleButtonClick = () => {
         setFade(true);
@@ -21,10 +26,6 @@ const Page2 = ({formData,updateFormData}) =>{
                 navigate('/page3');
             }, 150);
         }
-            // setTimeout(() => {
-            //     setFade(true);
-            //     navigate('/page3');
-        //     }, 150);
 
         else{
             if(filled === false){
@@ -59,7 +60,10 @@ const Page2 = ({formData,updateFormData}) =>{
 
     //  HANDLE STORE DATA
     const handleDataChange = (e) =>{
-        if(e.target.value === ''){
+        const mark1 = document.getElementById('s1').value;
+        const mark2 = document.getElementById('s2').value;
+        const mark3 = document.getElementById('s3').value;
+        if(mark1 === '' || mark2 === '' || mark3 === ''){
             setFill(false);
         }
         else{
@@ -103,15 +107,15 @@ const Page2 = ({formData,updateFormData}) =>{
                 <form className="Mark large-12 medium-12 small-12 columns" style={{height: "fit-content"}}
                       onChange={handleDataChange} onBlur={handleInvalidMark}>
                     <div className="Mark1" style={{position: 'relative', width: "inherit"}}>
-                        <input className="Bar MarkBar" type="text" id="s1" name="Mark1" autoFocus={true}
+                        <input className="Bar MarkBar" type="text" id="s1" name="Mark1" value={formData.Mark1} autoFocus={true}
                                placeholder="Nhập điểm môn 1" required style={{boxSizing: "border-box"}}/>
                     </div>
                     <div className="Mark2" style={{position: 'relative', width: "inherit"}}>
-                        <input className="Bar MarkBar" type="text" id="s2" name="Mark2" autoFocus={true}
+                        <input className="Bar MarkBar" type="text" id="s2" name="Mark2" value={formData.Mark2} autoFocus={true}
                                placeholder="Nhập điểm môn 2" required style={{boxSizing: "border-box"}}/>
                     </div>
                     <div className="Mark3" style={{position: 'relative', width: "inherit"}}>
-                        <input className="Bar MarkBar" type="text" id="s3" name="Mark3" autoFocus={true}
+                        <input className="Bar MarkBar" type="text" id="s3" name="Mark3" value={formData.Mark3} autoFocus={true}
                                placeholder="Nhập điểm môn 3" required style={{boxSizing: "border-box"}}/>
                     </div>
                 </form>

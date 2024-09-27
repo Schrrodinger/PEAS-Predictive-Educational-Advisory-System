@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import './Decorator.css'; // Import your custom CSS file
 import 'foundation-sites/dist/css/foundation.min.css';
 import {useNavigate} from "react-router-dom";
@@ -8,6 +8,11 @@ const Page3 = ({formData,updateFormData}) => {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
     const [filled,setFill]= useState(false);
+    useEffect(() => {
+        if(formData.Field_of_Interest){
+            setFill(true);
+        }
+    },[formData]);
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
@@ -41,6 +46,20 @@ const Page3 = ({formData,updateFormData}) => {
             [choice]: !prevState[choice]
         }));
     };
+    const fieldMapping = {
+        'Khoa học tự nhiên': 'Khoa học Tự nhiên',
+        'Khoa học xã hội': 'Khoa học Xã hội',
+        'Công nghệ': 'Công nghệ',
+        'Kỹ thuật': 'Kỹ thuật',
+        'Y tế': 'Y tế và Sức khỏe',
+        'Kinh tế': 'Kinh tế và Kinh doanh',
+        'Luật': 'Luật và Chính sách công',
+        'Giáo dục': 'Giáo dục',
+        'Nghệ thuật': 'Nghệ thuật và Thiết kế',
+        'Truyền thông và báo chí': 'Truyền thông và Media',
+        'Nông nghiệp và môi trường': 'Nông nghiệp và Môi trường',
+        'Du lịch và dịch vụ': 'Du lịch và Dịch vụ'
+    };
 
     //  HANDLE SAVE DATA
     const handleDataChange = (e) =>{
@@ -63,7 +82,7 @@ const Page3 = ({formData,updateFormData}) => {
             } else if (selection === 'Kinh tế') {
                 realValue = 'Kinh tế và Kinh doanh';
             } else if (selection === 'Y tế') {
-                realValue = 'Y tế và Sức khỏe ';
+                realValue = 'Y tế và Sức khỏe';
             } else if (selection === 'Giáo dục') {
                 realValue = 'Giáo dục';
             } else if (selection === 'Nghệ thuật') {
@@ -136,12 +155,12 @@ const Page3 = ({formData,updateFormData}) => {
                 <div className="Sub large-12 medium-12 small-12 columns" style={{ position: 'relative', fontKerning: 'auto', fontFamily: 'Montserrat, sans-serif', color: 'floralwhite', fontStyle: 'italic' }}>Nhập thông tin của bạn dưới đây để tiến hành phân tích</div>
             </div>
             <div className="InterestContainer2 large-12 medium-12 small-12 columns" style={{ boxSizing: 'border-box', position: 'relative', width: '100%', height:'inherit' }}>
-                <form onChange={handleDataChange} className="InterestForm2 large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
+                <form  className="InterestForm2 large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
                     <fieldset className="InterestList2 large-12 medium-12 small-12 columns" style={{ border: '2px solid lightgoldenrodyellow', position: 'relative', height: "fit-content", width: '100%' }}>
                         <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 1 lĩnh vực bạn quan tâm</legend>
                         {['Khoa học tự nhiên', 'Khoa học xã hội', 'Công nghệ', 'Kỹ thuật', 'Y tế', 'Kinh tế', 'Luật', 'Giáo dục', 'Nghệ thuật', 'Truyền thông và báo chí','Nông nghiệp và môi trường','Du lịch và dịch vụ'].map(choice => (
                             <label key={choice} className={`Choice ${choice} large-12 medium-12 small-12 columns`} style={{ alignContent: 'center', alignSelf: 'center' }}>
-                                <input name={'Field of Interest'} className="Checkbox" type="radio" value={choice} />
+                                <input name={'Field_of_Interest'} className="Checkbox" type="radio" value={choice} checked={formData.Field_of_Interest===fieldMapping[choice]} onChange={handleDataChange} />
                                 {getChoiceLabel(choice)}
                                 <button type="button" className="triangle" onClick={() => toggleDropdown(choice)}>▼</button>
                                 <div className={`details ${openDropdowns[choice] ? 'visible' : ''}`}>

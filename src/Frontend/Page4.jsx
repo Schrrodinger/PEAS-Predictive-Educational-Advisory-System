@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import './Decorator.css'; // Import your custom CSS file
 import 'foundation-sites/dist/css/foundation.min.css';
 import {useNavigate} from "react-router-dom";
@@ -7,6 +7,11 @@ const Page4 = ({formData,updateFormData}) => {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
     const [filled,setFill] = useState(false);
+    useEffect(() => {
+        if(formData.Habit){
+            setFill(true);
+        }
+    }, [formData]);
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
@@ -42,30 +47,41 @@ const Page4 = ({formData,updateFormData}) => {
         }));
     };
 
+    const fieldMapping ={
+        'Nghệ thuật và sáng tạo':'Nghệ thuật và sáng tạo',
+        'Công nghệ và kĩ thuật':'Công nghệ và kỹ thuật số',
+        'Hoạt đông xã hội và cộng đồng':'Hoạt động xã hội và cộng đồng',
+        'Du lịch và khám phá văn hóa':'Du lịch và khám phá văn hóa',
+        'Thể thao và hoạt động thể chất':'Thể thao và hoạt động thể chất',
+        'Khoa học và nghiên cứu':'Khoa học và khám phá',
+        'Nấu ăn và ẩm thực':'Nấu ăn và ẩm thực',
+        'Khác':'Other'
+    }
+
     const getChoiceLabel = (choice) => {
         const labels = {
-            'A': 'Nghệ thuật và sáng tạo',
-            'B': 'Thể thao và hoạt động thể chất',
-            'C': 'Công nghệ và kĩ thuật',
-            'D': 'Khoa học và nghiên cứu',
-            'E': 'Hoạt đông xã hội và cộng đồng',
-            'F': 'Nấu ăn và ẩm thực',
-            'G': 'Du lịch và khám phá văn hóa',
-            'H': 'Khác'
+            'Nghệ thuật và sáng tạo': 'Nghệ thuật và sáng tạo',
+            'Thể thao và hoạt động thể chất': 'Thể thao và hoạt động thể chất',
+            'Công nghệ và kĩ thuật': 'Công nghệ và kĩ thuật',
+            'Khoa học và nghiên cứu': 'Khoa học và nghiên cứu',
+            'Hoạt đông xã hội và cộng đồng': 'Hoạt đông xã hội và cộng đồng',
+            'Nấu ăn và ẩm thực': 'Nấu ăn và ẩm thực',
+            'Du lịch và khám phá văn hóa': 'Du lịch và khám phá văn hóa',
+            'Khác': 'Khác'
         };
         return labels[choice];
     };
 
     const getChoiceDetails = (choice) => {
         const details = {
-            'A': 'Âm nhạc; Hội họa; Viết ( văn, thơ, blog).',
-            'B': 'Tham gia các cuộc thi thể thao.',
-            'C': 'Lập trình; Chơi game; Thiết kế đồ họa; Robotics.',
-            'D': 'Thí nghiệm khoa học, thiên văn học...',
-            'E': 'Tham gia câu lạc bộ và các hoạt động tình nguyện',
-            'F': 'Nấu ăn; Khám phá ẩm thực.',
-            'G': 'Du lịch và tìm hiểu văn hóa, lịch sử của các khu vực khác nhau.',
-            'H': 'Khác.'
+            'Nghệ thuật và sáng tạo': 'Âm nhạc; Hội họa; Viết ( văn, thơ, blog).',
+            'Thể thao và hoạt động thể chất': 'Tham gia các cuộc thi thể thao.',
+            'Công nghệ và kĩ thuật': 'Lập trình; Chơi game; Thiết kế đồ họa; Robotics.',
+            'Khoa học và nghiên cứu': 'Thí nghiệm khoa học, thiên văn học...',
+            'Hoạt đông xã hội và cộng đồng': 'Tham gia câu lạc bộ và các hoạt động tình nguyện',
+            'Nấu ăn và ẩm thực': 'Nấu ăn; Khám phá ẩm thực.',
+            'Du lịch và khám phá văn hóa': 'Du lịch và tìm hiểu văn hóa, lịch sử của các khu vực khác nhau.',
+            'Khác': 'Khác.'
         };
         return details[choice];
     };
@@ -85,23 +101,25 @@ const Page4 = ({formData,updateFormData}) => {
             } else if (selection === 'Công nghệ và kĩ thuật') {
                 realValue = 'Công nghệ và kỹ thuật số';
             } else if (selection === 'Hoạt đông xã hội và cộng đồng') {
-                realValue = 'Hoạt đông xã hội và cộng đồng';
+                realValue = 'Hoạt động xã hội và cộng đồng';
             } else if (selection === 'Du lịch và khám phá văn hóa') {
                 realValue = 'Du lịch và khám phá văn hóa';
             } else if (selection === 'Thể thao và hoạt động thể chất') {
                 realValue = 'Thể thao và hoạt động thể chất';
             } else if (selection === 'Khoa học và nghiên cứu') {
-                realValue = 'Khoa học và khám phá ';
+                realValue = 'Khoa học và khám phá';
             } else if (selection === 'Nấu ăn và ẩm thực') {
                 realValue = 'Nấu ăn và ẩm thực';
             } else if (selection === 'Khác') {
-                realValue = 'Khác';
+                realValue = 'Other';
             }
+            console.log('selection is:' + selection);
+            console.log('realValue is: ' + realValue);
             setFill(true);
         }
         updateFormData({[name]:realValue});
-        console.log(name);
-        console.log(realValue);
+        // console.log(name);
+        // console.log(formData.Habit);
     };
 
     return (
@@ -122,9 +140,9 @@ const Page4 = ({formData,updateFormData}) => {
                 <form onChange={handleDataChange} className="InterestForm large-12 medium-12 small-12 columns" style={{ width: 'inherit', height: 'inherit', position: 'relative' }}>
                     <fieldset className="InterestList large-12 medium-12 small-12 columns" style={{ border: '2px solid lightgoldenrodyellow', position: 'relative', height: "fit-content", width: '100%' }}>
                         <legend className="Require" style={{ color: 'lightgoldenrodyellow', fontKerning: 'auto', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Montserrat, sans-serif' }}>Chọn 1 sở thích phù hợp với bạn</legend>
-                        {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].map(choice => (
+                        {['Nghệ thuật và sáng tạo', 'Thể thao và hoạt động thể chất', 'Công nghệ và kĩ thuật', 'Khoa học và nghiên cứu', 'Hoạt đông xã hội và cộng đồng', 'Nấu ăn và ẩm thực', 'Du lịch và khám phá văn hóa', 'Khác'].map(choice => (
                             <label key={choice} className={`Choice ${choice} large-12 medium-12 small-12 columns`} style={{ alignContent: 'center', alignSelf: 'center' }}>
-                                <input name={"Habit"} className="Checkbox" type="radio" value={getChoiceLabel(choice)}/>
+                                <input name={"Habit"} className="Checkbox" type="radio" value={choice} checked={fieldMapping[choice] === formData.Habit}/>
                                 {getChoiceLabel(choice)}
                                 <button type="button" className="triangle" onClick={() => toggleDropdown(choice)}>▼</button>
                                 <div className={`details ${openDropdowns[choice] ? 'visible' : ''}`}>

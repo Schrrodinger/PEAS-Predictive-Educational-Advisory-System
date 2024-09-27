@@ -1,14 +1,18 @@
 
 import './Decorator.css';
 // import Subject from "./Subject.js";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {objectValues} from "react-foundation/lib/utils.js";
 const Page1 = ({formData,updateFormData}) =>{
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
-    const [filled,setFill] = useState(false);
+    const [filled,setFill] = useState( false);
     const [valid, setValid] = useState(true);
+    useEffect(() => {
+        if (formData.Age && formData.Gender && formData.Departments) {
+            setFill(true);
+        }
+    }, [formData]);
     // HANDLE FORWARD PAGE TRANSITON
     const handleButtonClick = () => {
         setFade(true);
@@ -17,6 +21,9 @@ const Page1 = ({formData,updateFormData}) =>{
                 setFade(true);
                 navigate('/page2');
             }, 150);
+            sessionStorage.setItem(document.getElementById('age').value,formData.Age);
+            sessionStorage.setItem(document.getElementById('gender').value,formData.Gender);
+            sessionStorage.setItem(document.getElementById('block').value,formData.Departments);
         }
         else{
             if(valid === false){
@@ -39,26 +46,17 @@ const Page1 = ({formData,updateFormData}) =>{
 
     // HANDLE CHANGING VALUE
     const handleDataChange = (e) =>{
-        const ageValue = parseInt(e.target.value);  // Parse the input value as an integer
-        const gender = document.getElementById('gender').value ;
-        const block = document.getElementById('block').value;
-        if(ageValue === '' || gender === '' || block === ''){
-            setFill(false)
+        updateFormData({...formData, [e.target.name]: e.target.value});
+        const age = document.getElementById("age").value;
+        const gender = document.getElementById("gender").value;
+        const departments = document.getElementById("block").value;
+        if(age ==='' || gender === '' || departments === ''){
+            setFill(false);
         }
         else{
             setFill(true);
         }
-        updateFormData({...formData, [e.target.name]: e.target.value});
-    };
-
-    // HANDLE BLOCK CHOOSING
-    const [selectedBlock, setSelectedBlock] = useState('');
-
-    const handleSelectChange = (event) => {
-        const value = event.target.value;
-        setSelectedBlock(value);
-        localStorage.setItem('selectedBlock', value); // Store the selected block in localStorage
-        console.log(value);
+        console.log(filled);
     };
 
     //  HANDLE INVALID AGE
@@ -99,11 +97,11 @@ const Page1 = ({formData,updateFormData}) =>{
                       onChange={handleDataChange} onBlur={handleAgeValidation}>
                     <div className="Age" style={{position: 'relative', width: "inherit"}}>
                         <input className="Bar AgeBar" type="text" id="age" name="Age" autoFocus={true}
-                               placeholder="Nhập tuổi của bạn tại đây" required style={{boxSizing: "border-box"}}/>
+                               onChange={handleDataChange} value={formData.Age} placeholder="Nhập tuổi của bạn tại đây" required style={{boxSizing: "border-box"}}/>
                     </div>
                     <label className="Gender" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="gender" name="Gender" required>
+                            <select onChange={handleDataChange}  className="Bar" id="gender" name="Gender" value={formData.Gender} required>
                                 <option value="" disabled selected>Chọn giới tính</option>
                                 <option value="Nam">Nam</option>
                                 <option value="Nữ">Nữ</option>
@@ -112,8 +110,8 @@ const Page1 = ({formData,updateFormData}) =>{
                     </label>
                     <label className="Major" style={{position: 'relative'}}>
                         <div className="custom-select">
-                            <select className="Bar" id="block" name="Departments" required
-                                    onChange={handleSelectChange}>
+                            <select onChange={handleDataChange} className="Bar" id="block" name="Departments" required
+                                     value={formData.Departments}>
                                 <option value="" disabled selected>Khối bạn muốn thi</option>
                                 <option value="A">A</option>
                                 <option value="B">B</option>
@@ -126,12 +124,6 @@ const Page1 = ({formData,updateFormData}) =>{
                         </div>
                     </label>
                 </form>
-                {/*<div className="formDataDisplay">*/}
-                {/*    <h3>Stored Data:</h3>*/}
-                {/*    <p>Skill3: {formData.Age}</p>*/}
-                {/*    <p>Skill3: {formData.Gender}</p>*/}
-                {/*    <p>Skill3: {formData.Block}</p>*/}
-                {/*</div>*/}
             </div>
         </div>
     );

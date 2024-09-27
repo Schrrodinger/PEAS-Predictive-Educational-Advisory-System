@@ -1,11 +1,14 @@
 import './Decorator.css'; // Import your custom CSS for styling
 import 'foundation-sites/dist/css/foundation.min.css';
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {objectValues} from "react-foundation/lib/utils.js";
+import {useEffect, useState, useSyncExternalStore} from "react";
 function Page5({formData,updateFormData}) {
     const navigate = useNavigate();
     const [fade,setFade] = useState(true);
+    // const [Skill1, setSkill1] = useState(formData.Communication_Skills_Value || '1');
+    // const [Skill1, setSkill1] = useState(formData.Communication_Skills_Value ? Number(formData.Communication_Skills_Value) : 1);
+
+
     // HANDLE FORWARD NAVIGATION
     const handleButtonClick = () => {
         setFade(true);
@@ -27,24 +30,27 @@ function Page5({formData,updateFormData}) {
     // HANDLE SAVE DATA
     useEffect(() => {
         updateFormData({
-            "Communication Skills": 'Trung bình',
-            "Teamwork Skills": 'Trung bình',
-            "Management Skills": 'Trung bình',
-            "Critical Thinking": 'Trung bình',
-            "Computer Skills": 'Trung bình',
-            "Language Skills": 'Trung bình',
-            "Machine Operation Skills": 'Trung bình',
-            "Data Analysis Skills": 'Trung bình',
-            "Sales and Marketing Skills": 'Trung bình',
-            "Writing Skills": 'Trung bình',
-            "Financial Skills": 'Trung bình',
-            "Project Management Skills":'Trung bình',
-            "Medical Skills":'Trung bình'
+            "Communication_Skills": 'Trung bình',
+            "Teamwork_Skills": 'Trung bình',
+            "Management_Skills": 'Trung bình',
+            "Critical_Thinking": 'Trung bình',
+            "Computer_Skills": 'Trung bình',
+            "Language_Skills": 'Trung bình',
+            "MachineOP_Skills": 'Trung bình',
+            "Data_Analysis_Skills": 'Trung bình',
+            "Sales_Marketing_Skills": 'Trung bình',
+            "Writing_Skills": 'Trung bình',
+            "Financial_Skills": 'Trung bình',
+            "Project_Management_Skills":'Trung bình',
+            "Medical_Skills":'Trung bình'
         });
     }, []);
-    const handleDataChange = (e) => {
+
+
+
+    const handleDataChange =  (e) => {
         const {name,value} = e.target;
-        const selection = parseInt(value);
+        let selection = parseInt(value);
         let skillDescription = '';
         if (selection === 1 || selection === 2) {
             skillDescription = 'Trung bình';
@@ -53,12 +59,21 @@ function Page5({formData,updateFormData}) {
         } else if(selection === 4 || selection === 5) {
             skillDescription = 'Tốt';
         }
-        updateFormData({[name]:skillDescription});
-        console.log(e.target.name);
-        console.log(skillDescription);
+        let storageKey = '';
+
+        updateFormData({[name]: skillDescription,[name+'_Value']:Number(value)});
+        console.log(name);
+        console.log(name + ": " + skillDescription);
+        if(name !== 'Critical_Thinking'){
+            storageKey = name +'_Value';
+        }
+        else{
+            storageKey = 'Critical_Thinking_Value';
+        }
+
+        sessionStorage.setItem(storageKey,value);
+        console.log(storageKey + ': ' +sessionStorage.getItem(storageKey));
     };
-
-
     return (
         <div className="RatingPage" style={{ boxSizing: 'border-box', position: 'absolute', width: '100%', height: '95vh', overflowY: 'scroll'}}>
             <div className="Panigation large-12 medium-12 small-12 columns" style={{
@@ -124,8 +139,8 @@ function Page5({formData,updateFormData}) {
                 </div>
 
                 <form className="GradingSlideContainer large-12 medium-12 small-12 columns "
-                      style={{position: 'relative', height: 'max-content', boxSizing: 'border-box'}}
-                      onChange={handleDataChange}>
+                      onChange={handleDataChange} style={{position: 'relative', height: 'max-content', boxSizing: 'border-box'}}
+                >
                     {/* Skill 1 */}
                     <div className="Skill1 large-12 medium-12 small-12 columns" id="Skill_1" style={{
                         display: 'flex',
@@ -147,7 +162,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Communication Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Communication_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Communication_Skills_Value')} />
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -178,7 +193,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Teamwork Skills"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
+                            <input name={"Teamwork_Skills"} className="Slider" type="range" min='1' max='5' defaultValue={1} value={sessionStorage.getItem('Teamwork_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -209,7 +224,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Management Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Management_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Management_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -240,7 +255,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Critical Thinking"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Critical_Thinking"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Critical_Thinking_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -271,7 +286,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Computer Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Computer_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Computer_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -302,7 +317,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Language Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Language_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Language_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -333,7 +348,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Machine Operation Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"MachineOP_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('MachineOP_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -364,7 +379,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Data Analysis Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Data_Analysis_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Data_Analysis_Skills_Value')} />
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -395,7 +410,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Sales and Marketing Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Sales_Marketing_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Sales_Marketing_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -426,7 +441,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Writing Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Writing_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Writing_Skills_Value')} />
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -457,7 +472,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Financial Skills"} className="Slider" type="range" min="1" max="5" defaultValue="1"/>
+                            <input name={"Financial_Skills"} className="Slider" type="range" min="1" max="5" defaultValue={1} value={sessionStorage.getItem('Financial_Skills_Value')} />
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -488,7 +503,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Project Management Skills"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
+                            <input name={"Project_Management_Skills"} className="Slider" type="range" min='1' max='5' defaultValue={1} value={sessionStorage.getItem('Project_Management_Skills_Value')}/>
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
@@ -519,7 +534,7 @@ function Page5({formData,updateFormData}) {
                             flexDirection: 'column',
                             width: 'inherit'
                         }}>
-                            <input name={"Medical Skills"} className="Slider" type="range" min='1' max='5' defaultValue='1'/>
+                            <input name={"Medical_Skills"} className="Slider" type="range" min='1' max='5' defaultValue={1} value={sessionStorage.getItem('Medical_Skills_Value')} />
                             <div className="range-values" style={{display: 'flex', justifyContent: 'space-between'}}>
                                 <span>1</span>
                                 <span>2</span>
