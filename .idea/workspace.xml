@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Fix store user input history and give the final data" />
+    <list default="true" id="8f0b611c-ac0e-44ca-9dd3-cc0e7522ca5e" name="Changes" comment="Fix store user input history and give the final data">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-5WRI5ZAA.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-foundation_lib_utils__js.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-router-dom.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="BE_nga_test" />
+        <entry key="$PROJECT_DIR$" value="BE1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,12 +66,12 @@
     &quot;assignee&quot;: &quot;PhungNghiaMa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Schrrodinger/PEAS-Predictive-Educational-Advisory-System.git",
-    "accountId": "e9536dbb-6c20-420c-8dd1-b0dbb7e8aa86"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Schrrodinger/PEAS-Predictive-Educational-Advisory-System.git&quot;,
+    &quot;accountId&quot;: &quot;e9536dbb-6c20-420c-8dd1-b0dbb7e8aa86&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -79,7 +99,7 @@
     &quot;Python.backend.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;BE&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -233,6 +253,7 @@
       <workItem from="1727385301289" duration="3209000" />
       <workItem from="1727411691523" duration="10613000" />
       <workItem from="1727443855494" duration="6286000" />
+      <workItem from="1727540593797" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="Fix error link FE vs BE">
       <option name="closed" value="true" />
