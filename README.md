@@ -1,5 +1,6 @@
 # USER GUIDANCE
-Thhis project use Vite + React for Frontend and flask python for Backend.
+This project use Vite + React for Frontend and flask python for Backend.
+
 STEP TO RUN THIS PROJECT: 
 
 - Clone the default branch BE to computer
